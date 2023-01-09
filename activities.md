@@ -1,7 +1,7 @@
- ## Workout Calender
- - A calender can help you stay on top of your workouts
- - 
- - 
+## Workout Calender
+  - Helps you stay on top of your workouts
+  - Gets you organized
+  - Tracks your progress
 <table>
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
@@ -16,6 +16,9 @@
         <option value="tuesday">Tuesday</option>
         <option value="wednesday">Wednesday</option>
         <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
       </select>
     </td>
     <td><button>Apply</button></td>
