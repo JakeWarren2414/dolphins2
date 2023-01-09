@@ -3,3 +3,4 @@ title: "Dolphin Fitness"
 description: "An all in one website to better the health of everyone"
 gitorg: "https://github.com/jm1021/leuck_reunion"
 google_analytics:
+theme: jekyll-theme-minimal
