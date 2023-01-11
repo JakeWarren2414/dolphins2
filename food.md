@@ -1,3 +1,19 @@
+<!--Login Frontmatter-->
+<div style="padding: 5px;">
+    <h3>Login</h3>
+</div>
+<div style="padding:5px">
+    <label for="username">Username</label>
+    <input type="text">
+</div>
+<div style="padding:5px">
+    <label for="password">Password</label>
+    <input type="text">
+</div>
+<div style="padding:5px">
+    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/">Sign Up</a></p>
+</div>
+
 ## Planned Meals
 > The Alpine lodge extra-large kitchen seats 44 people.  The kitchens are perfect for large group meals and all come equipped with appropriate appliances and utensils. There is an outdoor barbecue!  There is a fridge and individual kitchens in the homes.   So there is a place to store snacks, make sure you stock up for the little ones.
 

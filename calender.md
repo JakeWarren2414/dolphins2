@@ -1,3 +1,20 @@
+<!--Login Frontmatter-->
+<div style="padding: 5px;">
+    <h3>Login</h3>
+</div>
+<div style="padding:5px">
+    <label for="username">Username</label>
+    <input type="text">
+</div>
+<div style="padding:5px">
+    <label for="password">Password</label>
+    <input type="text">
+</div>
+<div style="padding:5px">
+    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/">Sign Up</a></p>
+</div>
+
+
 ## Workout Calender
   - Helps you stay on top of your workouts
   - Gets you organized
