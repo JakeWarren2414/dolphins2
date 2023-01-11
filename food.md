@@ -11,7 +11,7 @@
     <input type="text">
 </div>
 <div style="padding:5px">
-    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/">Sign Up</a></p>
+    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/signup">Sign Up</a></p>
 </div>
 
 <h1>Nutrition Help</h1>
