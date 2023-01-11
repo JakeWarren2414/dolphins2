@@ -1,8 +1,36 @@
 <!--Login Frontmatter-->
 
-<body>
+
+
+<!DOCTYPE html>
+<html>
+  
+<head>
     <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
+    
+</head>
+  
+<body>
+    <div class="container">
+        <h1>BMI Calculator</h1>
+  
+        <!-- Option for providing height 
+            and weight to the user-->
+        <p>Height (in cm)</p>
+  
+        <input type="text" id="height">
+  
+        <p>Weight (in kg)</p>
+  
+        <input type="text" id="weight">
+  
+        <button id="btn">Calculate</button>
+  
+        <div id="result"></div>
+    </div>
 </body>
+  
+</html>
 ## BMI Overview
 > Generall Overview of BMI
 - Knowing your BMI range is the first step in your joureny toward a heathier life
