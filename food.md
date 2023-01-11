@@ -1,19 +1,4 @@
-<!--Login Frontmatter-->
-<div style="padding: 5px;">
-    <h3>Login</h3>
-</div>
-<div style="padding:5px">
-    <label for="username">Username</label>
-    <input type="text">
-</div>
-<div style="padding:5px">
-    <label for="password">Password</label>
-    <input type="text">
-</div>
-<div style="padding:5px">
-    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/signup">Sign Up</a></p>
-</div>
-
+<
 <h1>Nutrition Help</h1>
 
 <h3>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</h3>
