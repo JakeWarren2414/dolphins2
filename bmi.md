@@ -1,6 +1,8 @@
 <!--Login Frontmatter-->
 
-
+<body>
+    <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
+</body>
 ## BMI Overview
 > Generall Overview of BMI
 - Knowing your BMI range is the first step in your joureny toward a heathier life

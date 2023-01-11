@@ -8,6 +8,9 @@
         <p class="signup">Password</p>
         <input type="text">
     </div>
+    <div>
+        <p class="signup">rePassword</p>
+    </div>
     <div style="padding:10px">
         <p class="signup">Birthday</p>
         <input type="date" id="birthday" name="birthday">
