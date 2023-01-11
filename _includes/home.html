@@ -6,9 +6,43 @@
         <td><a href="https://jakewarren2414.github.io/dolphins2/">Home</a></td>
         <td><a href="https://jakewarren2414.github.io/dolphins2/bmi">BMI Info</a></td>
         <td><a href="https://jakewarren2414.github.io/dolphins2/food">Nutrition</a></td>
-        <td><a href="https://jakewarren2414.github.io/dolphins2/calender">Calender</a></td>
         <td><a href="https://jakewarren2414.github.io/dolphins2/sports">Workouts</a></td>
+        <td><a href="https://jakewarren2414.github.io/dolphins2/activities">Calender</a></td>
         <td><a href="https://jakewarren2414.github.io/dolphins2/family-night">Gyms</a></td>
         <td><a href="https://jakewarren2414.github.io/dolphins2/gallery">Agile Manifesto</a></td>
     </tr>
 </table>
+<body>
+    <script src="{{ '/assets/css/login.js' | relative_url }}"></script>
+    <script>
+        setInterval(()=>{
+            var timer = new Date();
+            var h = timer.getHours();
+            var m = timer.getMinutes();
+            var s = timer.getSeconds();
+            document.getElementById('jsClock').innerHTML = `${h} : ${m} : ${s}`;
+        },1000);
+    </script>
+
+    <div >clock time: <label id="jsClock"></label></div>
+    <!--Login Frontmatter-->
+    <div style="padding: 5px;">
+        <h3>Login</h3>
+    </div>
+    <div style="padding:5px">
+        <label for="username">Username</label>
+        <input id="id" type="text">
+    </div>
+    <div style="padding:5px">
+        <label for="password">Password</label>
+        <input id="pw" type="text">
+    </div>
+    <div>
+        <input type="button" value ="go back" onclick = "back()">
+        <input type="button" value="login" onclick="login()">
+    </div>
+    <div style="padding:5px">
+        <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/sign_up">Sign Up</a></p>
+    </div>
+</body>
+
