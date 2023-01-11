@@ -1,6 +1,4 @@
-<body>
-    <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
-</body>
+
 
 window.onload = () => {
     let button = document.querySelector("#btn");
