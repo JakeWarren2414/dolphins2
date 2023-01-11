@@ -18,7 +18,7 @@
 
 <h3>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</h3>
 <!-- Calorie will be paired with your profile-->
-<h3 id="C1">2000</h>
+<h3 id="C1">2000</h3>
 <input type="number" id="C2">
 <button onclick="calc()">=</button>
 <div id="result"></div>
