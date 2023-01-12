@@ -1,9 +1,3 @@
-<!--Login Frontmatter-->
-
-<div style="padding:5px">
-    <p> Dont have an account? <a href="https://jakewarren2414.github.io/dolphins2/signup">Sign Up</a></p>
-</div>
-
 ## What is Dolphin Fitness
 - Dolphin Fitness is a all in one site to help manage your health
 - We noticed on our own health journey the multible apps/website you have to use to start becoming more healthy
