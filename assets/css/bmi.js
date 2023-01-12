@@ -1,31 +1,30 @@
 
 
-window.onload = () => {
-    let button = document.querySelector("#btn");
-  
-    // Function for calculating BMI
-    button.addEventListener("click", calculateBMI);
-};
-  
-function calculateBMI() {
+function bmi() {
   
     /* Getting input from user into height variable.
     Input is string so typecasting is necessary. */
-    let height = parseInt(document
-            .querySelector("#height").value);
-  
+    let feet = parseInt(document
+            .querySelector("#feet").value);
+
+    let inches = parseInt(document
+            .querySelector("#inches").value);
     /* Getting input from user into weight variable. 
-    Input is string so typecasting is necessary.*/
+    Input is string so typecasting is neessary.*/
     let weight = parseInt(document
             .querySelector("#weight").value);
-  
+    let yourbmi = (weight/(12*feet+inches)*(12*feet+inches)*703).toFixed(2);
     let result = document.querySelector("#result");
-  
+    console.log(feet);
+    console.log(inches);
+    console.log(weight);
     // Checking the user providing a proper
     // value or not
-    if (height === "" || isNaN(height)) 
+    
+    if (feet === "" || isNaN(feet)) 
         result.innerHTML = "Provide a valid Height!";
-  
+    if (inches === "" || isNaN(inches)) 
+        result.innerHTML = "Provide a valid Height!";
     else if (weight === "" || isNaN(weight)) 
         result.innerHTML = "Provide a valid Weight!";
   
@@ -33,18 +32,18 @@ function calculateBMI() {
     else {
   
         // Fixing upto 2 decimal places
-        let bmi = (weight / ((height * height) 
-                            / 10000)).toFixed(2);
+        
   
         // Dividing as per the bmi conditions
-        if (bmi < 18.6) result.innerHTML =
-            `Under Weight : <span>${bmi}</span>`;
+        if (yourbmi < 18.6) result.innerHTML =
+            `Under Weight : <span>${yourbmi}</span>`;
   
-        else if (bmi >= 18.6 && bmi < 24.9) 
+        else if (yourbmi >= 18.6 && yourbmi < 24.9) 
             result.innerHTML = 
-                `Normal : <span>${bmi}</span>`;
+                `Normal : <span>${yourbmi}</span>`;
   
         else result.innerHTML =
-            `Over Weight : <span>${bmi}</span>`;
+            `Over Weight : <span>${yourbmi}</span>`;
     }
+    console.log(yourbmi);
 }

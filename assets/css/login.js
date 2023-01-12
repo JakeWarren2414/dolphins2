@@ -1,4 +1,4 @@
-assert("success")
+
 function login() {
     var id = document.querySelector("#id");
     var pw = document.querySelector("#pw");

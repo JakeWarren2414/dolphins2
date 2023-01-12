@@ -1,15 +1,15 @@
+<body>
+    <script src="{{ '/assets/css/signup.js' | relative_url }}"></script>
+<body>
 <div class="signup">
     <div style="padding:10px">
         <p class="signup">Username</p>
-        <input type="text">
+        <input id = "username" type="text">
     </div>
     <img src="https://jakewarren2414.github.io/dolphins2/favicon.ico" style="float: right; height: 400px">
     <div style="padding:10px">
         <p class="signup">Password</p>
-        <input type="text">
-    </div>
-    <div>
-        <p class="signup">rePassword</p>
+        <input id = "password" type="text">
     </div>
     <div style="padding:10px">
         <p class="signup">Birthday</p>
@@ -26,5 +26,8 @@
     <div style="padding:10px">
         <p class="signup">Calories Per Day</p>
         <input type="number">
+    </div>
+    <div>
+        <button id = "signUPbutton" class="signup">sign up</button>
     </div>
 </div>

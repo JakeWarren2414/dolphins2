@@ -2,35 +2,27 @@
 
 
 
-<!DOCTYPE html>
-<html>
-  
-<head>
-    <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
-    
-</head>
-  
 <body>
-    <div class="container">
-        <h1>BMI Calculator</h1>
-  
-        <!-- Option for providing height 
-            and weight to the user-->
-        <p>Height (in cm)</p>
-  
-        <input type="text" id="height">
-  
-        <p>Weight (in kg)</p>
-  
-        <input type="text" id="weight">
-  
-        <button id="btn">Calculate</button>
-  
-        <div id="result"></div>
+    <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
+    <div style="padding:5px">
+        <label for="feet">feet</label>
+        <label for="inches">inches</label>
+        <input id="feet" type="text">
+        <input id = "inches" type="text">
     </div>
+    <div style="padding:5px">
+        <label for="weight">Your Weight(pound)</label>
+        <input id="weight" type="text">
+    </div>
+    <div>
+        <input type="button" value ="compute BMI" onclick = "bmi()">
+    </div>
+    <div id="result"></div>
 </body>
-  
-</html>
+
+
+
+
 ## BMI Overview
 > Generall Overview of BMI
 - Knowing your BMI range is the first step in your joureny toward a heathier life
