@@ -13,7 +13,7 @@ function bmi() {
     Input is string so typecasting is neessary.*/
     let weight = parseInt(document
             .querySelector("#weight").value);
-    let yourbmi = (weight/(12*feet+inches)*(12*feet+inches)*703).toFixed(2);
+    let yourbmi = (weight/(12*feet+inches)/(12*feet+inches)*703).toFixed(2);
     let result = document.querySelector("#result");
     console.log(feet);
     console.log(inches);
