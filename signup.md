@@ -3,7 +3,7 @@
         <p class="signup">Username</p>
         <input type="text">
     </div>
-    <img src="https://jakewarren2414.github.io/dolphins2/favicon.ico" style="float: right; height: 400px">
+    <img src="https://jakewarren2414.github.io/dolphins2/faviconcopy.png" style="float: right; height: 400px">
     <div style="padding:10px">
         <p class="signup">Password</p>
         <input type="text">
