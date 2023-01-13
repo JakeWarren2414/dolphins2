@@ -4,6 +4,7 @@
 
 <body>
     <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
+    <h1 id="calc">BMI Calculator</h1>
     <div style="padding:5px">
         <label for="feet">feet</label>
         <label for="inches">inches</label>
@@ -43,3 +44,5 @@
 > What to do with this info
 - With this data you just found make a goal for a obtainable range that you will be able to reach in 6-12 months
 - And head to the next part of your fitness joureney: [nutrition](https://jakewarren2414.github.io/dolphins2/food)
+<div style="padding: 150px;">
+</div>
