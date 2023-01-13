@@ -1,4 +1,4 @@
-## What is Dolphin Fitness
+## Dolphin Fitness
 - Dolphin Fitness is a all in one site to help manage your health
 - We noticed on our own health journey the multible apps/website you have to use to start becoming more healthy
 - So our mission here is to create an easy way for any to start their fitness journey
