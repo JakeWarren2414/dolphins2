@@ -1,7 +1,7 @@
 <body>
-    <script src="{{ '/assets/css/signup.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/signup.js' | relative_url }}"></script>
 <body>
-<div class="signup">
+<!--<div class="signup">
     <div style="padding:10px">
         <p class="signup">Username</p>
         <input id = "username" type="text">
@@ -11,23 +11,21 @@
         <p class="signup">Password</p>
         <input id = "password" type="text">
     </div>
+    <div>
+        <p class="signup">confirm password</p>
+        <input type="text" id="cfPassword">
+    </div>
     <div style="padding:10px">
         <p class="signup">Birthday</p>
         <input type="date" id="birthday" name="birthday">
     </div>
-    <div style="padding:10px">
-        <p class="signup">Weight</p>
-        <input type="number">
-    </div>
-    <div style="padding:10px">
-        <p class="signup">Height (in inches)</p>
-        <input type="number">
-    </div>
-    <div style="padding:10px">
-        <p class="signup">Calories Per Day</p>
-        <input type="number">
-    </div>
     <div>
-        <button id = "signUPbutton" class="signup">sign up</button>
+        <button onclick = "signup();return false;" class="signup" >sign up</button>
     </div>
-</div>
+</div>-->
+<p><input type="text" name="userId" id="userId" class="form_id" value=""/></p>
+<p><input type="password" name="userPwd" id="userPwd" class="form_pw" 
+    value="" onkeydown="if(event.keyCode==13) javascript:chkEnter();" /></p>
+<p><label><input type="checkbox" id="idSaveCheck"/> id</label></p>
+<p><label><input type="checkbox" disabled id="pwdSaveCheck" class="no_act"/>password</label></p>
+ 
