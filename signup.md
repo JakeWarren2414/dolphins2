@@ -4,7 +4,7 @@
 
 <div style="padding: 100px"></div>
 <div class="page-header" style="color: black; padding: 350px height: 20%; border-radius: 50px; flex: 20%;">
-    <img id="S" src="https://jakewarren2414.github.io/dolphins2/faviconcopy.png" style="height: 200px">
+    <img id="S" src="https://jakewarren2414.github.io/dolphins2/faviconcopy.png" style="height: 201px">
     <div style="flex: 50%; padding:10px;">
         <h1 style="color: black;">Signup</h1>
         <div style="padding:10px">
