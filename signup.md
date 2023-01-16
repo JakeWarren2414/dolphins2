@@ -28,6 +28,6 @@
         <input type="number">
     </div>
     <div>
-        <button id = "signUPbutton" class="signup" onclick = "signup()">sign up</button>
+        <button id = "signUPbutton" class="signup">sign up</button>
     </div>
 </div>
