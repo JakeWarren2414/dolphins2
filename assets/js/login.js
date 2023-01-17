@@ -1,11 +1,12 @@
 
 function login() {
-    var id = document.querySelector("#id");
-    var pw = document.querySelector("#pw");
-    if(id.value == "" || pw.value == "") {
-        alert("Please write your Id or password")
-    }
-    else {
-        location.href = "https://jakewarren2414.github.io/FirstFastpages/"
-    }
+    const req = {
+        id: document.getElementById('id').value,
+        pw: document.getElementById('pw').value,
+    };
+    var data = [];
+    data.push(req);
+    alert(data);
+    
+
 }
