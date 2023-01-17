@@ -30,6 +30,8 @@
   </tbody>
 </table>
 
+<p><a href="https://jakewarren2414.github.io/dolphins2/assets/json/userdata.json">Link</a> to the JSON file</p>
+
 <script>
 fetch("https://jakewarren2414.github.io/dolphins2/assets/json/userdata.json")
   .then(function(response) {
