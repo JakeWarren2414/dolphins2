@@ -7,7 +7,7 @@
 ## CPT Rubic
 - We intend to follow 
 
-## Begining
+## Beginning
 - Start off your fitness journey by clicking on the BMI part of the taskbar
 - Or just click [here](https://jakewarren2414.github.io/dolphins2/bmi)
 
