@@ -11,7 +11,7 @@
     - [Two](https://jakewarren2414.github.io/dolphins2/food)
     - [Three](https://jakewarren2414.github.io/dolphins2/bmi#calc)
 
-## Fetching Data
+## Getting Data from personal JSON file
 
 <table>
   <thead>
