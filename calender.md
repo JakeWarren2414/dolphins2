@@ -4,11 +4,13 @@
   - Helps you stay on top of your workouts
   - Gets you organized
   - Tracks your progress
+<br>
 <table>
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
+    <th>Save Data</th>
   </tr>
   <tr>
     <td><input id="input"></td>
@@ -24,8 +26,10 @@
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
+    <td><button>Save Data</button></td>
   </tr>
 </table>
+<br>
 <table>
   <tr>
     <th>Monday</th>
@@ -47,8 +51,8 @@
   </tr>
 </table>
 
-<script>
 
+<script>
   function Add(){
     var input = document.getElementById("input").value;
     var week = document.getElementById("week").value;
@@ -73,9 +77,5 @@
     if (week === "Sunday") {
       document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
     }
-    }
-
-
-
-
+  }
 </script>
