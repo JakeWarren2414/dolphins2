@@ -5,7 +5,7 @@
 - We plan to add functioning api that will let you login in and see your calender
 
 ## CPT Rubic
-- We intend to follow 
+- We intend to follow all rules from the CPT rubric
 
 ## Beginning
 - Start off your fitness journey by clicking on the BMI part of the taskbar
