@@ -1,5 +1,5 @@
-<
-<h1>Nutrition Help</h1>
+
+<h1 id="Title">Nutrition Help</h1>
 
 <p>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</p>
 <!-- Calorie will be paired with your profile-->
