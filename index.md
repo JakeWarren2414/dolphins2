@@ -1,20 +1,51 @@
 <h1 id="Title"> Dolphin Fitness </h1>
-- Dolphin Fitness is a all in one site to help manage your health
-- We noticed on our own health journey the multible apps/website you have to use to start becoming more healthy
-- So our mission here is to create an easy way for any to start their fitness journey
-- We plan to add functioning api that will let you login in and see your calender
 
-## CPT Rubic
-- We intend to follow 
+<div class="row2">
+  <div class="column">
+    <h1>Dolphin Fitness</h1>
+    <p>is an all in one site to help manage your health. We noticed, on our own health journeys, the multiple online tools available to start becoming more healthy. So our mission here is to create an easy way for any to start their fitness journey.</p>
+  </div>
+  <div class="column">
+    Insert Image Here
+  </div>
+</div>
 
-## Begining
-- Start off your fitness journey by clicking on the BMI part of the taskbar
-- Or just click [here](https://jakewarren2414.github.io/dolphins2/bmi)
+<div class="row">
+  <div class="column">
+    Insert Image Here
+  </div>
+  <div class="column">
+    <h1>BMI Calculator</h1>
+    <p>Calculate your body mass index <a href="">here</a>.</p>
+  </div>
+</div>
 
-## Founders/Credits
-> The five founders of this site
-- Finn Carpenter
-- Jake Warren
-- Jeongwoo Lee
-- Paaras Purohit
-- Shruthi Damodar
+<div class="row2">
+  <div class="column">
+    <h1>Calender</h1>
+    <p>Commit to your workout through a plan<a href="">here</a>.</p>
+  </div>
+  <div class="column">
+    Insert Image Here
+  </div>
+</div>
+
+<div class="row">
+  <div class="column">
+    Insert Image Here
+  </div>
+  <div class="column">
+    <h1>Food</h1>
+    <p>Get a diet based on calories, body stats, and nutrition facts <a href="">here</a>.</p>
+  </div>
+</div>
+
+<div class="row2">
+  <div class="column">
+    <h1>Sports</h1>
+    <p>Fidn the perfect sport for you <a href="">here</a>.</p>
+  </div>
+  <div class="column">
+    Insert Image Here
+  </div>
+</div>

@@ -36,4 +36,18 @@ p.signup {
   display: none;
 }
 
+div.row {
+  align-items: left;
+  display: flex;
+}
 
+div.row2 {
+  align-items: center;
+  display: flex;
+  background-color:#deffecd9;
+}
+
+div.column {
+  flex: 100%;
+  padding: 10%;
+}
