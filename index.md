@@ -1,5 +1,6 @@
 <h1 id="Title"> Dolphin Fitness </h1>
 
+<<<<<<< HEAD
 <div class="row2">
   <div class="column">
     <h1>Dolphin Fitness</h1>
@@ -19,6 +20,14 @@
     <p>Calculate your body mass index <a href="">here</a>.</p>
   </div>
 </div>
+=======
+## CPT Rubic
+- We intend to follow all rules from the CPT rubric
+
+## Beginning
+- Start off your fitness journey by clicking on the BMI part of the taskbar
+- Or just click [here](https://jakewarren2414.github.io/dolphins2/bmi)
+>>>>>>> 178d02f90bd6456cab79e684d3866fb0f2169c94
 
 <div class="row2">
   <div class="column">

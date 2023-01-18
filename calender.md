@@ -4,28 +4,32 @@
   - Helps you stay on top of your workouts
   - Gets you organized
   - Tracks your progress
+<br>
 <table>
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
+    <th>Save Data</th>
   </tr>
   <tr>
     <td><input id="input"></td>
     <td>
       <select name="week" id="week">
-        <option value="monday">Monday</option>
-        <option value="tuesday">Tuesday</option>
-        <option value="wednesday">Wednesday</option>
-        <option value="thursday">Thursday</option>
-        <option value="friday">Friday</option>
-        <option value="saturday">Saturday</option>
-        <option value="sunday">Sunday</option>
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
       </select>
     </td>
-    <td><button>Apply</button></td>
+    <td><button onclick="Add()">Apply</button></td>
+    <td><button>Save Data</button></td>
   </tr>
 </table>
+<br>
 <table>
   <tr>
     <th>Monday</th>
@@ -37,12 +41,41 @@
     <th>Sunday</th>
   </tr>
     <tr>
-    <td id="monday"></td>
-    <td id="tuesday"></td>
-    <td id="wednesday"></td>
-    <td id="thursday"></td>
-    <td id="friday"></td>
-    <td id="saturday"></td>
-    <td id="sunday"></td>
+    <td><div id="monday"></div></td>
+    <td><div id="tuesday"></div></td>
+    <td><div id="wednesday"></div></td>
+    <td><div id="thursday"></div></td>
+    <td><div id="friday"></div></td>
+    <td><div id="saturday"></div></td>
+    <td><div id="sunday"></div></td>
   </tr>
 </table>
+
+
+<script>
+  function Add(){
+    var input = document.getElementById("input").value;
+    var week = document.getElementById("week").value;
+    if (week === "Monday") {
+      document.getElementById("monday").innerText = input + " " + document.getElementById("monday").innerText
+    }
+    if (week === "Tuesday") {
+      document.getElementById("tuesday").innerText = input + " " + document.getElementById("tuesday").innerText
+    }
+    if (week === "Wednesday") {
+      document.getElementById("wednesday").innerText = input + " " + document.getElementById("wednesday").innerText
+    }
+    if (week === "Thursday") {
+      document.getElementById("thursday").innerText = input + " " + document.getElementById("thursday").innerText
+    }
+    if (week === "Friday") {
+      document.getElementById("friday").innerText = input + " " + document.getElementById("friday").innerText
+    }
+    if (week === "Saturday") {
+      document.getElementById("saturday").innerText = input + " " + document.getElementById("saturday").innerText
+    }
+    if (week === "Sunday") {
+      document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
+    }
+  }
+</script>

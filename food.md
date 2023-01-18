@@ -1,16 +1,13 @@
 <
 <h1>Nutrition Help</h1>
 
-<h3>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</h3>
+<p>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</p>
 <!-- Calorie will be paired with your profile-->
-<h3 id="C1">2000</h3>
+
+<p> Your daily amount of calories is (2000 is a placeholder for now): <p id="C1">2000</p></p>
 <input type="number" id="C2">
 <button onclick="calc()">=</button>
 <div id="result"></div>
-
-
-<h3> Nutrition Tips </h3>
-<p>blah blah blah</p>
 
 <script>
     function calc() {
