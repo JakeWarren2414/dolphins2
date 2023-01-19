@@ -12,6 +12,7 @@
   .column {
     flex: 33.33%;
     padding: 5px;
+    color: rgba(37, 150, 190, 75%)
   }
 
 table.cool {
@@ -38,9 +39,10 @@ p.signup {
 
 
 div.row2 {
-  align-items: center;
+  margin: auto;
   display: flex;
-  background-color:#deffecd9;
+  background-image: linear-gradient(120deg, #155799, #159957);
+  color: black;
 }
 
 div.column {
