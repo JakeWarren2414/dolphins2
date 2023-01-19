@@ -92,11 +92,9 @@
 <td>20 minutes + 3(number of weeks)</td>
 <td><img width= "200p" height="100p" src="https://www.shutterstock.com/image-vector/running-man-vector-sketch-icon-260nw-467756699.jpg"></td>
 </tr>
-</tr>
 <th>Biking</th>
 <td>30 minutes + 3(number of weeks)</td>
 <td><img width= "200p" height="100p" src="https://media.istockphoto.com/id/478305878/vector/athlete-riding-bycicle-side-view-drawing.jpg?s=612x612&w=0&k=20&c=0vFH5L-Hz_tjPeQ7SpUOfhWj8o8-kjJGWjDeEI1O2pU="></td>
-</tr>
 </tr>
 <th>Swimming</th>
 <td>20 minutes + 2(number of weeks)</td>
