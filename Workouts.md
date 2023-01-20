@@ -5,24 +5,24 @@
 - Make sure to start out easy then go harder
 - Progressive overload is important and it essentially means to make the workout a little bit harder every time
 - Warm-ups are very important
+
+<br>
+
 <table>
-<tr>
-<th><label for="goals">What is your Goal?</label></th>
-<th>Apply</th>
-</tr>
-<tr>
-<td>
-  <select name="goal" id="goal">
-    <option id="lose_weight">Lose Weight</option>
-    <option id="gain_weight">Gain Wieght</option>
-  </select>
-</td>
-<td><button>Apply</button></td>
-</tr>
+  <tr>
+    <th>Push Day</th>
+    <th>Pull Day</th>
+    <th>Leg Day</th>
+    <th>Cardio Day</th>
+  </tr>
+    <td><button>Reveal</button></td>
+    <td><button>Reveal</button></td>
+    <td><button>Reveal</button></td>
+    <td><button>Reveal</button></td>
+  <tr>
 </table>
 
-
-
+<br>
 
 <table>
 <tr>
@@ -38,7 +38,7 @@
 <th>Workout 8</th>
 <th>Workout 9</th>
 </tr>
-<tr>
+<tr style="display: none;">
 <th>Push Day</th>
   <td>On Push Day you work the chest, shoulders, and triceps.</td>
   <td>Bench Press <img width= "200p" height="100p" src="https://static.strengthlevel.com/images/illustrations/bench-press-1000x1000.jpg"></td>
