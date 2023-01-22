@@ -1,12 +1,12 @@
-## Workout Routine
 
+<body>
+  <h1 id="wkt-title">Workout Routine</h1>
+  <br>
 
 - Workout 3 days in a row and take one rest day
 - Make sure to start out easy then go harder
 - Progressive overload is important and it essentially means to make the workout a little bit harder every time
 - Warm-ups are very important
-
-<br>
 
 <table>
   <tr>
@@ -119,3 +119,4 @@ if (o === "two") {
 }
 }
 </script>
+</body>
