@@ -12,15 +12,12 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
-  <body>    
-
+  <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
 
-    <header class="page-header" role="banner" style="padding: 350px">
+    <header class="page-header" role="banner" style="padding: 25%">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
-      <h2 class="project-tagline"><a href="https://jakewarren2414.github.io/dolphins2/login#L" class="loginb" style="color: white;"><u>Login</u></a> | <a href="https://jakewarren2414.github.io/dolphins2/signup#S" class="loginb" style="color: white;"><u>Signup</u></a></h2>
-      <div class="project-tagline"><label id="jsClock"></label></div>
       {% if site.github.is_project_page %}
       <div style="padding: 15 px;">
         <a href="https://jakewarren2414.github.io/dolphins2/" class="btn">Home</a>
@@ -38,9 +35,7 @@
       {% endif %}
     </header>
 
-    {% include home.html %}
-
-    <main id="content" role="main">
+    <main id="content" class="main-content" role="main">
       {{ content }}
 
       <footer class="site-footer">
