@@ -39,6 +39,15 @@
 ## BMI Calculator
 > Information
 - A great informational tool to find your BMI along with more info about the topic is this [website](https://www.calculator.net/bmi-calculator.html)
+- Here is the code that implements it:
+
+```python
+user_data = (70, 1.75)
+weight = user_data[0]
+height = user_data[1]
+bmi = weight / (height ** 2)
+print("Your BMI is: ", bmi)
+```
 
 ## Next steps
 > What to do with this info
