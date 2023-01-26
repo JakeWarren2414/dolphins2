@@ -5,12 +5,15 @@
   - Gets you organized
   - Tracks your progress
 <br>
-<table>
+
+## Editor Table
+<!-- Editor table-->
+<table width="500px">
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
-    <th>Save Data</th>
+    <th>Save</th>
   </tr>
   <tr>
     <td><input id="input"></td>
@@ -26,10 +29,13 @@
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
-    <td><button>Save Data</button></td>
+    <td><button>Save</button></td>
   </tr>
 </table>
+
 <br>
+
+<!-- Calender table-->
 <table>
   <tr>
     <th>Monday</th>
@@ -50,6 +56,12 @@
     <td><div id="sunday"></div></td>
   </tr>
 </table>
+
+<br>
+
+<div id="days"></div>
+<div id="tasks"></div>
+
 
 
 <script>
@@ -78,4 +90,12 @@
       document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
     }
   }
+
+  function displayDayOfWeek() {
+    var d = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = days[d.getDay()];
+    document.getElementById("days").innerHTML = "Today is " + day + " these are your tasks:";
+  }
+  setInterval(displayDayOfWeek, 1000);
 </script>
