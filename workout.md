@@ -119,7 +119,7 @@ if (o === "two") {
 }
 }
 </script>
-</body>
+
 
 ## Sports Quiz
 
@@ -127,11 +127,11 @@ if (o === "two") {
 <table>
  <tr>
    <td>Are you competitive?</td>
-   <td><butto id="compYes">Yes</button><button id="compNo">No</button></td>
+   <td><button id="compYes">Yes</button><button id="compNo">No</button></td>
  </tr>
  <tr>
    <td>Do you want to play with a ball?</td>
-   <td><button id="ballYes">Yes</button id="ballNo"><button>No</button></td>
+   <td><button id="ballYes">Yes</button><button id="ballNo">No</button></td>
  </tr>
  <tr>
    <td>Do you like contact sports?</td>
