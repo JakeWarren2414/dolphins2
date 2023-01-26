@@ -89,6 +89,7 @@
     if (week === "Sunday") {
       document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
     }
+    tasks();
   }
 
   function displayDayOfWeek() {
@@ -98,4 +99,30 @@
     document.getElementById("days").innerHTML = "Today is " + day + " these are your tasks:";
   }
   setInterval(displayDayOfWeek, 1000);
+  function tasks() {
+    var d = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = days[d.getDay()];
+      if (day === "Monday") {
+      document.getElementById("tasks").innerText = document.getElementById("monday").innerText;
+    }
+    if (day === "Tuesday") {
+      document.getElementById("tasks").innerText = document.getElementById("tuesday").innerText
+    }
+    if (day === "Wednesday") {
+      document.getElementById("tasks").innerText = document.getElementById("wednesday").innerText
+    }
+    if (day === "Thursday") {
+      document.getElementById("tasks").innerText = document.getElementById("thursday").innerText
+    }
+    if (day === "Friday") {
+      document.getElementById("tasks").innerText = document.getElementById("friday").innerText
+    }
+    if (day === "Saturday") {
+      document.getElementById("tasks").innerText = document.getElementById("saturday").innerText
+    }
+    if (day === "Sunday") {
+      document.getElementById("tasks").innerText = document.getElementById("sunday").innerText
+    }
+  }
 </script>
