@@ -21,4 +21,3 @@
 - It may be hard but you can find creative ways to combine healthy foods
 - However, what is the point of a healthy diet with our a healthy life style Check out our workouts page:  [Workouts](https://jakewarren2414.github.io/dolphins2/workout)
 <div style="padding: 150px;">
-</div
