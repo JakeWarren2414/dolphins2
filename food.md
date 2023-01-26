@@ -1,10 +1,7 @@
-<body>
-    <h1 id="foodtitle">Nutrition Help</h1>
-
+## Nutrition Help
 > Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left
-    <!-- Calorie will be paired with your profile-->
-
-- Your daily amount of calories is (2000 is a placeholder for now): <p id="C1">2000</p>
+- Your daily amount of calories is______________
+<br>
    <input type="number" id="C2">
    <button onclick="calc()">=</button>
    <div id="result"></div>
@@ -21,6 +18,6 @@
 ## Next steps
 > Implement the correct foods into your diet to see results
 - It may be hard but you can find creative ways to combine healthy foods
-- However, what is the point of a healthy diet with our a healthy life style. Check out our workouts page:  [Workouts](https://jakewarren2414.github.io/dolphins2/workout)
+- However, what is the point of a healthy diet with our a healthy life style? Check out our workouts page:  [Workouts](https://jakewarren2414.github.io/dolphins2/workout)
 <div style="padding: 150px;">
 </div
