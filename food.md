@@ -1,6 +1,6 @@
 ## Nutrition Help
 > Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left
-- Your daily amount of calories is (2000 is a placeholder for now): <p id="C1">2000</p>
+- Your daily amount of calories is __________
    <input type="number" id="C2">
    <button onclick="calc()">=</button>
    <div id="result"></div>
@@ -13,7 +13,7 @@
            document.getElementById("result").innerHTML = result;
        }
    </script>
-</body>
+
 
 ## Next steps
 > Implement the correct foods into your diet to see results
