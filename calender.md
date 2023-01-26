@@ -5,12 +5,15 @@
   - Gets you organized
   - Tracks your progress
 <br>
-<table>
+
+## Editor Table
+<!-- Editor table-->
+<table width="500px">
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
-    <th>Save Data</th>
+    <th>Save</th>
   </tr>
   <tr>
     <td><input id="input"></td>
@@ -26,10 +29,13 @@
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
-    <td><button>Save Data</button></td>
+    <td><button>Save</button></td>
   </tr>
 </table>
+
 <br>
+
+<!-- Calender table-->
 <table>
   <tr>
     <th>Monday</th>
@@ -50,6 +56,12 @@
     <td><div id="sunday"></div></td>
   </tr>
 </table>
+
+<br>
+
+<div id="days"></div>
+<div id="tasks"></div>
+
 
 
 <script>
@@ -76,6 +88,41 @@
     }
     if (week === "Sunday") {
       document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
+    }
+    tasks();
+  }
+
+  function displayDayOfWeek() {
+    var d = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = days[d.getDay()];
+    document.getElementById("days").innerHTML = "Today is " + day + " these are your tasks:";
+  }
+  setInterval(displayDayOfWeek, 1000);
+  function tasks() {
+    var d = new Date();
+    var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = days[d.getDay()];
+      if (day === "Monday") {
+      document.getElementById("tasks").innerText = document.getElementById("monday").innerText;
+    }
+    if (day === "Tuesday") {
+      document.getElementById("tasks").innerText = document.getElementById("tuesday").innerText
+    }
+    if (day === "Wednesday") {
+      document.getElementById("tasks").innerText = document.getElementById("wednesday").innerText
+    }
+    if (day === "Thursday") {
+      document.getElementById("tasks").innerText = document.getElementById("thursday").innerText
+    }
+    if (day === "Friday") {
+      document.getElementById("tasks").innerText = document.getElementById("friday").innerText
+    }
+    if (day === "Saturday") {
+      document.getElementById("tasks").innerText = document.getElementById("saturday").innerText
+    }
+    if (day === "Sunday") {
+      document.getElementById("tasks").innerText = document.getElementById("sunday").innerText
     }
   }
 </script>
