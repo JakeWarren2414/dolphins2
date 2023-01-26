@@ -5,15 +5,19 @@
    <input type="number" id="C2">
    <button onclick="calc()">=</button>
    <div id="result"></div>
+
+   <button>Add food</button>
+   <p>Will add an "alert" function to append foods with calories to lists</p>
  
  <script>
        function calc() {
-           var a = Number(document.getElementById("C1").innerHTML);
-           var b = Number(document.getElementById("C2").value);
-           var result = a - b;
+           let a = Number(document.getElementById("C1").innerHTML);
+           let b = Number(document.getElementById("C2").value);
+           let result = a - b;
            document.getElementById("result").innerHTML = result;
        }
    </script>
+
 
 
 ## Next steps
