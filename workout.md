@@ -120,3 +120,96 @@ if (o === "two") {
 }
 </script>
 </body>
+
+## Sports Quiz
+
+
+<table>
+ <tr>
+   <td>Are you competitive?</td>
+   <td><butto id="compYes">Yes</button><button id="compNo">No</button></td>
+ </tr>
+ <tr>
+   <td>Do you want to play with a ball?</td>
+   <td><button id="ballYes">Yes</button id="ballNo"><button>No</button></td>
+ </tr>
+ <tr>
+   <td>Do you like contact sports?</td>
+   <td><button id="contactYes">Yes</button><button id="contactNo">No</button></td>
+ </tr>
+ <tr>
+   <td>Do you want to play outside?</td>
+   <td><button id="outsideYes">Yes</button><button id="outsideNo">No</button></td>
+ </tr>
+ </table>
+
+<script>
+comp = True
+  document.getElementById("compYes").onclick = function() {
+    outside = True
+  }
+  document.getElementById("compNo").onclick = function() {
+    outside = False
+  }
+
+ball = True
+  document.getElementById("ballYes").onclick = function() {
+    outside = True
+  }
+  document.getElementById("ballNo").onclick = function() {
+    outside = False
+  }
+
+contact = True
+  document.getElementById("contactYes").onclick = function() {
+    outside = True
+  }
+  document.getElementById("contactNo").onclick = function() {
+    outside = False
+  }
+
+outside = True;
+  document.getElementById("outsideYes").onclick = function() {
+    outside = True
+  }
+  document.getElementById("outsideNo").onclick = function() {
+    outside = False
+  }
+
+
+
+
+
+if comp == True and ball == False and contact == False and outside == False:
+   print('Darts')
+if comp == True and ball == True and contact == False and outside == False:
+    print('Volleyball')
+if comp == True and ball == True and contact == True and outside == False:
+    print('Basketball')
+if comp == True and ball == True and contact == True and outside == True:
+    print('Football')
+if comp == True and ball== False and contact == True and outside == True:
+   print('Jousting')
+if comp == True and ball == False and contact == False and outside == True:
+   print('Track and Field')
+if comp == True and ball == True and contact == False and outside == True:
+   print('Soccer')
+if comp == True and ball == False and  contact == True and outside == False:
+   print('Boxing')
+if comp == False and ball == True and contact == False and outside == False:
+   print('Bowling')
+if comp == False and ball == True and contact == True and outside == False:
+   print('Hockey')
+if comp == False and ball == True and contact == True and outside == True:
+   print('Lacrosse')
+if comp == False and ball == True and contact == False and outside == True:
+   print('Golf')
+if comp == False and ball == False and contact == True and outside == False:
+   print('Wrestling')
+if comp == False and ball == False and contact == True and outside == True:
+   print('Buhurt')
+if comp == False and ball == False and contact == False and outside == True:
+   print('Archery')
+if comp == False and ball == False and contact == False and outside == False:
+   print('Chess')
+</script>
