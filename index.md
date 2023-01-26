@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="column">
-    Insert Image Here
+    <img src="/images/bmicalc.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">BMI Calculator</h1>
@@ -20,20 +20,20 @@
 
 <div class="row2">
   <div class="column">
-    <h1 style="color: white;">Calender</h1>
+    <h1 style="color: white;">Calendar</h1>
     <p style="color: white;">Commit to your workout through a plan <a href="" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
-    Insert Image Here
+    <img src="/images/calendar.png">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    Insert Image Here
+    <img src="/images/nutrition.jpg">
   </div>
   <div class="column">
-    <h1 style="color: rgba(37, 150, 190, 75%);">Food</h1>
+    <h1 style="color: rgba(37, 150, 190, 75%);">Nutrition</h1>
     <p style="color: rgba(37, 150, 190, 75%);">Get a diet based on calories, body stats, and nutrition facts <a href="" style="color: rgba(37, 150, 190, 75%);">here</a>.</p>
   </div>
 </div>
@@ -41,7 +41,7 @@
 <div class="row2">
   <div class="column">
     <h1 style="color: white;">Sports</h1>
-    <p style="color: white;">Fidn the perfect workout for you <a href="" style="color: white;"><u>here</u></a>.</p>
+    <p style="color: white;">Find the perfect workout for you <a href="" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
     Insert Image Here
