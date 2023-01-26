@@ -8,6 +8,18 @@
 
    <button>Add food</button>
    <p>Will add an "alert" function to append foods with calories to lists</p>
+
+   <form>
+  <label for="age">Age:</label>
+  <input type="number" id="age" name="age"><br><br>
+  <label for="sex">Sex:</label>
+  <input type="text" id="sex" name="sex"><br><br>
+  <label for="height">Height (in inches):</label>
+  <input type="number" id="height" name="height"><br><br>
+  <label for="weight">Weight (in pounds):</label>
+  <input type="number" id="weight" name="weight">
+</form>
+<button onclick="calculateCalories()">Result</button>
  
  <script>
        function calc() {
@@ -16,6 +28,20 @@
            let result = a - b;
            document.getElementById("result").innerHTML = result;
        }
+       function calculateCalories() {
+    let age = document.getElementById("age").value;
+    let sex = document.getElementById("sex").value;
+    let height = document.getElementById("height").value;
+    let weight = document.getElementById("weight").value;
+    let BMR;
+    if (sex === "male") {
+      BMR = 66 + (6.23 * weight) + (12.7 * height) - (6.8 * age);
+    } else if (sex === "female") {
+      BMR = 655 + (4.35 * weight) + (4.7 * height) - (4.7 * age);
+    }
+    let TDEE = BMR * 1.2;
+    document.getElementById("result").innerHTML = "Your daily calorie amount is " + TDEE;
+  }
    </script>
 
 
