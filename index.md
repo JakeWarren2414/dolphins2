@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="column">
-    <img src="/images/bmicalc.png">
+    <img src="../images/bmicalc.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">BMI Calculator</h1>
@@ -21,20 +21,20 @@
 <div class="row2">
   <div class="column">
     <h1 style="color: white;">Calendar</h1>
-    <p style="color: white;">Commit to your workout through a plan <a href="" style="color: white;"><u>here</u></a>.</p>
+    <p style="color: white;">Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
-    <img src="/images/calendar.png">
+    <img src="../images/calendar.png">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <img src="/images/nutrition.jpg">
+    <img src="../images/nutrition.jpg">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">Nutrition</h1>
-    <p style="color: rgba(37, 150, 190, 75%);">Get a diet based on calories, body stats, and nutrition facts <a href="" style="color: rgba(37, 150, 190, 75%);">here</a>.</p>
+    <p style="color: rgba(37, 150, 190, 75%);">Get a diet based on calories, body stats, and nutrition facts <a href="https://jakewarren2414.github.io/dolphins2/food#foodtitle" style="color: rgba(37, 150, 190, 75%);">here</a>.</p>
   </div>
 </div>
 
@@ -44,6 +44,6 @@
     <p style="color: white;">Find the perfect workout for you <a href="" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
-    <img width= "300p" height="250" src="https://www.pngall.com/wp-content/uploads/1/Sports-PNG-File-Download-Free.png">
+    <img width= "350p" height="250" src="https://www.pngall.com/wp-content/uploads/1/Sports-PNG-File-Download-Free.png">
   </div>
 </div>
