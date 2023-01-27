@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="column">
-    <img src="../images/bmicalc.png">
+    <img width= "300p" height="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dolphin-logo.svg/2048px-Dolphin-logo.svg.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">BMI Calculator</h1>
@@ -24,13 +24,13 @@
     <p style="color: white;">Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
-    <img src="../images/calendar.png">
+    <img width= "300p" height="300" src="https://static.vecteezy.com/system/resources/previews/009/380/244/original/calendar-icon-clipart-design-illustration-free-png.png">
   </div>
 </div>
 
 <div class="row">
   <div class="column">
-    <img src="../images/nutrition.jpg">
+    <img width= "300p" height="300" src="https://www.pngmart.com/files/7/Fresh-Healthy-Food-PNG-Free-Download.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">Nutrition</h1>
