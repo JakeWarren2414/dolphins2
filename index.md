@@ -1,7 +1,7 @@
 <div class="row2">
   <div class="column">
     <h1 style="color: white;">Dolphin Fitness</h1>
-    <p style="color: white;">An all in one site to help manage your health. We noticed, on our own health journeys, the multiple online tools available to start becoming more healthy. So our mission here is to create an easy way for any to start their fitness journey.</p>
+    <p style="color: white;">An all in one site to help manage your health. We noticed, on our own health journeys, the multiple online tools available to start becoming more healthy. Our mission here is to create an easy way for any to start their fitness journey.</p>
   </div>
   <div class="column">
     <img width= "300p" height="300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Dolphin-logo.svg/2048px-Dolphin-logo.svg.png">
