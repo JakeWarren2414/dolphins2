@@ -10,7 +10,7 @@
 
 <div class="row">
   <div class="column">
-    <img width= "300p" height="300" src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/meter.png">
+    <img width= "350p" height="200" src="https://www.pnbmetlife.com/content/dam/pnb-metlife/images/icons/bmi-calculator/meter.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">BMI Calculator</h1>
