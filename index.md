@@ -30,7 +30,7 @@
 
 <div class="row">
   <div class="column">
-    <img width= "300p" height="300" src="https://www.pngmart.com/files/7/Fresh-Healthy-Food-PNG-Free-Download.png">
+    <img width= "300p" height="250" src="https://www.pngmart.com/files/7/Fresh-Healthy-Food-PNG-Free-Download.png">
   </div>
   <div class="column">
     <h1 style="color: rgba(37, 150, 190, 75%);">Nutrition</h1>
@@ -44,6 +44,6 @@
     <p style="color: white;">Find the perfect workout for you <a href="" style="color: white;"><u>here</u></a>.</p>
   </div>
   <div class="column">
-    <img width= "350p" height="250" src="https://www.pngall.com/wp-content/uploads/1/Sports-PNG-File-Download-Free.png">
+    <img width= "350p" height="200" src="https://www.pngall.com/wp-content/uploads/1/Sports-PNG-File-Download-Free.png">
   </div>
 </div>
