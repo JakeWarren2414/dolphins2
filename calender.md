@@ -70,7 +70,6 @@
 <script>
   // Save Function
   window.onload = function() {
-  var x = document.getElementById("saver").value;
   document.getElementById("monday").innerText = localStorage.getItem("Monday");
   document.getElementById("tuesday").innerText = localStorage.getItem("Tuesday");
   document.getElementById("wednesday").innerText = localStorage.getItem("Wednesday");
@@ -81,7 +80,6 @@
   tasks();
   };
   function Save() {
-  var x = document.getElementById("saver").value;
   var monday = document.getElementById("monday").innerText;
   var tuesday = document.getElementById("tuesday").innerText;
   var wednesday = document.getElementById("wednesday").innerText;
@@ -98,13 +96,11 @@
   localStorage.setItem("Saturday", saturday);
   localStorage.setItem("Sunday", sunday);
   tasks();
-  x.style.background-color = "none;"
   }
   // The function to add workouts to your calender
   function Add(){
     var input = document.getElementById("input").value;
     var week = document.getElementById("week").value;
-    var x = document.getElementById("saver").value;
     switch (week) {
       case "Monday":
         var checkbox = document.createElement("check");
@@ -149,7 +145,6 @@
         document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText;
         break;
     }
-    x.style.background-color = "red;"
     tasks();
   }
 
