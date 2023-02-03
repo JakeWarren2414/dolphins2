@@ -29,7 +29,7 @@
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
-    <td><button>Save</button></td>
+    <td><button onclick="Save()">Save</button></td>
   </tr>
 </table>
 
@@ -68,6 +68,33 @@
 
 
 <script>
+  // Save Function
+  window.onload = function() {
+  document.getElementById("monday").innerText = localStorage.getItem("Monday");
+  document.getElementById("tuesday").innerText = localStorage.getItem("Tuesday");
+  document.getElementById("wednesday").innerText = localStorage.getItem("Wednesday");
+  document.getElementById("thursday").innerText = localStorage.getItem("Thursday");
+  document.getElementById("friday").innerText = localStorage.getItem("Friday");
+  document.getElementById("saturday").innerText = localStorage.getItem("Saturday");
+  document.getElementById("sunday").innerText = localStorage.getItem("Sunday");
+  };
+  function Save() {
+  var monday = document.getElementById("monday").innerText;
+  var tuesday = document.getElementById("tuesday").innerText;
+  var wednesday = document.getElementById("wednesday").innerText;
+  var thursday = document.getElementById("thursday").innerText;
+  var friday = document.getElementById("friday").innerText;
+  var saturday = document.getElementById("saturday").innerText;
+  var sunday = document.getElementById("sunday").innerText;
+
+  localStorage.setItem("Monday", monday);
+  localStorage.setItem("Tuesday", tuesday);
+  localStorage.setItem("Wednesday", wednesday);
+  localStorage.setItem("Thursday", thursday);
+  localStorage.setItem("Friday", friday);
+  localStorage.setItem("Saturday", saturday);
+  localStorage.setItem("Sunday", sunday);
+  }
   // The function to add workouts to your calender
   function Add(){
     var input = document.getElementById("input").value;
