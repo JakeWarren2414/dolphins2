@@ -77,6 +77,7 @@
   document.getElementById("friday").innerText = localStorage.getItem("Friday");
   document.getElementById("saturday").innerText = localStorage.getItem("Saturday");
   document.getElementById("sunday").innerText = localStorage.getItem("Sunday");
+  tasks();
   };
   function Save() {
   var monday = document.getElementById("monday").innerText;
@@ -94,6 +95,7 @@
   localStorage.setItem("Friday", friday);
   localStorage.setItem("Saturday", saturday);
   localStorage.setItem("Sunday", sunday);
+  tasks();
   }
   // The function to add workouts to your calender
   function Add(){
