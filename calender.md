@@ -13,7 +13,7 @@
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
-    <th>Save</th>
+    <th id="saver">Save</th>
   </tr>
   <tr>
     <td><input id="input"></td>
@@ -96,11 +96,13 @@
   localStorage.setItem("Saturday", saturday);
   localStorage.setItem("Sunday", sunday);
   tasks();
+  x.style.background-color = "none;"
   }
   // The function to add workouts to your calender
   function Add(){
     var input = document.getElementById("input").value;
     var week = document.getElementById("week").value;
+    var x = document.getElementById("saver").value;
     switch (week) {
       case "Monday":
         var checkbox = document.createElement("check");
@@ -145,6 +147,7 @@
         document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText;
         break;
     }
+    x.style.background-color = "red;"
     tasks();
   }
 
