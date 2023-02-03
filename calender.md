@@ -70,6 +70,7 @@
 <script>
   // Save Function
   window.onload = function() {
+  var x = document.getElementById("saver").value;
   document.getElementById("monday").innerText = localStorage.getItem("Monday");
   document.getElementById("tuesday").innerText = localStorage.getItem("Tuesday");
   document.getElementById("wednesday").innerText = localStorage.getItem("Wednesday");
@@ -80,6 +81,7 @@
   tasks();
   };
   function Save() {
+  var x = document.getElementById("saver").value;
   var monday = document.getElementById("monday").innerText;
   var tuesday = document.getElementById("tuesday").innerText;
   var wednesday = document.getElementById("wednesday").innerText;
@@ -153,6 +155,7 @@
 
   //displays the day for the first part of daily tasks
   function displayDayOfWeek() {
+    var x = document.getElementById("saver").value;
     var d = new Date();
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var day = days[d.getDay()];
@@ -162,6 +165,7 @@
 
   // takes the day and then grabs
   function tasks() {
+    var x = document.getElementById("saver").value;
     var d = new Date();
     var days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var day = days[d.getDay()];
