@@ -65,15 +65,7 @@ const BMIList = document.getElementById("BMIList");
 const BMIValue = document.getElementById("BMIValue");
 const addBMIButton = document.getElementById("addBMIButton");
 
-addBMIButton.addEventListener("click", function() {
-  const bmi = BMIValue.value;
-  const newRow = document.createElement("tr");
-  const newBMI = document.createElement("td");
-  newBMI.innerText = bmi;
-  newRow.appendChild(newBMI);
-  BMIList.appendChild(newRow);
-});
-</script>
+
 
 ## Next steps
 > What to do with this info
