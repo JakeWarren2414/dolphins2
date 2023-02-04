@@ -5,12 +5,16 @@
   - Gets you organized
   - Tracks your progress
 <br>
-<table>
+
+## Editor Table
+<!-- Editor table-->
+<table width="500px">
   <tr>
     <th><label for="workout">Type in Workout:</label></th>
     <th><label for="weeks">Choose a Day:</label></th>
     <th>Apply</th>
-    <th>Save Data</th>
+    <th>Remove</th>
+    <th id="saver">Save</th>
   </tr>
   <tr>
     <td><input id="input"></td>
@@ -26,10 +30,20 @@
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
-    <td><button>Save Data</button></td>
+    <td><button onclick="Remove()">Remove</button></td>
+    <td><button onclick="Save()">Save</button></td>
   </tr>
 </table>
+
 <br>
+
+<!-- Daily Tasks are displayed-->
+<h2><div id="days"></div></h2>
+<h3 style="color: black;"><div id="tasks"></div></h3>
+
+<br>
+
+<!-- Calender table-->
 <table>
   <tr>
     <th>Monday</th>
@@ -51,31 +65,8 @@
   </tr>
 </table>
 
+<br>
 
-<script>
-  function Add(){
-    var input = document.getElementById("input").value;
-    var week = document.getElementById("week").value;
-    if (week === "Monday") {
-      document.getElementById("monday").innerText = input + " " + document.getElementById("monday").innerText
-    }
-    if (week === "Tuesday") {
-      document.getElementById("tuesday").innerText = input + " " + document.getElementById("tuesday").innerText
-    }
-    if (week === "Wednesday") {
-      document.getElementById("wednesday").innerText = input + " " + document.getElementById("wednesday").innerText
-    }
-    if (week === "Thursday") {
-      document.getElementById("thursday").innerText = input + " " + document.getElementById("thursday").innerText
-    }
-    if (week === "Friday") {
-      document.getElementById("friday").innerText = input + " " + document.getElementById("friday").innerText
-    }
-    if (week === "Saturday") {
-      document.getElementById("saturday").innerText = input + " " + document.getElementById("saturday").innerText
-    }
-    if (week === "Sunday") {
-      document.getElementById("sunday").innerText = input + " " + document.getElementById("sunday").innerText
-    }
-  }
-</script>
+
+
+<script src="{{ '/assets/js/calender.js' | relative_url }}"></script>

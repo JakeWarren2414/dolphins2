@@ -1,19 +1,35 @@
+<!--Login Frontmatter-->
 <body>
-    <h1 id="foodtitle">Nutrition Help</h1>
-
-<p>Your daily calories are below, input the amount of calories you have eaten and click enter to see how much you have left</p>
-    <!-- Calorie will be paired with your profile-->
-
-<p> Your daily amount of calories is (2000 is a placeholder for now): <p id="C1">2000</p></p>
-   <input type="number" id="C2">
-   <button onclick="calc()">=</button>
-   <div id="result"></div>
-    <script>
-       function calc() {
-           var a = Number(document.getElementById("C1").innerHTML);
-           var b = Number(document.getElementById("C2").value);
-           var result = a - b;
-           document.getElementById("result").innerHTML = result;
-       }
-   </script>
+    <script></script>
+    <h1 id="foodtitle">Calorie Management</h1>
+    <div style="padding:5px">
+        <label for="sex">Sex</label>
+        <select name="sex" id="sex">
+          <option value="655.1">Female</option>
+          <option value="66.47">Male</option>
+        </select>
+    </div>
+    <div style="padding:5px">
+        <label for="age">Age</label>
+        <input id="age" type="text">
+    </div>
+    <div style="padding:5px">
+        <label for="height">Height (in)</label>
+        <input id="height" type="text">
+    </div>
+    <div style="padding:5px">
+        <label for="weight">Weight (lbs.)</label>
+        <input id="weight" type="text">
+    </div>
+    <div style="padding:5px">
+        <label for="active">How Active Are You?</label>
+        <select name="active" id="active">
+          <option value="1.2">Very Little</option>
+          <option value="1.375">Light</option>
+          <option value="1.55">Moderate</option>
+          <option value="1.725">Very</option>
+          <option value="1.9">Almost Completely</option>
+        </select>
+    </div>
+    <p></p>
 </body>
