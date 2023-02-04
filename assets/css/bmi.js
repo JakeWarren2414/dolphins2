@@ -47,5 +47,3 @@ function bmi() {
     }
     console.log(yourbmi);
 }
-
-}
