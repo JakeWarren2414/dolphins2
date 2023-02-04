@@ -47,3 +47,16 @@ function bmi() {
     }
     console.log(yourbmi);
 }
+
+function bmi() {
+
+    addBMIButton.addEventListener("click", function() {
+        const bmi = BMIValue.value;
+        const newRow = document.createElement("tr");
+        const newBMI = document.createElement("td");
+        newBMI.innerText = bmi;
+        newRow.appendChild(newBMI);
+        BMIList.appendChild(newRow);
+      });
+      </script>
+}
