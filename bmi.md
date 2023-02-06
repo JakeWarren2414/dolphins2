@@ -50,7 +50,10 @@
   </tbody>
 </table>
 <br>
-<input type="text" id="BMIValue">
+<label for="weight">weight in pounds</label>
+<input type="text" id="weight">
+<label for="height">height in inches</label>
+<input type="text" id="height">
 <button id="addBMIButton">Add BMI</button>
 <script>
 const BMIList = document.getElementById("BMIList");
