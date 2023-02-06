@@ -56,7 +56,6 @@
 const BMIList = document.getElementById("BMIList");
 const BMIValue = document.getElementById("BMIValue");
 const addBMIButton = document.getElementById("addBMIButton");
-
 addBMIButton.addEventListener("click", function() {
   const bmi = BMIValue.value;
   const newRow = document.createElement("tr");
