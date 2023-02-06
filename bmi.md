@@ -56,6 +56,18 @@
 <input type="text" id="height">
 <button id="addBMIButton">Add BMI</button>
 <script>
+const weight = document.getElementById("weight").value;
+const height = document.getElementById("height").value;
+const addBMIButton = document.getElementById("addBMIButton")
+addBMIButton.addEventListener("click", function() {
+  const bmi = (703*weight) / (height * height);
+  const newRow = document.createElement("tr");
+  const newBMI = document.createElement("td");
+  newBMI.innerText = bmi;
+  newRow.appendChild(newBMI);
+  BMIList.appendChild(newRow);
+})
+
 const BMIList = document.getElementById("BMIList");
 const BMIValue = document.getElementById("BMIValue");
 const addBMIButton = document.getElementById("addBMIButton");
