@@ -60,7 +60,9 @@ const weight = document.getElementById("weight").value;
 const height = document.getElementById("height").value;
 const addBMIButton = document.getElementById("addBMIButton")
 addBMIButton.addEventListener("click", function() {
-  const bmi = (703*weight) / (height * height);
+  const num = weight * 703;
+  const denom = height * height;
+  const bmi = num / denom;
   const newRow = document.createElement("tr");
   const newBMI = document.createElement("td");
   newBMI.innerText = bmi;
