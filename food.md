@@ -31,5 +31,13 @@
           <option value="1.9">Almost Completely</option>
         </select>
     </div>
-    <p></p>
+    <div style="padding:5px">
+      <input type="submit" value="Submit">
+    </div>
+    <p id="calResult">You burn 0 calories a day. This is the maximum amount of calories you can consume. Do not go over this.</p>
+    <script>
+      function calorie(age, height, weight, gender) {
+        
+      }
+    </script>
 </body>
