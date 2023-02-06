@@ -39,15 +39,33 @@
 ## BMI Calculator
 > Information
 - A great informational tool to find your BMI along with more info about the topic is this [website](https://www.calculator.net/bmi-calculator.html)
-- Here is the code that implements it:
 
-```python
-user_data = (70, 1.75)
-weight = user_data[0]
-height = user_data[1]
-bmi = weight / (height ** 2)
-print("Your BMI is: ", bmi)
-```
+<table id="BMITable">
+  <thead>
+    <tr>
+      <th>BMI</th>
+    </tr>
+  </thead>
+  <tbody id="BMIList">
+  </tbody>
+</table>
+<br>
+<input type="text" id="BMIValue">
+<button id="addBMIButton">Add BMI</button>
+<script>
+const BMIList = document.getElementById("BMIList");
+const BMIValue = document.getElementById("BMIValue");
+const addBMIButton = document.getElementById("addBMIButton");
+
+addBMIButton.addEventListener("click", function() {
+  const bmi = BMIValue.value;
+  const newRow = document.createElement("tr");
+  const newBMI = document.createElement("td");
+  newBMI.innerText = bmi;
+  newRow.appendChild(newBMI);
+  BMIList.appendChild(newRow);
+});
+</script>
 
 ## Next steps
 > What to do with this info
