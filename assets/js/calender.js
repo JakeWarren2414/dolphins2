@@ -30,7 +30,7 @@ function Save() {
     localStorage.setItem(day, document.getElementById(elementId).innerText);
   });
   tasks();
-  location.href="#";
+  location.href="#workout-calender";
 }
 // The function to add workouts to your calender
 function Add() {
