@@ -1,7 +1,7 @@
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 const data = fetch("https://jakewarren2414.github.io/dolphins2/assets/json/userdata.json")
 
-// Taking the data from the json and putting it into the table
+// Taking the data from the json and putting it into the table for each day
 
 document.getElementById("monday").innerHTML = data.Users[0].monday;
 document.getElementById("tuesday").innerHTML = data.Users[0].tuesday;
