@@ -20,13 +20,13 @@
     <td><input id="input"></td>
     <td>
       <select name="week" id="week">
-        <option>Monday</option>
-        <option>Tuesday</option>
-        <option>Wednesday</option>
-        <option>Thursday</option>
-        <option>Friday</option>
-        <option>Saturday</option>
-        <option>Sunday</option>
+        <option>monday</option>
+        <option>tuesday</option>
+        <option>wednesday</option>
+        <option>thursday</option>
+        <option>friday</option>
+        <option>saturday</option>
+        <option>sunday</option>
       </select>
     </td>
     <td><button onclick="Add()">Apply</button></td>
@@ -37,6 +37,7 @@
 
 <br>
 
+<div class="row2"></div>
 <!-- Daily Tasks are displayed-->
 <h2><div id="days"></div></h2>
 <h3 style="color: black;"><div id="tasks"></div></h3>
