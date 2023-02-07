@@ -69,7 +69,7 @@ addBMIButton.addEventListener("click", function() {
   const bmi = num / denom;
   const newRow = document.createElement("tr");
   const newBMI = document.createElement("td");
-  newBMI.innerText = bmi;
+  newBMI.innerText = bmi.toFixed(2);
   newRow.appendChild(newBMI);
   BMIList.appendChild(newRow);
 });
