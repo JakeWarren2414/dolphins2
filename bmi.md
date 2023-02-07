@@ -60,6 +60,10 @@ const addBMIButton = document.getElementById("addBMIButton");
 addBMIButton.addEventListener("click", function() {
   const weight = parseFloat(document.getElementById("weight").value);
   const height = parseFloat(document.getElementById("height").value);
+  if (isNaN(weight) || isNaN(height)) {
+    alert("Invalid input for weight or height");
+    return;
+  }
   const num = weight * 703;
   const denom = height * height;
   const bmi = num / denom;
