@@ -79,7 +79,6 @@ function calculateBMI(weight, height) {
   const denom = height * height;
   return num / denom;
 }
-
 const weight = parseFloat(prompt("Enter weight in pounds:"));
 const height = parseFloat(prompt("Enter height in inches:"));
 const bmi = calculateBMI(weight, height);
