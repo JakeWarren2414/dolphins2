@@ -56,8 +56,8 @@
 <input type="text" id="height">
 <button id="addBMIButton">Add BMI</button>
 <script>
-const weight = document.getElementById("weight").value;
-const height = document.getElementById("height").value;
+const weight = parseFloat(document.getElementById("weight").value);
+const height = parseFloat(document.getElementById("height").value);
 const addBMIButton = document.getElementById("addBMIButton")
 addBMIButton.addEventListener("click", function() {
   const num = weight * 703;
