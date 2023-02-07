@@ -56,15 +56,10 @@
 <input type="text" id="height">
 <button id="addBMIButton">Add BMI</button>
 <script>
-const weight = parseFloat(document.getElementById("weight").value);
-const height = parseFloat(document.getElementById("height").value);
-const BMIList = document.getElementById("BMIList");
-const addBMIButton = document.getElementById("addBMIButton")
+const addBMIButton = document.getElementById("addBMIButton");
 addBMIButton.addEventListener("click", function() {
-  if (isNaN(weight) || isNaN(height)) {
-    alert("Please enter valid values for weight and height.");
-    return;
-  }
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value);
   const num = weight * 703;
   const denom = height * height;
   const bmi = num / denom;
@@ -73,7 +68,7 @@ addBMIButton.addEventListener("click", function() {
   newBMI.innerText = bmi;
   newRow.appendChild(newBMI);
   BMIList.appendChild(newRow);
-})
+});
 </script>
 
 ## Next steps
