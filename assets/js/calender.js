@@ -1,4 +1,15 @@
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+const data = fetch("https://jakewarren2414.github.io/dolphins2/assets/json/userdata.json")
+
+// Taking the data from the json and putting it into the table
+
+document.getElementById("monday").innerHTML = data.Users[0].monday;
+document.getElementById("tuesday").innerHTML = data.Users[0].tuesday;
+document.getElementById("wednesday").innerHTML = data.Users[0].wednesday;
+document.getElementById("thursday").innerHTML = data.Users[0].thursday;
+document.getElementById("friday").innerHTML = data.Users[0].friday;
+document.getElementById("saturday").innerHTML = data.Users[0].saturday;
+document.getElementById("sunday").innerHTML = data.Users[0].sunday;
 
 function Remove() {
     var week = document.getElementById("week").value;
@@ -19,7 +30,7 @@ function Save() {
     localStorage.setItem(day, document.getElementById(elementId).innerText);
   });
   tasks();
-  location.href="#";
+  location.href="#workout-calender";
 }
 // The function to add workouts to your calender
 function Add() {
