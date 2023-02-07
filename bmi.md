@@ -16,7 +16,7 @@
         <input type="button" value ="compute BMI" onclick = "bmi()">
     </div>
     <div id="result"></div>
-<table>
+<table id="bmiDisplay">
   <tr>
     <th>BMI</th>
   </tr>
