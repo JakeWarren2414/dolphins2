@@ -74,14 +74,6 @@ addBMIButton.addEventListener("click", function() {
   newRow.appendChild(newBMI);
   BMIList.appendChild(newRow);
 });*/
-function calculateBMI(weight, height) {
-  const weight = parseFloat(prompt("Enter weight in pounds:"));
-  const height = parseFloat(prompt("Enter height in inches:"));
-  const num = weight * 703;
-  const denom = height * height;
-  finalBMI = num / denom;
-  console.log("Your BMI is: " + finalBMI.toFixed(2));
-}
 </script>
 
 ## Next steps
