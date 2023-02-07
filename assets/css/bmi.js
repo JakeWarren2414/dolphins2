@@ -47,8 +47,15 @@ function bmi() {
     }
     console.log(yourbmi);
     const newRow = document.createElement("tr");
+    const newWeight = document.createElement("td");
+    newWeight.innerText = weight;
+    newRow.appendChild(newWeight);
+    const newHeight = document.createElement("td");
+    newHeight.innerText = height;
+    newRow.appendChild(newHeight);
     const newBMI = document.createElement("td");
-    newBMI.innerText = bmi.toFixed(2);
+    newBMI.innerText = yourbmi;
     newRow.appendChild(newBMI);
+    const BMIList = document.getElementById("BMIList");
     BMIList.appendChild(newRow);
 }
