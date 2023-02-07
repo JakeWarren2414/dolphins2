@@ -1,7 +1,4 @@
 <!--Login Frontmatter-->
-
-
-
 <body>
     <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
     <h1 id="calc">BMI Calculator</h1>
@@ -17,13 +14,14 @@
     </div>
     <div>
         <input type="button" value ="compute BMI" onclick = "bmi()">
-        <button onclick="calculateBMI">Sample Button (For BMI)</button>
     </div>
     <div id="result"></div>
+<table id="bmiDisplay">
+  <tr>
+    <th>BMI</th>
+  </tr>
+</table>
 </body>
-
-
-
 
 ## BMI Overview
 > Generall Overview of BMI
@@ -40,41 +38,6 @@
 ## BMI Calculator
 > Information
 - A great informational tool to find your BMI along with more info about the topic is this [website](https://www.calculator.net/bmi-calculator.html)
-
-<table id="BMITable">
-  <thead>
-    <tr>
-      <th>BMI</th>
-    </tr>
-  </thead>
-  <tbody id="BMIList">
-  </tbody>
-</table>
-<br>
-<label for="weight">weight in pounds</label>
-<input type="text" id="weight">
-<label for="height">height in inches</label>
-<input type="text" id="height">
-<button id="addBMIButton">Add BMI</button>
-<script>
-/*const addBMIButton = document.getElementById("addBMIButton");
-addBMIButton.addEventListener("click", function() {
-  const weight = parseFloat(document.getElementById("weight").value);
-  const height = parseFloat(document.getElementById("height").value);
-  if (isNaN(weight) || isNaN(height)) {
-    alert("Invalid input for weight or height");
-    return;
-  }
-  const num = weight * 703;
-  const denom = height * height;
-  const bmi = num / denom;
-  const newRow = document.createElement("tr");
-  const newBMI = document.createElement("td");
-  newBMI.innerText = bmi.toFixed(2);
-  newRow.appendChild(newBMI);
-  BMIList.appendChild(newRow);
-});*/
-</script>
 
 ## Next steps
 > What to do with this info
