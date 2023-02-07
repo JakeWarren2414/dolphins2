@@ -1,7 +1,7 @@
 {
     "Users" : [
        {
-          "username":"finnc", "password":"pizza123","uid":"1", "monday":"Bench Press", "tuesday":"Squat", "wednesday":"Pullups", "thursday":"Calf Raises", "friday":"Curls", "saturday":"Deadlift", "sunday":"Box Jump"
+          "username":"finnc", "password":"pizza123","uid":"1", "monday":"Bench Press", "tuesday":"Squat", "wednesday":"Pullups", "thursday":"Calf Raises", "friday":"Curls", "saturday":"Deadlifts", "sunday":"Box Jump"
        }
     ]
    }

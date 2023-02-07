@@ -66,8 +66,4 @@
   </tr>
 </table>
 
-<br>
-
-
-
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
