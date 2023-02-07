@@ -17,6 +17,7 @@
     </div>
     <div>
         <input type="button" value ="compute BMI" onclick = "bmi()">
+        <button onclick="calculateBMI"></button>
     </div>
     <div id="result"></div>
 </body>
