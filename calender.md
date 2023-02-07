@@ -37,13 +37,6 @@
 
 <br>
 
-<div class="row2"></div>
-<!-- Daily Tasks are displayed-->
-<h2><div id="days"></div></h2>
-<h3 style="color: black;"><div id="tasks"></div></h3>
-
-<br>
-
 <!-- Calender table-->
 <table>
   <tr>
@@ -55,15 +48,8 @@
     <th>Saturday</th>
     <th>Sunday</th>
   </tr>
-    <tr>
-    <td><div id="monday"></div></td>
-    <td><div id="tuesday"></div></td>
-    <td><div id="wednesday"></div></td>
-    <td><div id="thursday"></div></td>
-    <td><div id="friday"></div></td>
-    <td><div id="saturday"></div></td>
-    <td><div id="sunday"></div></td>
-  </tr>
+  <tbody id="table">
+  </tbody>
 </table>
 
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
