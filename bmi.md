@@ -17,6 +17,7 @@
     </div>
     <div>
         <input type="button" value ="compute BMI" onclick = "bmi()">
+        <button onclick="calculateBMI"></button>
     </div>
     <div id="result"></div>
 </body>
@@ -50,20 +51,39 @@
   </tbody>
 </table>
 <br>
-<input type="text" id="BMIValue">
+<label for="weight">weight in pounds</label>
+<input type="text" id="weight">
+<label for="height">height in inches</label>
+<input type="text" id="height">
 <button id="addBMIButton">Add BMI</button>
 <script>
-const BMIList = document.getElementById("BMIList");
-const BMIValue = document.getElementById("BMIValue");
-const addBMIButton = document.getElementById("addBMIButton");
+/*const addBMIButton = document.getElementById("addBMIButton");
 addBMIButton.addEventListener("click", function() {
-  const bmi = BMIValue.value;
+  const weight = parseFloat(document.getElementById("weight").value);
+  const height = parseFloat(document.getElementById("height").value);
+  if (isNaN(weight) || isNaN(height)) {
+    alert("Invalid input for weight or height");
+    return;
+  }
+  const num = weight * 703;
+  const denom = height * height;
+  const bmi = num / denom;
   const newRow = document.createElement("tr");
   const newBMI = document.createElement("td");
-  newBMI.innerText = bmi;
+  newBMI.innerText = bmi.toFixed(2);
   newRow.appendChild(newBMI);
   BMIList.appendChild(newRow);
-});
+});*/
+function calculateBMI(weight, height) {
+  const num = weight * 703;
+  const denom = height * height;
+  return num / denom;
+}
+
+const weight = parseFloat(prompt("Enter weight in pounds:"));
+const height = parseFloat(prompt("Enter height in inches:"));
+const bmi = calculateBMI(weight, height);
+console.log("Your BMI is: " + bmi.toFixed(2));
 </script>
 
 ## Next steps
