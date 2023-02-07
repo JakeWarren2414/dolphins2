@@ -46,16 +46,8 @@ function bmi() {
             `Over Weight : <span>${yourbmi}</span>`;
     }
     console.log(yourbmi);
-    const newRow = document.createElement("tr");
-    const newWeight = document.createElement("td");
-    newWeight.innerText = weight;
-    newRow.appendChild(newWeight);
-    const newHeight = document.createElement("td");
-    newHeight.innerText = height;
-    newRow.appendChild(newHeight);
-    const newBMI = document.createElement("td");
-    newBMI.innerText = yourbmi;
-    newRow.appendChild(newBMI);
-    const BMIList = document.getElementById("BMIList");
-    BMIList.appendChild(newRow);
+    const table = document.getElementById("bmiDisplay");
+    const row = table.insertRow(-1);
+    const cell1 = row.insertCell(0);
+    cell1.innerHTML = yourbmi;
 }
