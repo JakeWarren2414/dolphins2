@@ -5,8 +5,8 @@
     <div style="padding:5px">
         <label for="sex">Sex</label>
         <select name="sex" id="sex">
-          <option value="655.1">Female</option>
-          <option value="66.47">Male</option>
+          <option value="female">Female</option>
+          <option value="male">Male</option>
         </select>
     </div>
     <div style="padding:5px">
@@ -14,11 +14,11 @@
         <input id="age" type="text">
     </div>
     <div style="padding:5px">
-        <label for="height">Height (in)</label>
+        <label for="height">Height (cm)</label>
         <input id="height" type="text">
     </div>
     <div style="padding:5px">
-        <label for="weight">Weight (lbs.)</label>
+        <label for="weight">Weight (kg)</label>
         <input id="weight" type="text">
     </div>
     <div style="padding:5px">
@@ -36,8 +36,20 @@
     </div>
     <p id="calResult">You burn 0 calories a day. This is the maximum amount of calories you can consume. Do not go over this.</p>
     <script>
-      function calorie(age, height, weight, gender) {
-        
+      let basalMetabolicRate;
+      function calorie() {
+        let sex = document.getElementById("sex").value;
+        let age = document.getElementById("age").value;
+        let height = document.getElementById("height").value;
+        let weight = document.getElementById("weight").value;
+        let activeness = document.getElementById("active").value;
+        if (sex == "female") {
+          basalMetabolicRate = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
+        }
+        else if (sex == "male") {
+          basalMetabolicRate = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
+          basalMetabolicRate *= activeness;
+        }
       }
     </script>
 </body>
