@@ -46,4 +46,8 @@ function bmi() {
             `Over Weight : <span>${yourbmi}</span>`;
     }
     console.log(yourbmi);
+    const table = document.getElementById("bmiDisplay");
+    const row = table.insertRow(-1);
+    const cell1 = row.insertCell(0);
+    cell1.innerHTML = yourbmi;
 }

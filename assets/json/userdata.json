@@ -1,9 +1,7 @@
 {
     "Users" : [
        {
-          "userId":"finnc", "firstName":"Finn","lastName":"Carpenter",
-          "CPD":"1900","Birthdate":"2006-12-12","Height":"68",
-          "Weight":"150"
+          "username":"finnc", "password":"pizza123","uid":"1", "monday":"Bench Press", "tuesday":"Squat", "wednesday":"Pullups", "thursday":"Calf Raises", "friday":"Curls", "saturday":"Deadlifts", "sunday":"Box Jump"
        }
     ]
    }
