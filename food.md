@@ -32,7 +32,7 @@
         </select>
     </div>
     <div style="padding:5px">
-      <input type="submit" value="Submit">
+      <button>
     </div>
     <p id="calResult">You burn 0 calories a day. This is the maximum amount of calories you can consume. Do not go over this.</p>
     <script>
@@ -50,6 +50,7 @@
           basalMetabolicRate = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
           basalMetabolicRate *= activeness;
         }
+        document.getElementById("calResult").innerHTML = basalMetabolicRate;
       }
     </script>
 </body>
