@@ -2,39 +2,26 @@
     <script src="{{ '/assets/js/signup.js' | relative_url }}"></script>
 <body>
 <div class="signup">
-    <div style="padding:10px">
-        <p class="signup">Username</p>
+    <div style="">
+        <label class="signupL">Username</label>
         <input id = "username" type="text"/>
     </div>
-    <img src="https://jakewarren2414.github.io/dolphins2/faviconcopy.png" style="float: right; height: 400px">
-    <div style="padding:10px">
-        <p class="signup">Password</p>
+    <div style="">
+        <label class="signupL">Password</label>
         <input id = "password" type="text"/>
     </div>
-    <div style="padding:10px">
-        <p class="signup">Confirm Password</p>
+    <div style="">
+        <label class="signupL">Confirm Password</label>
         <input id = "confirm_password" type="text"/>
     </div>
-    <div style="padding:10px">
-        <p class="signup">Birthday</p>
-        <input type="date" id="birthday" name="birthday">
-    </div>
-    <div style="padding:10px">
-        <p class="signup">Weight</p>
+    <div style="">
+        <label class="signupL">Calories Per Day</label>
         <input type="number">
-    </div>
-    <div style="padding:10px">
-        <p class="signup">Height (in inches)</p>
-        <input type="number">
-    </div>
-    <div style="padding:10px">
-        <p class="signup">Calories Per Day</p>
-        <input type="number">
-    </div>
-    <div>
-        <button id = "signUPbutton" class="signup" onclick = "signup()">sign up</button>
     </div>
 </div>
+    <div style="padding: 10px">
+        <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
+    </div>
 <!--input id='name' type = "text"/>
 <button id = "press" onclick = "printName()">
 <div id='result'></div>
