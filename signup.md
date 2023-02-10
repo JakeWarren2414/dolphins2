@@ -8,15 +8,23 @@
     </div>
     <div style="">
         <label class="signupL">Password</label>
-        <input id = "password" type="text"/>
+        <input id = "password" type="password">
     </div>
     <div style="">
         <label class="signupL">Confirm Password</label>
-        <input id = "confirm_password" type="text"/>
+        <input id = "confirm_password" type="password">
     </div>
     <div style="">
         <label class="signupL">Calories Per Day</label>
         <input type="number">
+    </div>
+    <div style="">
+        <label class="signupL">BMI</label>
+        <input type="text">
+    </div>
+    <div style="">
+        <label class="signupL">Sport</label>
+        <input type="text">
     </div>
 </div>
     <div style="padding: 10px">

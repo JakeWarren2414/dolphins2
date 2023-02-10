@@ -25,7 +25,6 @@ div.signup {
   border-radius: 25px solid #2596be;
   border: 3px solid black;
   padding: 20px;
-  text-align: left;
   background-image: linear-gradient(120deg, #155799, #159957)
 }
 
@@ -62,6 +61,7 @@ input[type=text], input[type=password], input[type=number] {
   display: inline-block;
   border: none;
   background: #f1f1f1;
+  opacity: 0.9;
 }
 
 label.signupL {
@@ -69,13 +69,19 @@ label.signupL {
 }
 
 .signupbtn {
-  float: left;
-  width: 100%;
+  margin: auto;
+  width: 20%;
+  height: 50%;
   background-color: #159957;
   border: 0px;
   color: black;
+  opacity: 0.9;
 }
 
 button:hover {
-  opacity:2;
+  opacity: 1;
+}
+
+input:hover {
+  opacity: 1;
 }
