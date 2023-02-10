@@ -33,7 +33,7 @@
         </select>
     </div>
     <div style="padding:5px">
-        <input type="submit" id="submit">
+        <input type="submit" id="submit"></input>
     </div>
     </form>
     <p id="calResult">You burn 0 calories a day. This is the maximum amount of calories you can consume. Do not go over this.</p>
@@ -45,5 +45,19 @@
       //Weight post to JSON goes here
       //Height post to JSON goes here
       //Max Cal post to JSON goes here
+      function calorie(){
+        let sex = document.getElementById("sex").value;
+        let age = document.getElementById("age").value;
+        let height = document.getElementById("height").value;
+        let weight = document.getElementById("weight").value;
+        let active = document.getElementById("active").value;
+        let basalMetabolicRate;
+        if (sex == "female") {
+            basalMetabolicRate = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
+        }
+        else {
+            basalMetabolicRate = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
+        }
+      }
     </script>
 </body>
