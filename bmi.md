@@ -1,6 +1,6 @@
 <!--Login Frontmatter-->
 <body>
-    <script src="{{ '/assets/css/bmi.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/bmi.js' | relative_url }}"></script>
     <h1 id="calc">BMI Calculator</h1>
     <div style="padding:5px">
         <label for="feet">feet</label>
