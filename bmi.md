@@ -88,26 +88,11 @@ function calculateBMI(weight, height) {
 
 const BMIs = weightHeightData.map(data => {
   const bmi = calculateBMI(data.weight, data.height);
-  return bmi.toFixed(1);
+  return bmi;
 });
 
-const table = document.createElement("table");
+console.log(BMIs); // prints [22.8, 23.7, 24.3]
 
-const headerRow = document.createElement("tr");
-const headerCell = document.createElement("th");
-headerCell.innerText = "BMI";
-headerRow.appendChild(headerCell);
-table.appendChild(headerRow);
-
-BMIs.forEach(bmi => {
-  const row = document.createElement("tr");
-  const cell = document.createElement("td");
-  cell.innerText = bmi;
-  row.appendChild(cell);
-  table.appendChild(row);
-});
-
-document.body.appendChild(table);
 </script>
 </body>
 
@@ -133,8 +118,3 @@ document.body.appendChild(table);
 - And head to the next part of your fitness journey: [Nutrition](https://jakewarren2414.github.io/dolphins2/food)
 <div style="padding: 150px;">
 </div>
-
-<script>
-
-console.log(BMIs); // prints [22.8, 23.7, 24.3]
-</script>
