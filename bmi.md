@@ -108,7 +108,8 @@ BMIs.forEach(bmi => {
 });
 
 document.body.appendChild(table);
-
+</html>
+</script>
 
 ## BMI Overview
 > General Overview of BMI
