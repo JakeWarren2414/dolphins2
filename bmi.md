@@ -75,6 +75,21 @@
         })
     })
 }
+const weightHeightData = [
+  { weight: 150, height: 68 },
+  { weight: 175, height: 72 },
+  { weight: 200, height: 76 }
+];
+
+function calculateBMI(weight, height) {
+  const bmi = weight / (height * height);
+  return bmi;
+}
+
+const BMIs = weightHeightData.map(data => {
+  const bmi = calculateBMI(data.weight, data.height);
+  return bmi;
+});
 </script>
 </body>
 
@@ -102,21 +117,6 @@
 </div>
 
 <script>
-const weightHeightData = [
-  { weight: 150, height: 68 },
-  { weight: 175, height: 72 },
-  { weight: 200, height: 76 }
-];
-
-function calculateBMI(weight, height) {
-  const bmi = weight / (height * height);
-  return bmi;
-}
-
-const BMIs = weightHeightData.map(data => {
-  const bmi = calculateBMI(data.weight, data.height);
-  return bmi;
-});
 
 console.log(BMIs); // prints [22.8, 23.7, 24.3]
 </script>
