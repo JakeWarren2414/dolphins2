@@ -1,63 +1,52 @@
 <!--Login Frontmatter-->
-
 <body>
-    <h1 id="foodtitle">Calorie Management</h1>
-    <form>
+    <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
+    <h1 id="food">Calorie Management</h1>
     <div style="padding:5px">
         <label for="sex">Sex</label>
-        <select name="sex" id="sex">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
+        <select id="sex" name="sex">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
         </select>
-    </div>
-    <div style="padding:5px">
         <label for="age">Age</label>
         <input id="age" type="text">
-    </div>
-    <div style="padding:5px">
-        <label for="height">Height (cm)</label>
-        <input id="height" type="text">
-    </div>
-    <div style="padding:5px">
-        <label for="weight">Weight (kg)</label>
-        <input id="weight" type="text">
-    </div>
-    <div style="padding:5px">
+        <label for="weight">Weight</label>
+        <input id = "weight" type="text">
+        <label for="height">Height</label>
+        <input id = "height" type="text">
         <label for="active">How Active Are You?</label>
-        <select name="active" id="active">
-          <option value="1.2">Very Little</option>
-          <option value="1.375">Light</option>
-          <option value="1.55">Moderate</option>
-          <option value="1.725">Very</option>
-          <option value="1.9">Almost Completely</option>
+        <select id="active" name="active">
+            <option value="1.2">Exercise 1 Or Less Days A Week</option>
+            <option value="1.375">Exercise 1-3 Days A Week</option>
+            <option value="1.55">Exercise 3-5 Days A Week</option>
+            <option value="1.725">Exercise 6-7 Days A Week</option>
+            <option value="1.9">Exercise All The Time</option>
         </select>
     </div>
-    <div style="padding:5px">
-        <input type="submit" id="submit"></input>
+    <div>
+        <input type="button" value="Calculate Your Maximum Calorie Consumption Per Day" onclick="calculateMaximumCalories()">
     </div>
-    </form>
-    <p id="calResult">You burn 0 calories a day. This is the maximum amount of calories you can consume. Do not go over this.</p>
-    <script>
-      //655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
-      //66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
-      //Age post to JSON goes here
-      //Gender post to JSON goes here
-      //Weight post to JSON goes here
-      //Height post to JSON goes here
-      //Max Cal post to JSON goes here
-      function calorie(){
-        let sex = document.getElementById("sex").value;
-        let age = document.getElementById("age").value;
-        let height = document.getElementById("height").value;
-        let weight = document.getElementById("weight").value;
-        let active = document.getElementById("active").value;
-        let basalMetabolicRate;
-        if (sex == "female") {
-            basalMetabolicRate = 655.1 + (9.563 * weight) + (1.850 * height) - (4.676 * age)
-        }
-        else {
-            basalMetabolicRate = 66.47 + (13.75 * weight) + (5.003 * height) - (6.755 * age)
-        }
-      }
-    </script>
+    <div style="padding: 15px;"></div>
+    <div id="result">You burn 0 calories per day. This is your maximum calorie limit for each day. It will refresh when you refresh the page, as that is assumed to be a new day. Do not go over this limit.</div>
+    <div style="padding: 15px;"></div>
+    <input type="button" value="Save Maximum Calories To Your Account" onclick="putGoodFuncHere">
+</body>
+
+---
+
+<body>
+    <div style="padding:5px">
+        <label for="food">Name of Food</label>
+        <input id="food" type="text">
+        <label for="calamnt">Amount of Calories (Check Nutrition Label)</label>
+        <input id = "calamnt" type="text">
+    </div>
+    <table id="foodTable">
+        <tr>
+            <th>Food Name</th>
+            <th>Calories</th>
+        </tr>
+    </table>
+    <div style="padding: 15px;"></div>
+    <input type="button" value="Add Food To Your Daily List" onclick="addFood()">
 </body>

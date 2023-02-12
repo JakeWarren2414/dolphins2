@@ -80,25 +80,20 @@ const weightHeightData = [
   { weight: 175, height: 72 },
   { weight: 200, height: 76 }
 ];
-
 function calculateBMI(weight, height) {
   const bmi = weight / (height * height);
   return bmi;
 }
-
 const BMIs = weightHeightData.map(data => {
   const bmi = calculateBMI(data.weight, data.height);
   return bmi.toFixed(1);
 });
-
 const table = document.createElement("table");
-
 const headerRow = document.createElement("tr");
 const headerCell = document.createElement("th");
 headerCell.innerText = "BMI";
 headerRow.appendChild(headerCell);
 table.appendChild(headerRow);
-
 BMIs.forEach(bmi => {
   const row = document.createElement("tr");
   const cell = document.createElement("td");
@@ -106,10 +101,10 @@ BMIs.forEach(bmi => {
   row.appendChild(cell);
   table.appendChild(row);
 });
-
 document.body.appendChild(table);
 </html>
 </script>
+</body>
 
 ## BMI Overview
 > General Overview of BMI
