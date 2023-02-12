@@ -8,16 +8,15 @@
 
 ## Editor Table
 <!-- Editor table-->
-<table width="500px">
-  <tr>
-    <th><label for="workout">Type in Workout:</label></th>
-    <th><label for="weeks">Choose a Day:</label></th>
-    <th>Apply</th>
-    <th>Remove</th>
-    <th id="saver">Save</th>
+<table width="500px" class="profile">
+  <tr class="profile">
+    <th class="profile"><label for="workout">Type in Workout:</label></th>
+    <th class="profile"><label for="weeks">Choose a Day:</label></th>
+    <th class="profile">Apply</th>
+    <th class="profile">Remove</th>
   </tr>
   <tr>
-    <td><input id="input"></td>
+    <td><input id="input" class="profile"></td>
     <td>
       <select name="week" id="week">
         <option>monday</option>
@@ -29,41 +28,26 @@
         <option>sunday</option>
       </select>
     </td>
-    <td><button onclick="Add()">Apply</button></td>
-    <td><button onclick="Remove()">Remove</button></td>
-    <td><button onclick="Save()">Save</button></td>
+    <td><button onclick="Add()" class="profile">Apply</button></td>
+    <td><button onclick="Remove()" class="profile">Remove</button></td>
   </tr>
 </table>
 
 <br>
 
-<div class="row2"></div>
-<!-- Daily Tasks are displayed-->
-<h2><div id="days"></div></h2>
-<h3 style="color: black;"><div id="tasks"></div></h3>
-
-<br>
-
 <!-- Calender table-->
-<table>
-  <tr>
-    <th>Monday</th>
-    <th>Tuesday</th>
-    <th>Wednesday</th>
-    <th>Thursday</th>
-    <th>Friday</th>
-    <th>Saturday</th>
-    <th>Sunday</th>
+<table class="profile">
+  <tr class="profile">
+    <th class="profile">Monday</th>
+    <th class="profile">Tuesday</th>
+    <th class="profile">Wednesday</th>
+    <th class="profile">Thursday</th>
+    <th class="profile">Friday</th>
+    <th class="profile">Saturday</th>
+    <th class="profile">Sunday</th>
   </tr>
-    <tr>
-    <td><div id="monday"></div></td>
-    <td><div id="tuesday"></div></td>
-    <td><div id="wednesday"></div></td>
-    <td><div id="thursday"></div></td>
-    <td><div id="friday"></div></td>
-    <td><div id="saturday"></div></td>
-    <td><div id="sunday"></div></td>
-  </tr>
+  <tbody id="table" class="profile">
+  </tbody>
 </table>
 
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
