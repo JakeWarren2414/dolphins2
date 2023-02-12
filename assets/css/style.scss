@@ -54,7 +54,7 @@ div.column {
   background-color: (to top left, #155799, #159957);
 }
 
-input[type=text], input[type=password], input[type=number] {
+input[type=text], input[type=password], input[type=number], div.profile, select, button.profile {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -84,4 +84,30 @@ button:hover {
 
 input:hover {
   opacity: 1;
+}
+
+table.profile {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+th.profile {
+  background-color: lightgray;
+  padding: 8px;
+}
+
+td.profile {
+  border: 1px solid lightgray;
+  padding: 8px;
+}
+
+tr:nth-child(even).profile td.profile {
+  background-color: lightyellow;
+}
+
+tr:hover.profile td.profile {
+  background-color: lightblue;
+  cursor: pointer;
 }
