@@ -101,7 +101,7 @@
 <div style="padding: 150px;">
 </div>
 
-<pre>
+<script>
 const weightHeightData = [
   { weight: 150, height: 68 },
   { weight: 175, height: 72 },
@@ -119,4 +119,4 @@ const BMIs = weightHeightData.map(data => {
 });
 
 console.log(BMIs); // prints [22.8, 23.7, 24.3]
-</pre>
+</script>
