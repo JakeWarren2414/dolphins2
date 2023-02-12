@@ -111,3 +111,22 @@ tr:hover.profile td.profile {
   background-color: lightblue;
   cursor: pointer;
 }
+
+.contain {
+  display: flex;
+  background: linear-gradient(to top left, #155799, #159957);
+}
+
+.block {
+  color: white;
+  flex: 1;
+  height: 300px;
+  text-align: center;
+  margin: 10px;
+  u {
+    color: #36454F;
+  }
+}
+
+
+
