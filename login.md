@@ -10,4 +10,13 @@
 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/signup'">Signup</button>
 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/#Title'">Next</button>
 </div>
+<div class="page-header" style="padding: 350px height: 20%; border-radius: 50px;">
+<input type="text" placeholder="Monday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Tuesday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Wednesday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Thursday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Friday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Saturday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<input type="text" placeholder="Sunday's Tasks" id = "id" style="color: black; padding: 10px;"><br>
+<div>
 <div style="padding: 200px;"></div>
