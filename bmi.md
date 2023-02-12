@@ -168,8 +168,6 @@ data.forEach(user => {
 });
     </script>
 </body>
-</html>
-</script>
 
 ## BMI Overview
 > General Overview of BMI
