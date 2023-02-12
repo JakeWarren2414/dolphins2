@@ -88,10 +88,26 @@ function calculateBMI(weight, height) {
 
 const BMIs = weightHeightData.map(data => {
   const bmi = calculateBMI(data.weight, data.height);
-  return bmi;
+  return bmi.toFixed(1);
 });
 
-console.log(BMIs); // prints [22.8, 23.7, 24.3]
+const table = document.createElement("table");
+
+const headerRow = document.createElement("tr");
+const headerCell = document.createElement("th");
+headerCell.innerText = "BMI";
+headerRow.appendChild(headerCell);
+table.appendChild(headerRow);
+
+BMIs.forEach(bmi => {
+  const row = document.createElement("tr");
+  const cell = document.createElement("td");
+  cell.innerText = bmi;
+  row.appendChild(cell);
+  table.appendChild(row);
+});
+
+document.body.appendChild(table);
 
 </script>
 </body>
