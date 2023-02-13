@@ -1,5 +1,7 @@
-<body>
+<head>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
     <script src="{{ '/assets/js/signup.js' | relative_url }}"></script>
 <body>
 

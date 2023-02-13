@@ -1,4 +1,6 @@
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<head>
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
 <script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
   <div class="row2">
     <div class="column">
