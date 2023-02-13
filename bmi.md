@@ -106,6 +106,9 @@ document.body.appendChild(table);
 </script>
 </body>
 
+
+
+
 ## BMI Overview
 > General Overview of BMI
 - Knowing your BMI range is the first step in your journey toward a heathier life
