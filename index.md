@@ -1,14 +1,11 @@
 <script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
-<div class="hidden">
   <div class="row2">
     <div class="column">
       <h1 style="color: white;">Dolphin Fitness</h1>
       <p style="color: white;">An all in one site to help manage your health. We noticed, on our own health journeys, the multiple online tools available to start becoming more healthy. Our mission here is to create an easy way for any to start their fitness journey.</p>
     </div>
   </div>
-</div>
 
-<div class="hidden">
 <div style="padding: 20px;"></div>
   <div class="contain">
       <div class="block">
@@ -28,4 +25,3 @@
           <h1 style="color: white;">Calendar</h1>
           <p style="color: white;">Tracking your workouts and staying accountable is hard. Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender"><u>here</u></a>.</p>
     </div>
-</div>
