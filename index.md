@@ -25,4 +25,4 @@
       <div class="block">
           <h1 style="color: white;">Calendar</h1>
           <p style="color: white;">Tracking your workouts and staying accountable is hard. Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender"><u>here</u></a>.</p>
-    </div>
+  </div>
