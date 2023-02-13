@@ -32,14 +32,19 @@
 <div id="result" style="display: none"></div>
 
 
+<h3>Choose your sport after the test</h3>
+<select>
+   <option>monday</option>
+   <option>tuesday</option>
+   <option>wednesday</option>
+   <option>thursday</option>
+   <option>friday</option>
+   <option>saturday</option>
+   <option>sunday</option>
+</select>
 
 
-
-
-
-
-
-
+<button>Save</button>
 
 
 <script>
