@@ -61,13 +61,13 @@
             bmi: document.getElementById("bmi").value,
             calories: document.getElementById("calories").value,
             sport: document.getElementById("sport").value,
-            monday: "",
-            tuesday: "",
-            wednesday: "",
-            thursday: "",
-            friday: "",
-            saturday: "",
-            sunday: ""
+            monday: "A",
+            tuesday: "A",
+            wednesday: "A",
+            thursday: "A",
+            friday: "A",
+            saturday: "A",
+            sunday: "A"
         };
         const requestOptions = {
             method: 'POST',
