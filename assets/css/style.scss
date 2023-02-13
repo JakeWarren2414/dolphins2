@@ -46,10 +46,6 @@ p.signup {
   color: black;
 }
 
-.hidden {
-  display: none;
-}
-
 
 div.row2 {
   margin: auto;
@@ -142,5 +138,12 @@ tr:hover.profile td.profile {
   }
 }
 
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
 
+.show {
+  opacity: 1;
+}
 
