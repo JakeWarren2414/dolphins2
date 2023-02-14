@@ -98,7 +98,7 @@ function answer(response) {
 function removeSports(isCompetitive, wantsBall, likesContact, wantsOutside, wantsTeam, wantsRunning) {
 if (!isCompetitive) {
   // Using the array that the user has made uses the ! as a sort of not operator and makes a sport function inside the filter to either exlucde or keep sports
-  sportsList = sportsList.filter(sport => sport !== "basketball" && sport !== "soccer" && sport !== "baseball" && sport !== "football" && sport !== "volleyball" && sport !== "swimming" && sport !== "gymnastics" && sport !== "tennis";
+  sportsList = sportsList.filter(sport => sport !== "basketball" && sport !== "soccer" && sport !== "baseball" && sport !== "football" && sport !== "volleyball" && sport !== "swimming" && sport !== "gymnastics" && sport !== "tennis";)
 }
 // Goes through the same process for the rest of the if statments
 if (!wantsBall) {
