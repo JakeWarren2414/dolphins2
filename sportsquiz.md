@@ -142,7 +142,13 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 
 </script>
 
-
+## Next steps
+> You are almost done with your journey:
+- Now that you have chosen a fun sport to play you can begin exercising
+- This is an integral part of fitness
+- You also should start working out to get better at your sport and feel better overall: [Workouts](https://jakewarren2414.github.io/dolphins2/workout)
+<div style="padding: 150px;">
+</div>
 
 
 

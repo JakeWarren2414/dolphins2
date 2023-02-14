@@ -50,3 +50,11 @@
     <div style="padding: 15px;"></div>
     <input type="button" value="Add Food To Your Daily List" onclick="addFood()">
 </body>
+
+## Next steps
+> Continue your journey
+- Now you know how to diet properly
+- This is one of if not the most important parts of your journey
+- However a diet is nothing without exercise: [Sports](https://jakewarren2414.github.io/dolphins2/sportsquiz)
+<div style="padding: 150px;">
+</div>
