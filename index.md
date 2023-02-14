@@ -18,11 +18,25 @@
           <p style="">Without a proper diet, your work will be for nothing. Get a diet based on calories, body stats, and nutrition facts <a href="https://jakewarren2414.github.io/dolphins2/food#foodtitle"><u>here</u></a>.</p>
       </div>
     </div>
-      <div class="block">
-          <h1 style="color: white;">Sport Quiz</h1>
-          <p style="color: white;"> Sometimes becoming intrested in working out comes from a sport. Find the perfect workout for you <a href="https://jakewarren2414.github.io/dolphins2/sportsquiz"><u>here</u></a>.</p>
-      </div>
-      <div class="block">
-          <h1 style="color: white;">Calendar</h1>
-          <p style="color: white;">Tracking your workouts and staying accountable is hard. Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender"><u>here</u></a>.</p>
+<div style="padding: 20px;"></div>
+  <div class="contain">
+    <div class="block">
+        <h1 style="color: white;">Sports Quiz</h1>
+        <p style="color: white;"> Sometimes becoming intrested in working out comes from a sport. Find the perfect workout for you <a href="https://jakewarren2414.github.io/dolphins2/sportsquiz"><u>here</u></a>.</p>
+    </div>
+    <div class="block">
+        <h1 style="color: white;">Calendar</h1>
+        <p style="color: white;">Tracking your workouts and staying accountable is hard. Commit to your workout through a plan <a href="https://jakewarren2414.github.io/dolphins2/calender"><u>here</u></a>.</p>
+    </div>
+  </div>
+<div style="padding: 20px;"></div>
+  <div class="contain">
+    <div class="block">
+        <h1 style="color: white;">Workouts</h1>
+        <p style="color: white;">Working out is the backbone of a healthy life. With this page you will be informed about the perfect workouts for you. Click <a href="https://jakewarren2414.github.io/dolphins2/workout"><u>here</u></a>.</p>
+    </div>
+    <div class="block">
+        <h1 style="color: white;">Agile Manifesto</h1>
+        <p style="color: white;">Our Agile Manifesto is <a href="https://jakewarren2414.github.io/dolphins2/gallery"><u>here</u></a>.</p>
+    </div>
   </div>
