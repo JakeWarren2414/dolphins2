@@ -53,7 +53,7 @@
         <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
     </div>
 <script>
-    const url = "http://dolphin.nighthawkcodingsociety.com/api/users";
+    const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';
     function signup() {
         const body = {

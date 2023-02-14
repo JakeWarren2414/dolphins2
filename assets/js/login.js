@@ -1,6 +1,6 @@
 
 function login() {
-    const login_url = 'http://dolphin.nighthawkcodingsociety.com/api/users/match';
+    const login_url = 'https://dolphin.nighthawkcodingsociety.com/api/users/match';
     const body = {
         password: document.getElementById("password").value,
         username: document.getElementById("username").value
