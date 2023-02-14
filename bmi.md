@@ -1,19 +1,22 @@
-<!--Login Frontmatter-->
+
 <body>
     <script src="{{ '/assets/js/bmi.js' | relative_url }}"></script>
     <h1 id="calc">BMI Calculator</h1>
     <div style="padding:5px">
-        <label for="feet">feet</label>
-        <label for="inches">(inches)</label>
+        <label for="feet">What is your height?</label>
+        <br>
+        <label for="feet">Feet</label>
         <input id="feet" type="text">
+        <label for="inches">Inches</label>
         <input id = "inches" type="text">
     </div>
     <div style="padding:5px">
-        <label for="weight">Your Weight(pound)</label>
+        <label for="weight">What is your weight in pounds?</label>
         <input id="weight" type="text">
     </div>
     <div>
-        <input type="button" value ="compute BMI" onclick = "bmi()">
+        <input type="button" value="Compute BMI" onclick="bmi()">
+        <input type="button" value="Save BMI To Account" onclick="createUser()">
     </div>
     <div id="result"></div>
 <table id="bmiDisplay">
