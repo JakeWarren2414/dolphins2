@@ -34,27 +34,35 @@
 
 <h3>Which sport will you like to pursue?</h3>
 <select>
-   <option>monday</option>
-   <option>tuesday</option>
-   <option>wednesday</option>
-   <option>thursday</option>
-   <option>friday</option>
-   <option>saturday</option>
-   <option>sunday</option>
-   <option>monday</option>
-   <option>tuesday</option>
-   <option>wednesday</option>
-   <option>thursday</option>
-   <option>friday</option>
-   <option>saturday</option>
-   <option>sunday</option>
-   <option>monday</option>
-   <option>tuesday</option>
-   <option>wednesday</option>
-   <option>thursday</option>
-   <option>friday</option>
-   <option>saturday</option>
-   <option>sunday</option>
+   <option>Basketball</option>
+   <option>Soccer</option>
+   <option>Baseball</option>
+   <option>Football</option>
+   <option>Volleyball</option>
+   <option>Running</option>
+   <option>Swimming</option>
+   <option>Gymnastics</option>
+   <option>Tennis</option>
+   <option>Track and Field</option>
+   <option>Golf</option>
+   <option>Bowling</option>
+   <option>Frisbee</option>
+   <option>Hiking</option>
+   <option>Yoga</option>
+   <option>Meditation</option>
+   <option>Ultimate Frisbee</option>
+   <option>Beach Volleyball</option>
+   <option>Indoor Soccer</option>
+   <option>Indoor Volleyball</option>
+   <option>Indoor Track and Field</option>
+   <option>Rock Climbing</option>
+   <option>Camping</option>
+   <option>Rugby</option>
+   <option>Hockey</option>
+   <option>Lacrosse</option>
+   <option>Wresling</option>
+   <option>Flag Football</option>
+   <option>Touch Football</option>
 </select>
 
 
