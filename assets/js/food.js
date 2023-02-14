@@ -48,3 +48,4 @@ function addFood() {
     name.innerHTML = food;
     amount.innerHTML = calamnt;
 }
+
