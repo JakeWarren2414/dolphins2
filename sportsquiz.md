@@ -32,8 +32,22 @@
 <div id="result" style="display: none"></div>
 
 
-<h3>Choose your sport after the test</h3>
+<h3>Which sport will you like to pursue?</h3>
 <select>
+   <option>monday</option>
+   <option>tuesday</option>
+   <option>wednesday</option>
+   <option>thursday</option>
+   <option>friday</option>
+   <option>saturday</option>
+   <option>sunday</option>
+   <option>monday</option>
+   <option>tuesday</option>
+   <option>wednesday</option>
+   <option>thursday</option>
+   <option>friday</option>
+   <option>saturday</option>
+   <option>sunday</option>
    <option>monday</option>
    <option>tuesday</option>
    <option>wednesday</option>
@@ -93,6 +107,26 @@ if (!wantsTeam) {
 }
 if (!wantsRunning) {
   sportsList = sportsList.filter(sport => sport !== "basketball" && sport !== "soccer" && sport !== "baseball" && sport !== "football" && sport !== "running" && sport !== "track and field" && sport !== "frisbee" && sport !== "ultimate frisbee" && sport !== "indoor soccer" && sport !== "indoor track and field" && sport !== "rugby" && sport !== "lacrosse" && sport !== "flag football" && sport !== "touch football");
+}
+if (isCompetitive) {
+  // Using the array that the user has made uses the ! as a sort of not operator and makes a sport function inside the filter to either exlucde or keep sports
+  sportsList = sportsList.filter(sport => sport !== "golf" && sport !== "bowling" && sport !== "frisbee" && sport !== "hiking" && sport !== "yoga" && sport !== "meditation" && sport !== "ultimate frisbee" && sport !== "beach volleyball" && sport !== "indoor soccer" && sport !== "indoor volleyball" && sport !== "indoor track and field" && sport !== "rock climbing" && sport !== "camping" && sport !== "flag football" && sport !== "touch football" );
+}
+// Goes through the same process for the rest of the if statments
+if (wantsBall) {
+  sportsList = sportsList.filter(sport => sport !== "running" && sport !== "swimming" && sport !== "gymnastics" && sport !== "hiking" && sport !== "track and field" && sport !== "yoga" && sport !== "meditation" && sport !== "indoor track and field" && sport !== "rock climbing" && sport !== "camping" && sport !== "wrestling" );
+}
+if (likesContact) {
+  sportsList = sportsList.filter(sport => sport !== "swimming" && sport !== "running" && sport !== "gymnastics" && sport !== "tennis" && sport !== "track and field" && sport !== "golf" && sport !== "bowling" && sport !== "hiking" && sport !== "yoga" && sport !== "meditation" && sport !== "beach volleyball" && sport !== "indoor track and field" && sport !== "rock climbing" && sport !== "camping");
+}
+if (wantsOutside) {
+  sportsList = sportsList.filter(sport => sport !== "gymnastics" && sport !== "bowling" && sport !== "indoor soccer" && sport !== "indoor volleyball" && sport !== "indoor track and field" && sport !== "hockey" && sport !== "wrestling");
+}
+if (wantsTeam) {
+  sportsList = sportsList.filter(sport => sport !== "running" && sport !== "swimming" && sport !== "tennis" && sport !== "golf" && sport !== "hiking" && sport !== "yoga" && sport !== "meditation" && sport !== "rock climbing" && sport !== "camping" && sport !== "wrestling");
+}
+if (wantsRunning) {
+  sportsList = sportsList.filter(sport => sport !== "volleyball" && sport !== "swimming" && sport !== "tennis" && sport !== "golf" && sport !== "bowling" && sport !== "hiking" && sport !== "yoga" && sport !== "meditation" && sport !== "indoor volleyball" && sport !== "rock climbing" && sport !== "camping" && sport !== "wrestling");
 }
 }
 // The result of the function
