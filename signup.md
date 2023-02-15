@@ -1,7 +1,4 @@
-<html>
-<head>
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-</head>
+
 <body>
     <script src="{{ '/assets/js/signup.js' | relative_url }}"></script>
 <body>
@@ -55,8 +52,13 @@
     <div style="padding: 10px">
         <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
     </div>
+<div id="john"></div>
 <script>
-    const url = "http://dolphin.nighthawkcodingsociety.com/api/users";
+    window.onload = function autofill() {
+        var sportss = localStorage.getItem('selectedSport');
+        document.getElementById("sport").value = sportss;
+    };
+    const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';
     function signup() {
         const body = {
@@ -100,5 +102,4 @@
 <button id = "press" onclick = "printName()">
 <div id='result'></div>
 <script src="{{ '/assets/js/signup.js' | relative_url }}"></script>-->
-</body>
-</html>
+

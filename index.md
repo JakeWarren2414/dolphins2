@@ -1,13 +1,16 @@
-
-<script src="{{ '/assets/js/scroll.js' | relative_url }}"></script>
+  <script>
+  AOS.init();
+</script>
+<div data-aos="fade-up">
   <div class="row2">
     <div class="column">
       <h1 style="color: white;">Dolphin Fitness</h1>
       <p style="color: white;">An all in one site to help manage your health. We noticed, on our own health journeys, the multiple online tools available to start becoming more healthy. Our mission here is to create an easy way for any to start their fitness journey.</p>
     </div>
   </div>
-
+</div>
 <div style="padding: 20px;"></div>
+<div data-aos="fade-left">
   <div class="contain">
       <div class="block">
           <h1 style="color: white; padding: 7px;">BMI</h1>
@@ -20,7 +23,9 @@
           <img width= "120p" height="120" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Aiga_restaurant_knife-fork_crossed.png">
       </div>
     </div>
+</div>
 <div style="padding: 20px;"></div>
+<div data-aos="fade-right">
   <div class="contain">
     <div class="block">
         <h1 style="color: white;">Sports Quiz</h1>
@@ -33,7 +38,9 @@
         <img width= "120p" height="120" src="https://cdn-icons-png.flaticon.com/512/42/42371.png">
     </div>
   </div>
+</div>
 <div style="padding: 20px;"></div>
+<div data-aos="fade-left">
   <div class="contain">
     <div class="block">
         <h1 style="color: white;">Workouts</h1>
@@ -46,3 +53,4 @@
         <img width= "140p" height="140" src="https://freesvg.org/img/activity.png">
     </div>
   </div>
+</div>
