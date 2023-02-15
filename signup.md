@@ -52,7 +52,12 @@
     <div style="padding: 10px">
         <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
     </div>
+<div id="john"></div>
 <script>
+    window.onload = function autofill() {
+        var sportss = localStorage.getItem('selectedSport');
+        document.getElementById("sport").value = sportss;
+    };
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';
     function signup() {
