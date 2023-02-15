@@ -2,6 +2,8 @@
 <body>
     <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
     <h1 id="food">Calorie Management</h1>
+    <input type="button" value="Get Your Stats" onclick="getVars()">
+    <div id="dataFetched"></div>
     <div style="padding:5px">
         <label for="sex">Sex</label>
         <select id="sex" name="sex">
@@ -29,15 +31,15 @@
     <div style="padding: 15px;"></div>
     <div id="result">You burn 0 calories per day. This is your maximum calorie limit for each day. It will refresh when you refresh the page, as that is assumed to be a new day. Do not go over this limit.</div>
     <div style="padding: 15px;"></div>
-    <input type="button" value="Save Maximum Calories To Your Account" onclick="putGoodFuncHere">
+    <input type="button" value="Save Maximum Calories To Your Account" onclick="update()">
 </body>
 
 ---
 
 <body>
     <div style="padding:5px">
-        <label for="food">Name of Food</label>
-        <input id="food" type="text">
+        <label for="foodName">Name of Food</label>
+        <input id="foodName" type="text">
         <label for="calamnt">Amount of Calories (Check Nutrition Label)</label>
         <input id = "calamnt" type="text">
     </div>
