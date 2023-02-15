@@ -59,7 +59,13 @@
   </tr>
 </table>
 
+
+
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
+
+## Need Help Deciding
+> This link will show you everyone elses workout calenders to help make yours
+- [Link](https://jakewarren2414.github.io/dolphins2/calendercool)
 
 ## Next steps
 > You have finally finished your journey:
