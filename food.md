@@ -29,7 +29,7 @@
     <div style="padding: 15px;"></div>
     <div id="result">You burn 0 calories per day. This is your maximum calorie limit for each day. It will refresh when you refresh the page, as that is assumed to be a new day. Do not go over this limit.</div>
     <div style="padding: 15px;"></div>
-    <input type="button" value="Save Maximum Calories To Your Account" onclick="putGoodFuncHere">
+    <input type="button" value="Save Maximum Calories To Your Account" onclick="update()">
 </body>
 
 ---

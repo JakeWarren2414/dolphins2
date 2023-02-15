@@ -1,12 +1,17 @@
 let calorieList = [];
 let maxcal;
+let sex;
+let age;
+let weight;
+let height;
+let active;
 
 function calculateMaximumCalories() {
-    let sex = document.querySelector("#sex").value;
-    let age = parseInt(document.querySelector("#age").value);
-    let weight = parseInt(document.querySelector("#weight").value);
-    let height = parseInt(document.querySelector("#height").value);
-    let active = parseInt(document.querySelector("#active").value);
+    sex = document.querySelector("#sex").value;
+    age = parseInt(document.querySelector("#age").value);
+    weight = parseInt(document.querySelector("#weight").value);
+    height = parseInt(document.querySelector("#height").value);
+    active = parseInt(document.querySelector("#active").value);
 
     if (sex == "female") {
         maxcal = 655.1 + (9.563*weight) + (1.850*height) - (4.676*age);
@@ -49,3 +54,21 @@ function addFood() {
     amount.innerHTML = calamnt;
 }
 
+function update() {
+    fetch('http://dolphin.nighthawkcodingsociety.com/api/users', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        age: age,
+        sex: sex,
+        weight: weight,
+        height: height,
+        maxcal: maxcal
+      })
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error(error));
+}  
