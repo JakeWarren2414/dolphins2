@@ -31,7 +31,7 @@ function calculateMaximumCalories() {
 }
 
 function addFood() {
-    let food = document.querySelector("#food").value;
+    let food = document.querySelector("#foodName").value;
     let calamnt = parseInt(document.querySelector("#calamnt").value);
 
     calorieList.push(calamnt);
@@ -55,7 +55,7 @@ function addFood() {
 }
 
 function update() {
-    fetch('http://dolphin.nighthawkcodingsociety.com/api/users', {
+    fetch('https://dolphin.nighthawkcodingsociety.com/api/users', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -72,3 +72,50 @@ function update() {
     .then(data => console.log(data))
     .catch(error => console.error(error));
 }  
+
+function getVars() {
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    age = data.age;
+    console.log(age);
+    document.getElementById("dataFetched").innerHTML = age;
+  })
+  .catch(error => console.error(error));
+
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    sex = data.sex;
+    console.log(sex);
+    document.getElementById("dataFetched").innerHTML = sex;
+  })
+  .catch(error => console.error(error));
+
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    weight = data.weight;
+    console.log(weight);
+    document.getElementById("dataFetched").innerHTML = weight;
+  })
+  .catch(error => console.error(error));
+
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    height = data.height;
+    console.log(height);
+    document.getElementById("dataFetched").innerHTML = height;
+  })
+  .catch(error => console.error(error));
+
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    maxcal = data.maxcal;
+    console.log(maxcal);
+    document.getElementById("dataFetched").innerHTML = maxcal;
+  })
+  .catch(error => console.error(error));
+}

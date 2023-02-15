@@ -2,6 +2,8 @@
 <body>
     <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
     <h1 id="food">Calorie Management</h1>
+    <input type="button" value="Get Your Stats" onclick="getVars()">
+    <div id="dataFetched"></div>
     <div style="padding:5px">
         <label for="sex">Sex</label>
         <select id="sex" name="sex">
@@ -36,8 +38,8 @@
 
 <body>
     <div style="padding:5px">
-        <label for="food">Name of Food</label>
-        <input id="food" type="text">
+        <label for="foodName">Name of Food</label>
+        <input id="foodName" type="text">
         <label for="calamnt">Amount of Calories (Check Nutrition Label)</label>
         <input id = "calamnt" type="text">
     </div>
