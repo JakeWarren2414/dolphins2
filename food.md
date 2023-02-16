@@ -1,4 +1,5 @@
 <!--Login Frontmatter-->
+<script> AOS.init();</script>
 <body>
     <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
     <h1 id="food">Calorie Management</h1>

@@ -1,3 +1,5 @@
+<script> AOS.init();</script>
+<div data-aos="fade-right">
 <h2>Sports quiz</h2>
 <div id="question1">
 <p>Are you competitive?</p>
@@ -30,12 +32,12 @@
 <button onclick="answer(false)">No</button>
 </div>
 <div id="result" style="display: none"></div>
+</div>
 
 
+<div style="padding: 10px;"></div>
 
-
-
-
+<div data-aos="fade-right">
 <h3>Which sport will you like to pursue?</h3>
 <select id="sport-select">
   <option>Basketball</option>
@@ -70,7 +72,7 @@
 </select>
 <button id="save-button">Save</button>
 <p>Your current sport is <span id="saved-sport"></span></p>
-
+</div>
 
 <script>
 // JavaScript code that listens to a click on the "Save" button and saves the selected value to local storage
@@ -184,14 +186,20 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 
 </script>
 
-
-## Next steps
-> You are almost done with your journey:
-- Now that you have chosen a fun sport to play you can begin exercising
-- This is an integral part of fitness
-- You also should start working out to get better at your sport and feel better overall: [Workouts](https://jakewarren2414.github.io/dolphins2/workout)
+<div data-aos="fade-right">
+<h2>Next Steps</h2>
+<blockquote>
+<p>You are almost done with your journey:</p>
+<ul>
+  <li>Now that you have chosen a fun sport to play you can begin exercising</li>
+  <li>This is an integral part of fitness</li>
+  <li>You also should start working out to get better at your sport and feel better overall: <a href="https://jakewarren2414.github.io/dolphins2/workout">Workouts</a></li>
+</ul>
+</blockquote>
+</div>
 <div style="padding: 150px;">
 </div>
+
 
 
 

@@ -1,4 +1,4 @@
-var user = "";
+var user = "A";
 function login() {
     const login_url = 'https://dolphin.nighthawkcodingsociety.com/api/users/match';
     const body = {
@@ -22,7 +22,7 @@ function login() {
     fetch(login_url, requestOptions)
     .then(response => {
         // trap error response from Web API
-        if (response.status !== 200) {
+        if (response.status == 400) {
             const message = 'Login error: ' + response.status + " " + response.statusText;
             document.getElementById("message").innerHTML = message;
         }
@@ -31,9 +31,7 @@ function login() {
             document.getElementById("message").innerHTML = message
             user = data.username
         })
-        .catch((err) => {
-            alert("username or password is not correct")
-        })
+        .catch((error) => alert("username or password is not correct"))
     })
 
 }

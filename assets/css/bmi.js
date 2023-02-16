@@ -57,6 +57,9 @@ function updateUser(){
       
         const response = await fetch(url, {
           method: 'POST',
+          mode: 'cors',
+          cache: 'default',
+          credentials: 'include',
           headers: {
             'Content-Type': 'application/json'
           },

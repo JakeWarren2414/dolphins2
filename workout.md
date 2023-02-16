@@ -11,6 +11,7 @@
 
 ## Which workout day do you want to learn about?
 
+<script> AOS.init();</script>
 
 <table>
  <tr>

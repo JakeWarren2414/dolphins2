@@ -1,4 +1,4 @@
-<!--Login Frontmatter-->
+<script> AOS.init();</script>
 
 ## Workout Calender
   - Helps you stay on top of your workouts

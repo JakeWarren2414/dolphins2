@@ -50,13 +50,18 @@
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
-            monday: "A",
-            tuesday: "A",
-            wednesday: "A",
-            thursday: "A",
-            friday: "A",
-            saturday: "A",
-            sunday: "A"
+            monday: "",
+            tuesday: "",
+            wednesday: "",
+            thursday: "",
+            friday: "",
+            saturday: "",
+            sunday: "",
+            sex: "",
+            weight: "",
+            height: "",
+            sport: "",
+            maxCalories: ""
         };
         const requestOptions = {
             method: 'POST',
