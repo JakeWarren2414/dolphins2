@@ -31,9 +31,7 @@ function login() {
             document.getElementById("message").innerHTML = message
             user = data.username
         })
-        .catch((err) => {
-            alert("username or password is not correct")
-        })
+        .catch((error) => alert("username or password is not correct"))
     })
 
 }
