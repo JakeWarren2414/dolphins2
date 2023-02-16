@@ -1,4 +1,4 @@
-var user = "";
+var user = "A";
 function login() {
     const login_url = 'https://dolphin.nighthawkcodingsociety.com/api/users/match';
     const body = {
