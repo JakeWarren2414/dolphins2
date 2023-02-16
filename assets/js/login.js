@@ -22,10 +22,11 @@ function login() {
     fetch(login_url, requestOptions)
     .then(response => {
         // trap error response from Web API
-        if (response.status !== 200) {
-            const message = 'Login error: ' + response.status + " " + response.statusText;
-            document.getElementById("message").innerHTML = message;
-        }
+        // if (response.status !== 200) {
+        //     const message = 'Login error: ' + response.status + " " + response.statusText;
+        //     document.getElementById("message").innerHTML = message;
+        // }
+        console.log(response.status)
         response.json().then(data => {
             const message = 'Login success: ' + data.username;
             document.getElementById("message").innerHTML = message
