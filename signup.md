@@ -59,19 +59,9 @@
     confirm_password = document.getElementById("confirm_password").value;
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';  
-    function getAge() {
-       var birthday = document.getElementById('birth' ).value.split("-");
-       var d1 = new Date(birthday[0],birthday[1]-1,birthday[2]);
-       var d2 = new Date();
-       var diff = d2.getTime() - d1.getTime();
-       var daysPast = Math.floor(diff / (1000 * 60 * 60 * 24));
-       var age = Math.floor(daysPast / 365.25)
-        return age
-    }
-    const ages = getAge()
     function signup() {
-        const ages = getAge()
-        console.log(ages)
+        dob = document.getElementById("birth").value
+        console.log(dob)
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
@@ -87,7 +77,7 @@
             height: "",
             sport: document.getElementById("sport").value,
             maxcal: document.getElementById("calories").value,
-            age: ages
+            dob: birthday = document.getElementById('birth' ).value.split("-")
         };
         const requestOptions = {
             method: 'POST',
