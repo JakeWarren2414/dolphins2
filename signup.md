@@ -24,30 +24,30 @@
             <input id="calories" type="number">
         </div>
         <div style="">
-            <label class="signupL">BMI</label>
-            <input id="bmi" type="text">
-        </div>
-        <div style="">
             <label class="signupL">Sport</label>
             <input id="sport" type="text">
+        </div>
+        <div style="">
+            <label class="signupL">Birth</label>
+            <input id="birth" type="date">
         </div>
     </div>
     <br>
     <div class="signup2">
         <label class="signupL">Monday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "monday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Tuesday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "tuesday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Wednesday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "wednesday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Thursday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "thursday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Friday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "friday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Saturday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "saturday" style="color: black; padding: 10px;"><br>
         <label class="signupL">Sunday</label>
-        <input type="text" id = "id" style="color: black; padding: 10px;"><br>
+        <input type="text" id = "sunday" style="color: black; padding: 10px;"><br>
     </div>
 </div>
     <div style="padding: 10px">
@@ -58,23 +58,36 @@
     passwords = document.getElementById("password").value;
     confirm_password = document.getElementById("confirm_password").value;
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
-    const create_fetch = url + '/create';
+    const create_fetch = url + '/create';  
+    function getAge() {
+       var birthday = document.getElementById('birth' ).value.split("-");
+       var d1 = new Date(birthday[0],birthday[1]-1,birthday[2]);
+       var d2 = new Date();
+       var diff = d2.getTime() - d1.getTime();
+       var daysPast = Math.floor(diff / (1000 * 60 * 60 * 24));
+       var age = Math.floor(daysPast / 365.25)
+        return age
+    }
+    const ages = getAge()
     function signup() {
+        const ages = getAge()
+        console.log(ages)
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
-            monday: "",
-            tuesday: "",
-            wednesday: "",
-            thursday: "",
-            friday: "",
-            saturday: "",
-            sunday: "",
+            monday: document.getElementById("monday").value,
+            tuesday: document.getElementById("tuesday").value,
+            wednesday: document.getElementById("wednesday").value,
+            thursday: document.getElementById("thursday").value,
+            friday: document.getElementById("friday").value,
+            saturday: document.getElementById("saturday").value,
+            sunday: document.getElementById("sunday").value,
             sex: "",
             weight: "",
             height: "",
-            sport: "",
-            maxCalories: ""
+            sport: document.getElementById("sport").value,
+            maxcal: document.getElementById("calories").value,
+            age: ages
         };
         const requestOptions = {
             method: 'POST',
