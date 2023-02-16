@@ -50,13 +50,13 @@
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
-            monday: "A",
-            tuesday: "A",
-            wednesday: "A",
-            thursday: "A",
-            friday: "A",
-            saturday: "A",
-            sunday: "A"
+            monday: "",
+            tuesday: "",
+            wednesday: "",
+            thursday: "",
+            friday: "",
+            saturday: "",
+            sunday: ""
         };
         const requestOptions = {
             method: 'POST',
@@ -65,24 +65,20 @@
                 "content-type": "application/json",
             },
         };
-        if (passwords == confirm_password) {
-            fetch(create_fetch, requestOptions)
-                .then(response => {
+        fetch(create_fetch, requestOptions)
+            .then(response => {
                     // trap error response from Web API
-                    if (response.status !== 200) {
+                if (response.status !== 200) {
                     const errorMsg = 'Database create error: ' + response.status;
                     console.log(errorMsg);
                     return;
-                    }
+                }
                     // response contains valid result
-                    response.json().then(data => {
-                        console.log(data);
+                response.json().then(data => {
+                    console.log(data);
                         //add a table row for the new/created userid
-                    })
                 })
-        } else {
-            alert("password is not matched");
-        }
+            })
     }
 </script>
 <!--input id='name' type = "text"/>
