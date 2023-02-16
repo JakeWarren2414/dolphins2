@@ -1,9 +1,6 @@
 <script>
   AOS.init();
 </script>
-<script src="{{ '/assets/js/login.js' | relative_url }}">
-  document.write('Welcome' + user + '<br>');
-</script>
 
 <div data-aos="fade-up">
   <div class="row2">

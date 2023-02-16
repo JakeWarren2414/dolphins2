@@ -13,9 +13,18 @@
     {% include head-custom.html %}
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="{{ '/assets/js/login.js' | relative_url }}"></script>
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
+    {% block user %}
+    {% if user == "" %}
+    <a href = "{{url_for('login')}}">Login</a>
+    {% else %}
+    <p>user: {{user}}</p>
+    <a href = "{{url_for('login')}}">Logout</a>
+    {% endif %}
+    {% endblock user %}
     <script src="{{ '/assets/js/clock.js' | relative_url }}"></script>
     <header class="page-header" role="banner" style="padding: 25%">
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
