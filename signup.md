@@ -77,7 +77,7 @@
             height: "",
             sport: document.getElementById("sport").value,
             maxcal: document.getElementById("calories").value,
-            dob: birthday = document.getElementById('birth' ).value.split("-")
+            dob: birthday = document.getElementById('birth' ).value
         };
         const requestOptions = {
             method: 'POST',
