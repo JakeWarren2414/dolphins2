@@ -6,6 +6,16 @@ let weight;
 let height;
 let active;
 
+function test() {
+  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+  .then(response => response.json())
+  .then(data => {
+    let username = data.username;
+    console.log(username);
+  })
+  .catch(error => console.error(error));
+}
+
 function calculateMaximumCalories() {
     sex = document.querySelector("#sex").value;
     age = parseInt(document.querySelector("#age").value);
