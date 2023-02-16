@@ -1,17 +1,20 @@
-<h1>Other Peoples Tables</h1>
-<table class="profile">
-  <tr class="profile">
-    <th class="profile">Monday</th>
-    <th class="profile">Tuesday</th>
-    <th class="profile">Wednesday</th>
-    <th class="profile">Thursday</th>
-    <th class="profile">Friday</th>
-    <th class="profile">Saturday</th>
-    <th class="profile">Sunday</th>
-  </tr>
-  <tbody id="table" class="profile">
-  </tbody>
-</table>
+<script> AOS.init();</script>
+<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
+<div data-aos="fade-up">
+    <table class="profile">
+    <tr class="profile">
+        <th class="profile">Monday</th>
+        <th class="profile">Tuesday</th>
+        <th class="profile">Wednesday</th>
+        <th class="profile">Thursday</th>
+        <th class="profile">Friday</th>
+        <th class="profile">Saturday</th>
+        <th class="profile">Sunday</th>
+    </tr>
+    <tbody id="table" class="profile">
+    </tbody>
+    </table>
+</div>
 
 <script>
 const tableBody = document.querySelector('#table');

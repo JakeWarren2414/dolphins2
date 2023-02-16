@@ -1,6 +1,4 @@
-  <script>
-  AOS.init();
-</script>
+<script> AOS.init();</script>
 <div data-aos="fade-up">
   <div class="row2">
     <div class="column">
