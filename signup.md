@@ -56,7 +56,12 @@
             thursday: "",
             friday: "",
             saturday: "",
-            sunday: ""
+            sunday: "",
+            sex: "",
+            weight: "",
+            height: "",
+            sport: "",
+            maxCalories: ""
         };
         const requestOptions = {
             method: 'POST',
