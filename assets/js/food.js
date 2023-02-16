@@ -59,7 +59,7 @@ function update() {
       method: 'POST',
       mode: 'cors',
       cache: 'default',
-      credentials: 'include',
+      credentials: 'include', 
       headers: {
         'Content-Type': 'application/json'
       },
@@ -80,9 +80,9 @@ function getVars() {
   fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
   .then(response => response.json())
   .then(data => {
-    age = data.age;
-    console.log(age);
-    document.getElementById("dataFetched").innerHTML = age;
+    let aget = data.age;
+    console.log(aget);
+    document.getElementById("dataFetched").innerHTML = aget;
   })
   .catch(error => console.error(error));
 
