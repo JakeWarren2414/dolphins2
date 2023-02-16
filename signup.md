@@ -19,18 +19,6 @@
             <label class="signupL">Confirm Password</label>
             <input id = "confirm_password" type="password">
         </div>
-        <div style="">
-            <label class="signupL">Calories Per Day</label>
-            <input id="calories" type="number">
-        </div>
-        <div style="">
-            <label class="signupL">BMI</label>
-            <input id="bmi" type="text">
-        </div>
-        <div style="">
-            <label class="signupL">Sport</label>
-            <input id="sport" type="text">
-        </div>
     </div>
     <!-- <div class="signup2">
         <label class="signupL">Monday</label>
@@ -54,19 +42,14 @@
     </div>
 <div id="john"></div>
 <script>
-    window.onload = function autofill() {
-        var sportss = localStorage.getItem('selectedSport');
-        document.getElementById("sport").value = sportss;
-    };
+    passwords = document.getElementById("password").value;
+    confirm_password = document.getElementById("confirm_password").value;
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';
     function signup() {
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
-            bmi: document.getElementById("bmi").value,
-            calories: document.getElementById("calories").value,
-            sport: document.getElementById("sport").value,
             monday: "A",
             tuesday: "A",
             wednesday: "A",
@@ -82,20 +65,24 @@
                 "content-type": "application/json",
             },
         };
-        fetch(create_fetch, requestOptions)
-            .then(response => {
-                // trap error response from Web API
-                if (response.status !== 200) {
-                const errorMsg = 'Database create error: ' + response.status;
-                console.log(errorMsg);
-                return;
-                }
-                // response contains valid result
-                response.json().then(data => {
-                    console.log(data);
-                    //add a table row for the new/created userid
+        if (passwords == confirm_password) {
+            fetch(create_fetch, requestOptions)
+                .then(response => {
+                    // trap error response from Web API
+                    if (response.status !== 200) {
+                    const errorMsg = 'Database create error: ' + response.status;
+                    console.log(errorMsg);
+                    return;
+                    }
+                    // response contains valid result
+                    response.json().then(data => {
+                        console.log(data);
+                        //add a table row for the new/created userid
+                    })
                 })
-            })
+        } else {
+            alert("password is not matched");
+        }
     }
 </script>
 <!--input id='name' type = "text"/>
