@@ -16,4 +16,3 @@
 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/#Title'">Next</button>
 </div>
 <div style="padding: 200px;"></div>
-{% endblock contents %}
