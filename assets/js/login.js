@@ -28,7 +28,6 @@ function login() {
         }
         response.json().then(data => {
             const message = 'Login success: ' + data.username;
-            window.location.href = '{{site.baseurl}}/data';
             document.getElementById("message").innerHTML = message
             user = data.username
         })
