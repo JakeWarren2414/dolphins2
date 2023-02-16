@@ -11,6 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
@@ -25,8 +27,8 @@
         <a href="https://jakewarren2414.github.io/dolphins2/" class="btn">Home</a>
         <a href="https://jakewarren2414.github.io/dolphins2/bmi#calc" class="btn">BMI Info</a>
         <a href="https://jakewarren2414.github.io/dolphins2/food#foodtitle" class="btn">Nutrition</a>
-        <a href="https://jakewarren2414.github.io/dolphins2/workout" class="btn">Workouts</a>
         <a href="https://jakewarren2414.github.io/dolphins2/sportsquiz" class="btn">Sport Quiz</a>
+        <a href="https://jakewarren2414.github.io/dolphins2/workout" class="btn">Workouts</a>
         <a href="https://jakewarren2414.github.io/dolphins2/calender" class="btn">Calender</a>
         <a href="https://jakewarren2414.github.io/dolphins2/gallery" class="btn">Agile Manifesto</a>
       </div>
@@ -35,6 +37,7 @@
         <a href="{{ site.github.zip_url }}" class="btn">Download .zip</a>
         <a href="{{ site.github.tar_url }}" class="btn">Download .tar.gz</a>
       {% endif %}
+      <div style="padding: 50px;"></div>
     </header>
 
     <main id="content" class="main-content" role="main">

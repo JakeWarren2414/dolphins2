@@ -74,3 +74,23 @@ function updateUser(){
       // Example usage: updateUser('123', 150, 170, 25);
       
 }
+function backend() {
+   // Select the input elements
+const weightInput = document.getElementById('weight');
+const heightInput = document.getElementById('height');
+const calculateButton = document.getElementById('calculate');
+
+// Add an event listener to the calculate button
+calculateButton.addEventListener('click', function() {
+  // Get the input values and convert them to numbers
+  const weight = parseFloat(weightInput.value);
+  const height = parseFloat(heightInput.value);
+
+  // Calculate the BMI
+  const bmi = weight / (height * height);
+
+  // Display the result
+  const result = document.getElementById('result');
+  result.innerHTML = `Your BMI is ${bmi.toFixed(2)}.`;
+});
+}

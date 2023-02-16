@@ -14,6 +14,7 @@
     <th class="profile"><label for="weeks">Choose a Day:</label></th>
     <th class="profile">Apply</th>
     <th class="profile">Remove</th>
+    <th class="profile">Save</th>
   </tr>
   <tr>
     <td><input id="input" class="profile"></td>
@@ -30,6 +31,7 @@
     </td>
     <td><button onclick="Add()" class="profile">Apply</button></td>
     <td><button onclick="Remove()" class="profile">Remove</button></td>
+    <td><button onclick="Save()" class="profile">Save</button></td>
   </tr>
 </table>
 
@@ -46,8 +48,29 @@
     <th class="profile">Saturday</th>
     <th class="profile">Sunday</th>
   </tr>
-  <tbody id="table" class="profile">
-  </tbody>
+  <tr>
+    <td id="monday"></td>
+    <td id="tuesday"></td>
+    <td id="wednesday"></td>
+    <td id="thursday"></td>
+    <td id="friday"></td>
+    <td id="saturday"></td>
+    <td id="sunday"></td>
+  </tr>
 </table>
 
+
+
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
+
+## Need Help Deciding
+> This link will show you everyone elses workout calenders to help make yours
+- [Link](https://jakewarren2414.github.io/dolphins2/calendercool)
+
+## Next steps
+> You have finally finished your journey:
+- This calendar will help keep you organized
+- Make sure to use this every workout
+- You can signup and save all the steps to your fitness journey: [Signup](https://jakewarren2414.github.io/dolphins2/signup)
+<div style="padding: 150px;">
+</div>
