@@ -65,20 +65,24 @@
                 "content-type": "application/json",
             },
         };
-        fetch(create_fetch, requestOptions)
-            .then(response => {
+        if (passwords == confirm_password) {
+            fetch(create_fetch, requestOptions)
+                .then(response => {
                     // trap error response from Web API
-                if (response.status !== 200) {
+                    if (response.status !== 200) {
                     const errorMsg = 'Database create error: ' + response.status;
                     console.log(errorMsg);
                     return;
-                }
+                    }
                     // response contains valid result
-                response.json().then(data => {
-                    console.log(data);
+                    response.json().then(data => {
+                        console.log(data);
                         //add a table row for the new/created userid
+                    })
                 })
-            })
+        } else {
+            alert("password is not matched");
+        }
     }
 </script>
 <!--input id='name' type = "text"/>
