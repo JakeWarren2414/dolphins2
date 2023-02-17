@@ -19,8 +19,20 @@
             <label class="signupL">Confirm Password</label>
             <input id = "confirm_password" type="password">
         </div>
+        <div style="">
+            <label class="signupL">Calories Per Day</label>
+            <input id="calories" type="number">
+        </div>
+        <div style="">
+            <label class="signupL">BMI</label>
+            <input id="bmi" type="text">
+        </div>
+        <div style="">
+            <label class="signupL">Sport</label>
+            <input id="sport" type="text">
+        </div>
     </div>
-    <!-- <div class="signup2">
+    <<div class="signup2">
         <label class="signupL">Monday</label>
         <input type="text" id = "id" style="color: black; padding: 10px;"><br>
         <label class="signupL">Tuesday</label>
@@ -35,7 +47,7 @@
         <input type="text" id = "id" style="color: black; padding: 10px;"><br>
         <label class="signupL">Sunday</label>
         <input type="text" id = "id" style="color: black; padding: 10px;"><br>
-    </div> -->
+    </div>
 </div>
     <div style="padding: 10px">
         <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
