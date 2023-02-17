@@ -32,7 +32,8 @@
             <input id="sport" type="text">
         </div>
     </div>
-    <<div class="signup2">
+    <br>
+    <div class="signup2">
         <label class="signupL">Monday</label>
         <input type="text" id = "id" style="color: black; padding: 10px;"><br>
         <label class="signupL">Tuesday</label>
