@@ -60,8 +60,6 @@
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';  
     function signup() {
-        dob = document.getElementById("birth").value
-        console.log(dob)
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,
@@ -86,7 +84,7 @@
                 "content-type": "application/json",
             },
         };
-        if (passwords == confirm_password) {
+        if (passwords != confirm_password) {
             fetch(create_fetch, requestOptions)
                 .then(response => {
                     // trap error response from Web API
