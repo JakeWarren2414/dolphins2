@@ -67,7 +67,7 @@ function addFood() {
 function update() {
     fetch('https://dolphin.nighthawkcodingsociety.com/api/users', {
       method: 'POST',
-      mode: 'cors',
+      // mode: 'cors',
       cache: 'default',
       credentials: 'include', 
       headers: {
