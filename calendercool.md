@@ -1,12 +1,5 @@
 <script> AOS.init();</script>
 <div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
-<div>
-  <label>Username</label>
-  <input id="username" type="text">
-</div>
-<div>
-  <button id = "button" type="submit" onclick = "showCalender()">input</button>
-</div>
 <div data-aos="fade-up">
   <table class="profile">
     <tr class="profile">
@@ -75,41 +68,41 @@ const thursday_delete_site = url + '/delete_thursday';
 const friday_delete_site = url + '/delete_friday';
 const saturday_delete_site = url + '/delete_saturday';
 const sunday_delete_site = url + '/delete_sunday';
-function showCalender() {
-  const body = {
-    username: document.getElementById("username").value,
-  };
-  const requestOptions = {
-    method: 'POST',
-    body: JSON.stringify(body),
-    headers: {
-      "content-type": "application/json",
-    },
-  };
-  fetch(calender_fetch, requestOptions)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
-        document.getElementById("tuesday").innerHTML = data.tuesday;
-        document.getElementById("wednesday").innerHTML = data.wednesday;
-        document.getElementById("thursday").innerHTML = data.thursday;
-        document.getElementById("friday").innerHTML = data.friday;
-        document.getElementById("saturday").innerHTML = data.saturday;
-        document.getElementById("sunday").innerHTML = data.sunday;
-      })
+
+const body = {
+  username: sessionStorage.getItem("uid")
+};
+const requestOptions = {
+  method: 'POST',
+  body: JSON.stringify(body),
+  headers: {
+    "content-type": "application/json",
+  },
+};
+fetch(calender_fetch, requestOptions)
+  .then(response => {
+    if (response.status !== 200) {
+      const errorMsg = 'Database create error: ' + response.status;
+      console.log(errorMsg);
+      return;
+    }
+    response.json().then(data => {
+      document.getElementById("monday").innerHTML = data.monday;
+      document.getElementById("tuesday").innerHTML = data.tuesday;
+      document.getElementById("wednesday").innerHTML = data.wednesday;
+      document.getElementById("thursday").innerHTML = data.thursday;
+      document.getElementById("friday").innerHTML = data.friday;
+      document.getElementById("saturday").innerHTML = data.saturday;
+      document.getElementById("sunday").innerHTML = data.sunday;
     })
-}
+  })
+
 function Add() {
   const input = document.getElementById("input").value;
   const week = document.getElementById("week").value;
   if (week == "monday") {
     const monday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       monday: input
     };
     const monday_request = {
@@ -133,7 +126,7 @@ function Add() {
   }
   if (week == "tuesday") {
     const tuesday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       tuesday: input
     };
     const tuesday_request = {
@@ -157,7 +150,7 @@ function Add() {
   }
   if (week == "wednesday") {
     const wednesday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       wednesday: input
     };
     const wednesday_request = {
@@ -181,7 +174,7 @@ function Add() {
   }
   if (week == "thursday") {
     const thursday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       thursday: input
     };
     const thursday_request = {
@@ -205,7 +198,7 @@ function Add() {
   }
   if (week == "friday") {
     const friday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       friday: input
     };
     const friday_request = {
@@ -229,7 +222,7 @@ function Add() {
   }
   if (week == "saturday") {
     const saturday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       saturday: input
     };
     const saturday_request = {
@@ -253,7 +246,7 @@ function Add() {
   }
   if (week == "sunday") {
     const sunday_body = {
-      username: document.getElementById("username").value,
+      username: sessionStorage.getItem("uid"),
       sunday: input
     };
     const sunday_request = {
@@ -280,7 +273,7 @@ function Add() {
 function Remove() {
   const week = document.getElementById("week").value;
   const delete_body = {
-    username: document.getElementById("username").value,
+    username: sessionStorage.getItem("uid"),
   };
   if (week == "monday") {
     const monday_delete = {

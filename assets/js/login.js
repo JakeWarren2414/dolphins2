@@ -1,4 +1,4 @@
-var user = "A";
+var sessionData = "uid"
 function login() {
     const login_url = 'https://dolphin.nighthawkcodingsociety.com/api/users/match';
     const body = {
@@ -27,11 +27,11 @@ function login() {
             document.getElementById("message").innerHTML = message;
         }
         response.json().then(data => {
-            const message = 'Login success: ' + data.username;
-            document.getElementById("message").innerHTML = message
-            user = data.username
+            if (sessionStorage.getItem("uid") == null) {
+                sessionStorage.setItem("uid", data.username);
+            }
+            const message = 'Login success: ' + sessionStorage.getItem("uid");
+            document.getElementById("message").innerHTML = message;
         })
-        .catch((error) => alert("username or password is not correct"))
     })
-
 }
