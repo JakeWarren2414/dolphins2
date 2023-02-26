@@ -63,14 +63,3 @@
 
 <script src="{{ '/assets/js/calender.js' | relative_url }}"></script>
 
-## Need Help Deciding
-> This link will show you everyone elses workout calenders to help make yours
-- [Link](https://jakewarren2414.github.io/dolphins2/calendercool)
-
-## Next steps
-> You have finally finished your journey:
-- This calendar will help keep you organized
-- Make sure to use this every workout
-- You can signup and save all the steps to your fitness journey: [Signup](https://jakewarren2414.github.io/dolphins2/signup)
-<div style="padding: 150px;">
-</div>
