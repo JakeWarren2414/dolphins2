@@ -23,6 +23,7 @@ function login() {
     .then(response => {
         // trap error response from Web API
         if (response.status == 400) {
+            alert("username or password don't match")
             const message = 'Login error: ' + response.status + " " + response.statusText;
             document.getElementById("message").innerHTML = message;
         }

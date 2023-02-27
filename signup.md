@@ -50,16 +50,23 @@
         <input type="text" id = "sunday" style="color: black; padding: 10px;"><br>
     </div>
 </div>
-    <div style="padding: 10px">
-        <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
-    </div>
+<div style="padding: 10px">
+    <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
+</div>
 <div id="john"></div>
 <script>
     passwords = document.getElementById("password").value;
     confirm_password = document.getElementById("confirm_password").value;
+    username = document.getElementById("username").value;
     const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
     const create_fetch = url + '/create';  
     function signup() {
+        if(username.length == 0){
+            alert("please enter your username")
+        }
+        if(password.length == 0){
+            alert("please enter your password")
+        }
         const body = {
             username: document.getElementById("username").value,
             password: document.getElementById("password").value,

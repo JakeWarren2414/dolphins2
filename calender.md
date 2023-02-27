@@ -68,7 +68,9 @@ const thursday_delete_site = url + '/delete_thursday';
 const friday_delete_site = url + '/delete_friday';
 const saturday_delete_site = url + '/delete_saturday';
 const sunday_delete_site = url + '/delete_sunday';
-
+if (sessionStorage.getItem("uid") == null) {
+  location.href = "https://jakewarren2414.github.io/dolphins2/login";
+}
 const body = {
   username: sessionStorage.getItem("uid")
 };
