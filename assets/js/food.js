@@ -1,27 +1,19 @@
 let calorieList = [];
-let maxcal;
-let sex;
-let age;
-let weight;
-let height;
-let active;
 
-const result = document.querySelector("#result");
-const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
-const age_fetch = url + '/age';
-const sex_fetch = url + '/sex';
-const weight_fetch = url + '/weight';
-const height_fetch = url + '/height';
+var url = "https://dolphin.nighthawkcodingsociety.com/api/users"; 
+var age_fetch = url + '/age';
+var sex_fetch = url + '/calender';
+var weight_fetch = url + '/weight';
+var height_fetch = url + '/height';
 
-const body = {
+var body = {
   username: sessionStorage.getItem("uid")
 };
-const requestOptions = {
+var requestOptions = {
   method: 'POST',
   body: JSON.stringify(body),
   headers: {
     "content-type": "application/json",
-    "Access-Control-Allow-Origin: https://jakewarren2414.github.io"
   },
 };
 
@@ -34,7 +26,7 @@ fetch(sex_fetch, requestOptions)
     }
     response.json().then(data => {
       document.getElementById("sex").innerHTML = data.sex;
-      document.getElementById("age").innerHTML = data.age;
+      $('input[id=age]').attr('value',data.age);
       document.getElementById("weight").innerHTML = data.weight;
       document.getElementById("height").innerHTML = data.height;
     })
@@ -90,23 +82,8 @@ function addFood() {
     amount.innerHTML = calamnt;
 }
 
-const result = document.querySelector("#result");
-const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
-const age_fetch = url + '/age';
-const sex_fetch = url + '/sex';
-const weight_fetch = url + '/weight';
-const height_fetch = url + '/height';
 
-const body = {
-  username: sessionStorage.getItem("uid")
-};
-const requestOptions = {
-  method: 'POST',
-  body: JSON.stringify(body),
-  headers: {
-    "content-type": "application/json"
-  },
-};
+
 
 fetch(sex_fetch, requestOptions)
   .then(response => {

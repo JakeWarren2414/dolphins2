@@ -35,11 +35,11 @@ function Delete_account() {
                             }
                             // response contains valid result
                             response.json().then(data => {
-                                if (sessionStorage.getItem("uid") == null) {
-                                    location.href = "https://jakewarren2414.github.io/dolphins2/";
+                                if (sessionStorage.getItem("uid") == username) {
+                                    location.href = "https://jakewarren2414.github.io/dolphins2/logout";
                                 }
                                 else {
-                                    location.href = "https://jakewarren2414.github.io/dolphins2/logout";
+                                    location.href = "https://jakewarren2414.github.io/dolphins2/";
                                 }
                             })
                         })
