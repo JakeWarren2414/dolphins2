@@ -19,7 +19,7 @@
     function loginPage() {
         username = sessionStorage.getItem("uid");
         const newRow = document.getElementById('loginPage');
-        if (username == "null") {
+        if (username == null) {
             newRow.innerHTML = `
                 <div class="page-header" style="padding: 350px height: 20%; border-radius: 50px;">
                 <h1 style="color: black;" id="L">Login</h1><br>
