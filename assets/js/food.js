@@ -36,7 +36,9 @@ function calculateMaximumCalories() {
     console.log(height);
     console.log(active);
     
-    result.innerHTML = "You burn " + maxcal + " calories per day. This is your maximum calorie limit for each day. It will refresh when you refresh the page, as that is assumed to be a new day. Do not go over this limit.";
+    result.innerHTML = "You burn " + maxcal + " calories per day. This is your maximum calorie "
+    + "limit for each day. It will refresh when you refresh the page, as that is assumed to be a "
+    + "new day. Do not go over this limit."
     console.log(maxcal);
 }
 
