@@ -1,5 +1,5 @@
 <!--Login Frontmatter-->
-<input type="button" value="Test" onclick="test()">
+<input type="button" value="Get Your Stats" onclick="getVariables()">
 <script> AOS.init();</script>
 <body>
     <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
