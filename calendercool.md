@@ -1,6 +1,6 @@
 <script> AOS.init();</script>
-<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
-<div>
+<div data-aos="fade-right"><h1>Calender</h1></div>
+<div id="calenderlog">
   <label>Username</label>
   <input id="username" type="text">
   <label>Password</label>
@@ -57,7 +57,8 @@
 </table>
 </div>
 
-
+<h1>Want more suggestions?</h1>
+<p> Click this <a href="https://jakewarren2414.github.io/dolphins2/calender">Link</a> for more help</p>
 
 
 <script>
@@ -97,6 +98,7 @@ function showCalender() {
         return;
       }
       response.json().then(data => {
+        document.getElementById("calenderlog").classList.add("hidden");
         document.getElementById("monday").innerHTML = data.monday;
         document.getElementById("tuesday").innerHTML = data.tuesday;
         document.getElementById("wednesday").innerHTML = data.wednesday;
@@ -110,33 +112,41 @@ function showCalender() {
 function Add() {
   const input = document.getElementById("input").value;
   const week = document.getElementById("week").value;
-  if (week == "monday") {
-    const monday_body = {
-      username: document.getElementById("username").value,
-      monday: input
-    };
-    const monday_request = {
-      method: 'POST',
-      body: JSON.stringify(monday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(monday_fetch, monday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
-      })
+  // Check if the variable "week" equals "monday"
+if (week == "monday") {
+  // Create an object "monday_body" with the input username and password
+  const monday_body = {
+    username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
+    monday: input
+  };
+  // Create an object "monday_request" with three properties: "method", "body", and "headers"
+  const monday_request = {
+    method: 'POST',
+    body: JSON.stringify(monday_body),
+    headers: {
+      "content-type": "application/json",
+    },
+  };
+  // Send a fetch request to the "monday_fetch" URL with the "monday_request" object as the request
+  fetch(monday_fetch, monday_request)
+  .then(response => {
+    // Check if the response status is not 200 (i.e. there was an error)
+    if (response.status !== 200) {
+      const errorMsg = 'Database create error: ' + response.status;
+      console.log(errorMsg);
+      return;
+    }
+    // If the response status is 200, convert the response to JSON and set the "monday" element's innerHTML to the value of the "monday" property in the response data object
+    response.json().then(data => {
+      document.getElementById("monday").innerHTML = data.monday;
     })
-  }
+  })
+}
   if (week == "tuesday") {
     const tuesday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       tuesday: input
     };
     const tuesday_request = {
@@ -161,6 +171,7 @@ function Add() {
   if (week == "wednesday") {
     const wednesday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       wednesday: input
     };
     const wednesday_request = {
@@ -185,6 +196,7 @@ function Add() {
   if (week == "thursday") {
     const thursday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       thursday: input
     };
     const thursday_request = {
@@ -209,6 +221,7 @@ function Add() {
   if (week == "friday") {
     const friday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       friday: input
     };
     const friday_request = {
@@ -233,6 +246,7 @@ function Add() {
   if (week == "saturday") {
     const saturday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       saturday: input
     };
     const saturday_request = {
@@ -257,6 +271,7 @@ function Add() {
   if (week == "sunday") {
     const sunday_body = {
       username: document.getElementById("username").value,
+      password: document.getElementById("password").value,
       sunday: input
     };
     const sunday_request = {
@@ -283,27 +298,33 @@ function Remove() {
   const week = document.getElementById("week").value;
   const delete_body = {
     username: document.getElementById("username").value,
+    password: document.getElementById("password").value,
   };
-  if (week == "monday") {
-    const monday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(monday_delete_site, monday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
-      })
+// Check if the variable "week" equals "monday"
+if (week == "monday") {
+  // Create an object "monday_delete" with three properties: "method", "body", and "headers"
+  const monday_delete = {
+    method: 'POST',
+    body: JSON.stringify(delete_body),
+    headers: {
+      "content-type": "application/json",
+    },
+  };
+  // Send a fetch request to the "monday_delete_site" URL with the "monday_delete" object as the request
+  fetch(monday_delete_site, monday_delete)
+  .then(response => {
+    // Check if the response status is not 200 (i.e. there was an error)
+    if (response.status !== 200) {
+      const errorMsg = 'Database create error: ' + response.status;
+      console.log(errorMsg);
+      return;
+    }
+    // If the response status is 200, convert the response to JSON and set the "monday" element's innerHTML to the value of the "monday" property in the response data object
+    response.json().then(data => {
+      document.getElementById("monday").innerHTML = data.monday;
     })
-  }
+  })
+}
   if (week == "tuesday") {
     const tuesday_delete = {
       method: 'POST',
