@@ -3,9 +3,11 @@
 <div>
   <label>Username</label>
   <input id="username" type="text">
+  <label>Password</label>
+  <input id="password" type="password">
+  <button class="profile" id = "button" type="submit" onclick = "showCalender()">input</button>
 </div>
 <div>
-  <button id = "button" type="submit" onclick = "showCalender()">input</button>
 </div>
 <div data-aos="fade-up">
   <table class="profile">
