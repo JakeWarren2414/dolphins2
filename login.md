@@ -34,6 +34,7 @@
                 <button style="padding: 5px; color: black; flex: 50%" onclick="login()">Login</button>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/signup'">Signup</button>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/forgotpassword'">Did you forgot your password?</button>
+                <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/delete'">Delete Account</button>
             `;
         }
         else {
