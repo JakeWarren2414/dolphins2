@@ -6,15 +6,39 @@ let weight;
 let height;
 let active;
 
-function test() {
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    let username = data.username;
-    console.log(username);
+const result = document.querySelector("#result");
+const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
+const maxcal_fetch = url + '/maxcal';
+const age_fetch = url + '/age';
+const sex_fetch = url + '/sex';
+const weight_fetch = url + '/weight';
+const height_fetch = url + '/height';
+
+const body = {
+  username: sessionStorage.getItem("uid")
+};
+const requestOptions = {
+  method: 'POST',
+  body: JSON.stringify(body),
+  headers: {
+    "content-type": "application/json",
+  },
+};
+
+fetch(maxcal_fetch, requestOptions)
+  .then(response => {
+    if (response.status !== 200) {
+      const errorMsg = 'Database create error: ' + response.status;
+      console.log(errorMsg);
+      return;
+    }
+    response.json().then(data => {
+      document.getElementById("sex").innerHTML = data.sex;
+      document.getElementById("age").innerHTML = data.age;
+      document.getElementById("weight").innerHTML = data.weight;
+      document.getElementById("height").innerHTML = data.height;
+    })
   })
-  .catch(error => console.error(error));
-}
 
 function calculateMaximumCalories() {
     sex = document.querySelector("#sex").value;
