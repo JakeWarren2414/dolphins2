@@ -1,5 +1,5 @@
 <script> AOS.init();</script>
-<div data-aos="fade-right"><h1>Workout Calender</h1></div>
+<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
 <div>
   <label>Username</label>
   <input id="username" type="text">
@@ -32,9 +32,7 @@
       <td><button onclick="Remove()" class="profile">Remove</button></td>
     </tr>
   </table>
-
   <br>
-
   <table class="profile">
   <tr class="profile">
     <th class="profile">Monday</th>
@@ -56,6 +54,9 @@
   </tr>
 </table>
 </div>
+
+
+
 
 <script>
 const tableBody = document.querySelector('#table');
@@ -275,7 +276,6 @@ function Add() {
       })
     })
   }
-
 }
 function Remove() {
   const week = document.getElementById("week").value;
@@ -440,5 +440,4 @@ function Remove() {
 //       tableBody.appendChild(newRow);
 //     });
 //   });
-
 </script>

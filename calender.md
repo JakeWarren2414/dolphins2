@@ -1,4 +1,30 @@
 <script> AOS.init();</script>
+<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
+<div data-aos="fade-up">
+  <table class="profile">
+    <tr class="profile">
+      <th class="profile"><label for="workout">Type in Workout:</label></th>
+      <th class="profile"><label for="weeks">Choose a Day:</label></th>
+      <th class="profile">Apply</th>
+      <th class="profile">Remove</th>
+    </tr>
+    <tr>
+      <td><input id="input" class="profile"></td>
+      <td>
+        <select name="week" id="week">
+          <option>monday</option>
+          <option>tuesday</option>
+          <option>wednesday</option>
+          <option>thursday</option>
+          <option>friday</option>
+          <option>saturday</option>
+          <option>sunday</option>
+        </select>
+      </td>
+      <td><button onclick="Add()" class="profile">Apply</button></td>
+      <td><button onclick="Remove()" class="profile">Remove</button></td>
+    </tr>
+  </table>
 
 <br>
 

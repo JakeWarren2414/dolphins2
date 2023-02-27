@@ -84,7 +84,7 @@
                 "content-type": "application/json",
             },
         };
-        if (passwords != confirm_password) {
+        if (passwords == confirm_password) {
             fetch(create_fetch, requestOptions)
                 .then(response => {
                     // trap error response from Web API
