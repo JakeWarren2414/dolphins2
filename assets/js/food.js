@@ -19,7 +19,7 @@ function calculateMaximumCalories() {
     else if (sex == "male") {
         maxcal = 66.47 + (13.75*weight) + (5.003*height) - (6.755*age);
     }
-    let result = document.querySelector("#result");
+    let result = document.getElementById("result");
     console.log(sex);
     console.log(age);
     console.log(weight);
@@ -70,8 +70,7 @@ const requestOptions = {
   method: 'POST',
   body: JSON.stringify(body),
   headers: {
-    "content-type": "application/json",
-    "Access-Control-Allow-Origin: https://jakewarren2414.github.io"
+    "content-type": "application/json"
   },
 };
 
