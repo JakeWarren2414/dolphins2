@@ -23,6 +23,7 @@
       {% if site.github.is_project_page %}
       <h2 class="project-tagline" id="jsClock"></h2>
       <h2 id="login" class="project-tagline"></h2>
+      <h2 id="welcome" class="project-tagline"></h2>
       <h2 id = "logout" class="project-tagline"></h2>
       <div style="padding: 15 px;">
         <a href="https://jakewarren2414.github.io/dolphins2/" class="btn">Home</a>
@@ -58,6 +59,7 @@
     username = sessionStorage.getItem("uid");
     const loginh2 = document.getElementById('login');
     const logouth2 = document.getElementById('logout')
+    const welcome = document.getElementById('welcome')
     if (username == null) {
       loginh2.innerHTML = `
         <a href="https://jakewarren2414.github.io/dolphins2/login" style="color: white;">Login</a> | <a href="https://jakewarren2414.github.io/dolphins2/signup" style="color: white;">Signup</a>
@@ -66,6 +68,9 @@
     else {
       logouth2.innerHTML = `
       <a href="https://jakewarren2414.github.io/dolphins2/logout"style ="color: white;">Logout</a>
+      `;
+      welcome.innerHTML = `
+      Welcome ${username} to dolphins fitness
       `;
     }
   }
