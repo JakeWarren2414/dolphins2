@@ -1,19 +1,53 @@
 <script> AOS.init();</script>
-<div data-aos="fade-right"><h1>Other Peoples Calenders</h1></div>
+<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
 <div data-aos="fade-up">
-    <table class="profile">
+  <table class="profile">
     <tr class="profile">
-        <th class="profile">Monday</th>
-        <th class="profile">Tuesday</th>
-        <th class="profile">Wednesday</th>
-        <th class="profile">Thursday</th>
-        <th class="profile">Friday</th>
-        <th class="profile">Saturday</th>
-        <th class="profile">Sunday</th>
+      <th class="profile"><label for="workout">Type in Workout:</label></th>
+      <th class="profile"><label for="weeks">Choose a Day:</label></th>
+      <th class="profile">Apply</th>
+      <th class="profile">Remove</th>
     </tr>
-    <tbody id="table" class="profile">
-    </tbody>
-    </table>
+    <tr>
+      <td><input id="input" class="profile"></td>
+      <td>
+        <select name="week" id="week">
+          <option>monday</option>
+          <option>tuesday</option>
+          <option>wednesday</option>
+          <option>thursday</option>
+          <option>friday</option>
+          <option>saturday</option>
+          <option>sunday</option>
+        </select>
+      </td>
+      <td><button onclick="Add()" class="profile">Apply</button></td>
+      <td><button onclick="Remove()" class="profile">Remove</button></td>
+    </tr>
+  </table>
+
+  <br>
+
+  <table class="profile">
+  <tr class="profile">
+    <th class="profile">Monday</th>
+    <th class="profile">Tuesday</th>
+    <th class="profile">Wednesday</th>
+    <th class="profile">Thursday</th>
+    <th class="profile">Friday</th>
+    <th class="profile">Saturday</th>
+    <th class="profile">Sunday</th>
+  </tr>
+  <tr>
+    <td id="monday"></td>
+    <td id="tuesday"></td>
+    <td id="wednesday"></td>
+    <td id="thursday"></td>
+    <td id="friday"></td>
+    <td id="saturday"></td>
+    <td id="sunday"></td>
+  </tr>
+</table>
 </div>
 
 <script>
@@ -34,7 +68,9 @@ const thursday_delete_site = url + '/delete_thursday';
 const friday_delete_site = url + '/delete_friday';
 const saturday_delete_site = url + '/delete_saturday';
 const sunday_delete_site = url + '/delete_sunday';
-
+if (sessionStorage.getItem("uid") == null) {
+  location.href = "https://jakewarren2414.github.io/dolphins2/login";
+}
 const body = {
   username: sessionStorage.getItem("uid")
 };
@@ -235,4 +271,179 @@ function Add() {
     })
   }
 
+}
+function Remove() {
+  const week = document.getElementById("week").value;
+  const delete_body = {
+    username: sessionStorage.getItem("uid"),
+  };
+  if (week == "monday") {
+    const monday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(monday_delete_site, monday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("monday").innerHTML = data.monday;
+      })
+    })
+  }
+  if (week == "tuesday") {
+    const tuesday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(tuesday_delete_site, tuesday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("tuesday").innerHTML = data.tuesday;
+      })
+    })
+  }
+  if (week == "wednesday") {
+    const wednesday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(wednesday_delete_site, wednesday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("wednesday").innerHTML = data.wednesday;
+      })
+    })
+  }
+  if (week == "thursday") {
+    const thursday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(thursday_delete_site, thursday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("thursday").innerHTML = data.thursday;
+      })
+    })
+  }
+  if (week == "friday") {
+    const friday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(friday_delete_site, friday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("friday").innerHTML = data.friday;
+      })
+    })
+  }
+  if (week == "saturday") {
+    const saturday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(saturday_delete_site, saturday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("saturday").innerHTML = data.saturday;
+      })
+    })
+  }
+  if (week == "sunday") {
+    const sunday_delete = {
+      method: 'POST',
+      body: JSON.stringify(delete_body),
+      headers: {
+        "content-type": "application/json",
+      },
+    };
+     fetch(sunday_delete_site, sunday_delete)
+    .then(response => {
+      if (response.status !== 200) {
+        const errorMsg = 'Database create error: ' + response.status;
+        console.log(errorMsg);
+        return;
+      }
+      response.json().then(data => {
+        document.getElementById("sunday").innerHTML = data.sunday;
+      })
+    })
+  }
+}
+// fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
+//   .then(response => response.json())
+//   .then(data => {
+//     data.forEach(user => {
+//       const newRow = document.createElement('tr');
+//       newRow.innerHTML = `
+//         <td>${user.monday}</td>
+//         <td>${user.tuesday}</td>
+//         <td>${user.wednesday}</td>
+//         <td>${user.thursday}</td>
+//         <td>${user.friday}</td>
+//         <td>${user.saturday}</td>
+//         <td>${user.sunday}</td>
+//       `;
+//       tableBody.appendChild(newRow);
+//     });
+//   });
 </script>
+## Need Help Deciding
+> This link will show you everyone elses workout calenders to help make yours
+- [Link](https://jakewarren2414.github.io/dolphins2/calendercool)
+
+## Next steps
+> You have finally finished your journey:
+- This calendar will help keep you organized
+- Make sure to use this every workout
+- You can signup and save all the steps to your fitness journey: [Signup](https://jakewarren2414.github.io/dolphins2/signup)
+<div style="padding: 150px;">
+</div>
