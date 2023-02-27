@@ -31,8 +31,10 @@ function login() {
             if (sessionStorage.getItem("uid") == null) {
                 sessionStorage.setItem("uid", data.username);
             }
-            const message = 'Login success: ' + sessionStorage.getItem("uid");
-            document.getElementById("message").innerHTML = message;
+            location.href = "https://jakewarren2414.github.io/dolphins2/";
+            // const message = 'Login success: ' + sessionStorage.getItem("uid");
+            // document.getElementById("message").innerHTML = message;
+
         })
     })
 }
