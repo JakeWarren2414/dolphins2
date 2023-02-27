@@ -29,8 +29,6 @@
                 <p id="message"></p>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="login()">Login</button>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/signup'">Signup</button>
-                <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/#Title'">Next</button>
-                </div>
             `;
         }
         else {

@@ -54,18 +54,33 @@
     <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
 </div>
 <div id="john"></div>
-<script>
-    passwords = document.getElementById("password").value;
-    confirm_password = document.getElementById("confirm_password").value;
-    username = document.getElementById("username").value;
-    const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
-    const create_fetch = url + '/create';  
+<script> 
     function signup() {
-        if(username.length == 0){
-            alert("please enter your username")
+        var passwords = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirm_password").value;
+        var username = document.getElementById("username").value;
+        var birthday = document.getElementById('birth').value
+        const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
+        const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
+        const create_fetch = url + '/create'; 
+        fetch(login_url)
+            .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i]["username"] === username) {
+                            alert("Username is already existed");
+                        }
+                    }
+                })
+        if(username.length === 0){
+            alert("please enter your username");
         }
-        if(password.length == 0){
-            alert("please enter your password")
+        if(password.length === 0){
+            alert("please enter your password");
+        }
+        if (birthday === "") {
+            alert("Please write your birth")
         }
         const body = {
             username: document.getElementById("username").value,
@@ -82,7 +97,7 @@
             height: "",
             sport: document.getElementById("sport").value,
             maxcal: document.getElementById("calories").value,
-            dob: birthday = document.getElementById('birth' ).value
+            dob: birthday = document.getElementById('birth').value
         };
         const requestOptions = {
             method: 'POST',
