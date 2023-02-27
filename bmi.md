@@ -17,7 +17,7 @@
   <div data-aos="fade-left">
       <div style="padding: 5px;">
           <input type="button" value="Compute BMI" onclick="bmi()">
-          <input type="button" value="Save BMI To Account" onclick="createUser()">
+          <input type="button" value="Save BMI To Account" onclick="saveBMI()">
       </div>
       <div style="padding: 5px;" id="result"></div>
   <table id="bmiDisplay" style="padding: 30px;">
