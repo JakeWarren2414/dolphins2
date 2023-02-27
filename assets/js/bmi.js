@@ -1,5 +1,3 @@
-
-
 function bmi() {
   
     /* Getting input from user into height variable.
@@ -50,4 +48,21 @@ function bmi() {
     const row = table.insertRow(-1);
     const cell1 = row.insertCell(0);
     cell1.innerHTML = yourbmi;
+}
+
+function saveBMI() {
+    window.onload = function() {
+        days.forEach(day => {
+          const elementId = day.toLowerCase();
+          document.getElementById(elementId).innerText = localStorage.getItem(day);
+        });
+      };
+      // Goes through each day and saves it
+      function Save() {
+        days.forEach(day => {
+          const elementId = day.toLowerCase();
+          localStorage.setItem(day, document.getElementById(elementId).innerText);
+        });
+        location.href="#workout-calender";
+      }
 }
