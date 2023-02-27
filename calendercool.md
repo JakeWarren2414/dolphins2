@@ -1,5 +1,5 @@
 <script> AOS.init();</script>
-<div data-aos="fade-right"><h1>Other Peoples Tables</h1></div>
+<div data-aos="fade-right"><h1>Workout Calender</h1></div>
 <div>
   <label>Username</label>
   <input id="username" type="text">
