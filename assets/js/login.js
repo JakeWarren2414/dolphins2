@@ -2,8 +2,8 @@ var sessionData = "uid"
 function login() {
     // const login_url = 'https://dolphin.nighthawkcodingsociety.com/api/users/match';
     const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
-    const password = document.getElementById("password").value
-    const username = document.getElementById("username").value
+    const password = document.getElementById("password").value;
+    const username = document.getElementById("username").value;
     // const body = {
     //     password: document.getElementById("password").value,
     //     username: document.getElementById("username").value
