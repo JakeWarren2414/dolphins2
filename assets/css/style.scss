@@ -139,8 +139,7 @@ tr:hover.profile td.profile {
 }
 
 .hidden {
-  opacity: 0;
-  transition: all 1s;
+  display: none;
 }
 
 .show {

@@ -7,17 +7,17 @@ let height;
 let active;
 
 function calculateMaximumCalories() {
-    sex = document.querySelector("#sex").value;
-    age = parseInt(document.querySelector("#age").value);
-    weight = parseInt(document.querySelector("#weight").value);
-    height = parseInt(document.querySelector("#height").value);
-    active = parseInt(document.querySelector("#active").value);
+    sex = document.getElementById("sex").value;
+    age = parseInt(document.getElementById("age").value);
+    weight = parseInt(document.getElementById("weight").value);
+    height = parseInt(document.getElementById("height").value);
+    active = parseInt(document.getElementById("active").value);
 
     if (sex == "female") {
         maxcal = 655.1 + (9.563*weight) + (1.850*height) - (4.676*age);
     }
     else if (sex == "male") {
-        maxcal = 66.47 + (13.75*weight) + (5.003*height) - (6.755*age)
+        maxcal = 66.47 + (13.75*weight) + (5.003*height) - (6.755*age);
     }
     let result = document.querySelector("#result");
     console.log(sex);
@@ -26,7 +26,9 @@ function calculateMaximumCalories() {
     console.log(height);
     console.log(active);
     
-    result.innerHTML = "You burn " + maxcal + " calories per day. This is your maximum calorie limit for each day. It will refresh when you refresh the page, as that is assumed to be a new day. Do not go over this limit.";
+    result.innerHTML = "You burn " + maxcal + " calories per day. This is your maximum calorie "
+    + "limit for each day. It will refresh when you refresh the page, as that is assumed to be a "
+    + "new day. Do not go over this limit."
     console.log(maxcal);
 }
 
@@ -54,71 +56,36 @@ function addFood() {
     amount.innerHTML = calamnt;
 }
 
-function update() {
-    fetch('https://dolphin.nighthawkcodingsociety.com/api/users', {
-      method: 'POST',
-      mode: 'cors',
-      cache: 'default',
-      credentials: 'include',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        age: age,
-        sex: sex,
-        weight: weight,
-        height: height,
-        maxcal: maxcal
-      })
+const result = document.querySelector("#result");
+const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
+const age_fetch = url + '/age';
+const sex_fetch = url + '/sex';
+const weight_fetch = url + '/weight';
+const height_fetch = url + '/height';
+
+const body = {
+  username: sessionStorage.getItem("uid")
+};
+const requestOptions = {
+  method: 'POST',
+  body: JSON.stringify(body),
+  headers: {
+    "content-type": "application/json",
+    "Access-Control-Allow-Origin: https://jakewarren2414.github.io"
+  },
+};
+
+fetch(sex_fetch, requestOptions)
+  .then(response => {
+    if (response.status !== 200) {
+      const errorMsg = 'Database create error: ' + response.status;
+      console.log(errorMsg);
+      return;
+    }
+    response.json().then(data => {
+      document.getElementById("sex").innerHTML = data.sex;
+      document.getElementById("age").innerHTML = data.age;
+      document.getElementById("weight").innerHTML = data.weight;
+      document.getElementById("height").innerHTML = data.height;
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error(error));
-}  
-
-function getVars() {
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    age = data.age;
-    console.log(age);
-    document.getElementById("dataFetched").innerHTML = age;
   })
-  .catch(error => console.error(error));
-
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    sex = data.sex;
-    console.log(sex);
-    document.getElementById("dataFetched").innerHTML = sex;
-  })
-  .catch(error => console.error(error));
-
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    weight = data.weight;
-    console.log(weight);
-    document.getElementById("dataFetched").innerHTML = weight;
-  })
-  .catch(error => console.error(error));
-
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    height = data.height;
-    console.log(height);
-    document.getElementById("dataFetched").innerHTML = height;
-  })
-  .catch(error => console.error(error));
-
-  fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
-  .then(response => response.json())
-  .then(data => {
-    maxcal = data.maxcal;
-    console.log(maxcal);
-    document.getElementById("dataFetched").innerHTML = maxcal;
-  })
-  .catch(error => console.error(error));
-}
