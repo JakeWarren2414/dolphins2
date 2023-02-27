@@ -84,16 +84,7 @@ function addFood() {
 
 
 
-const body = {
-  username: sessionStorage.getItem("uid")
-};
-const requestOptions = {
-  method: 'POST',
-  body: JSON.stringify(body),
-  headers: {
-    "content-type": "application/json"
-  },
-};
+
 
 fetch(sex_fetch, requestOptions)
   .then(response => {
