@@ -70,7 +70,8 @@ const requestOptions = {
   method: 'POST',
   body: JSON.stringify(body),
   headers: {
-    "content-type": "application/json"
+    "content-type": "application/json",
+    "Access-Control-Allow-Origin": "https://dolphin.nighthawkcodingsociety.com/api/users"
   },
 };
 
@@ -82,9 +83,13 @@ fetch(sex_fetch, requestOptions)
       return;
     }
     response.json().then(data => {
-      document.getElementById("sex").innerHTML = data.sex;
-      document.getElementById("age").innerHTML = data.age;
-      document.getElementById("weight").innerHTML = data.weight;
-      document.getElementById("height").innerHTML = data.height;
+      document.getElementById("sex").value = data.sex;
+      document.getElementById("sex").setAttribute("placeholder", data.sex);
+      document.getElementById("age").value = data.age;
+      document.getElementById("age").setAttribute("placeholder", data.age);
+      document.getElementById("weight").value = data.weight;
+      document.getElementById("age").setAttribute("placeholder", data.weight);
+      document.getElementById("height").value = data.height;
+      document.getElementById("age").setAttribute("placeholder", data.height);
     })
   })
