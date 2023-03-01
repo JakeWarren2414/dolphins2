@@ -11,7 +11,7 @@
             <option value="female">Female</option>
         </select>
         <label for="age">Age</label>
-        <input id="age" type="text">
+        <input id="age" value="" type="text">
         <label for="weight">Weight</label>
         <input id = "weight" type="text">
         <label for="height">Height</label>

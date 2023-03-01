@@ -52,6 +52,7 @@
 </div>
 <div style="padding: 10px">
     <button id = "signUPbutton" type="submit" class="signupbtn" onclick = "signup()">sign up</button>
+    <button class="signupbtn" onclick="location.href='https://jakewarren2414.github.io/dolphins2/delete'">Delete Account</button>
 </div>
 <div id="john"></div>
 <script> 
