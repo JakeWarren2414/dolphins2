@@ -14,7 +14,7 @@
   <div class="contain">
       <div class="block">
           <h1 style="color: white; padding: 7px;">BMI</h1>
-          <p style="padding: 3px"> To start on your way towards a healthier life, knowing your BMI is essincal. Calculate your body mass index <a href="https://jakewarren2414.github.io/dolphins2/bmi#calc"><u>here</u></a>.</p>
+          <p style="padding: 3px"> To start on your way towards a healthier life, knowing your BMI is essential. Calculate your body mass index <a href="https://jakewarren2414.github.io/dolphins2/bmi#calc"><u>here</u></a>.</p>
           <img width= "110p" height="110" src="https://cdn-icons-png.flaticon.com/512/29/29764.png">
       </div>
       <div class="block">
