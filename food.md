@@ -3,7 +3,8 @@
 <script> AOS.init();</script>
 <body>
     <script src="{{ '/assets/js/food.js' | relative_url }}"></script>
-    <img src="{{ '/images/dolphin.png' | relative_url }}">
+    People who manage their calories: <img src="{{ '/images/dolphin.png' | relative_url }}">
+    People who don't manage their calories: <img src="{{ '/images/dolphin-grayscale.png' | relative_url }}">
     <h1 id="food">Calorie Management</h1>
     <div style="padding:5px">
         <label for="sex">Sex</label>
