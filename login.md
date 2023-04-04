@@ -2,7 +2,7 @@
 <body>
     <script src="{{ '/assets/js/login.js' | relative_url }}"></script>
 <body>
-<div style="padding: 200px;"></div>
+<div id="spacing" style="padding: 200px;"></div>
 <!-- <div class="page-header" style="padding: 350px height: 20%; border-radius: 50px;">
 <h1 style="color: black;" id="L">Login</h1><br>
 <input type="text" placeholder="Username" id = "username" style="color: black; padding: 10px;"><br>
@@ -13,12 +13,16 @@
 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/signup'">Signup</button>
 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/#Title'">Next</button>
 </div> -->
-<div id = "loginPage" class="page-header" style="padding: 350px height: 20%; border-radius: 50px;">
+<div class="shadow">
+<div id = "loginHead" class="page-header" style="display:none;"><img src="{{ site.url }}/favicon.ico"></div>
+<div id="logininfo"></div>
 </div>
 <script>
     function loginPage() {
         username = sessionStorage.getItem("uid");
-        const newRow = document.getElementById('loginPage');
+        const newRow = document.getElementById('logininfo');
+        var space = document.getElementById("spacing");
+        var head = document.getElementById("loginHead");
         if (username == null) {
             newRow.innerHTML = `
                 <div class="page-header" style="padding: 350px height: 20%; border-radius: 50px;">
@@ -29,11 +33,15 @@
                 <p id="message"></p>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="login()">Login</button>
                 <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/signup'">Signup</button>
+                <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/forgotpassword'">Did you forgot your password?</button>
+                <button style="padding: 5px; color: black; flex: 50%" onclick="location.href='https://jakewarren2414.github.io/dolphins2/delete'">Delete Account</button>
             `;
         }
         else {
+            document.getElementById("spacing").style.padding="50px";
+            head = head.style.display = "block";
             newRow.innerHTML = `
-            <div>${username}</div>
+            <div>Hello ${username} welcome back</div>
             `;
         }
     }
