@@ -101,60 +101,6 @@ if (savedSport) {
 }
 </script>
 
-<div data-aos="fade-right">
-  <h3>Choose a sport:</h3>
-  <select id="sport-select">
-    <option value="Basketball">Basketball</option>
-    <option value="Soccer">Soccer</option>
-    <option value="Baseball">Baseball</option>
-    <option value="Football">Football</option>
-    <option value="Volleyball">Volleyball</option>
-    <option value="Running">Running</option>
-    <option value="Swimming">Swimming</option>
-    <option value="Gymnastics">Gymnastics</option>
-    <option value="Tennis">Tennis</option>
-    <option value="Track and Field">Track and Field</option>
-    <option value="Golf">Golf</option>
-    <option value="Bowling">Bowling</option>
-    <option value="Frisbee">Frisbee</option>
-    <option value="Hiking">Hiking</option>
-    <option value="Yoga">Yoga</option>
-    <option value="Meditation">Meditation</option>
-    <option value="Ultimate Frisbee">Ultimate Frisbee</option>
-    <option value="Beach Volleyball">Beach Volleyball</option>
-    <option value="Indoor Soccer">Indoor Soccer</option>
-    <option value="Indoor Volleyball">Indoor Volleyball</option>
-    <option value="Indoor Track and Field">Indoor Track and Field</option>
-    <option value="Rock Climbing">Rock Climbing</option>
-    <option value="Camping">Camping</option>
-    <option value="Rugby">Rugby</option>
-    <option value="Hockey">Hockey</option>
-    <option value="Lacrosse">Lacrosse</option>
-    <option value="Wresling">Wresling</option>
-    <option value="Flag Football">Flag Football</option>
-    <option value="Touch Football">Touch Football</option>
-  </select>
-  <button id="submit-button">Submit</button>
-</div>
-
-<script>
-  // JavaScript code that listens to a click on the "Submit" button and removes the selected sport
-  const submitButton = document.getElementById('submit-button');
-  const sportSelect = document.getElementById('sport-select');
-
-  submitButton.addEventListener('click', function() {
-    const selectedSport = sportSelect.value;
-    removeSport(selectedSport);
-  });
-
-  function removeSport(sport) {
-    // Replace this function with your own implementation of removing a sport
-    console.log(`Removing sport: ${sport}`);
-    // Implement your logic here to remove the selected sport from the sports list
-  }
-</script>
-
-
 
 
 
@@ -261,5 +207,58 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 
 
 
+<div data-aos="fade-right">
+  <h3>Choose a sport:</h3>
+  <select id="sport-select">
+    <option value="Basketball">Basketball</option>
+    <option value="Soccer">Soccer</option>
+    <option value="Baseball">Baseball</option>
+    <option value="Football">Football</option>
+    <option value="Volleyball">Volleyball</option>
+    <option value="Running">Running</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Gymnastics">Gymnastics</option>
+    <option value="Tennis">Tennis</option>
+    <option value="Track and Field">Track and Field</option>
+    <option value="Golf">Golf</option>
+    <option value="Bowling">Bowling</option>
+    <option value="Frisbee">Frisbee</option>
+    <option value="Hiking">Hiking</option>
+    <option value="Yoga">Yoga</option>
+    <option value="Meditation">Meditation</option>
+    <option value="Ultimate Frisbee">Ultimate Frisbee</option>
+    <option value="Beach Volleyball">Beach Volleyball</option>
+    <option value="Indoor Soccer">Indoor Soccer</option>
+    <option value="Indoor Volleyball">Indoor Volleyball</option>
+    <option value="Indoor Track and Field">Indoor Track and Field</option>
+    <option value="Rock Climbing">Rock Climbing</option>
+    <option value="Camping">Camping</option>
+    <option value="Rugby">Rugby</option>
+    <option value="Hockey">Hockey</option>
+    <option value="Lacrosse">Lacrosse</option>
+    <option value="Wresling">Wresling</option>
+    <option value="Flag Football">Flag Football</option>
+    <option value="Touch Football">Touch Football</option>
+  </select>
+  <button id="submit-button">Submit</button>
+</div>
 
+<script>
+  const submitButton = document.getElementById('submit-button');
+  const sportSelect = document.getElementById('sport-select');
+  const sportsList = ["Basketball", "Soccer", "Baseball", "Football", "Volleyball", "Running", "Swimming", "Gymnastics", "Tennis", "Track and Field", "Golf", "Bowling", "Frisbee", "Hiking", "Yoga", "Meditation", "Ultimate Frisbee", "Beach Volleyball", "Indoor Soccer", "Indoor Volleyball", "Indoor Track and Field", "Rock Climbing", "Camping", "Rugby", "Hockey", "Lacrosse", "Wresling", "Flag Football", "Touch Football"];
 
+  submitButton.addEventListener('click', function() {
+    const selectedSport = sportSelect.value;
+    removeSport(selectedSport);
+  });
+
+  function removeSport(sport) {
+    const index = sportsList.indexOf(sport);
+    if (index > -1) {
+      sportsList.splice(index, 1);
+      console.log(`Removing sport: ${sport}`);
+      console.log(`Updated sports list: ${sportsList}`);
+    }
+  }
+</script>
