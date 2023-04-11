@@ -210,7 +210,35 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
 <div data-aos="fade-right">
   <h3>Choose a sport:</h3>
   <select id="sport-select">
-    <!-- options here -->
+    <option value="Basketball">Basketball</option>
+    <option value="Soccer">Soccer</option>
+    <option value="Baseball">Baseball</option>
+    <option value="Football">Football</option>
+    <option value="Volleyball">Volleyball</option>
+    <option value="Running">Running</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Gymnastics">Gymnastics</option>
+    <option value="Tennis">Tennis</option>
+    <option value="Track and Field">Track and Field</option>
+    <option value="Golf">Golf</option>
+    <option value="Bowling">Bowling</option>
+    <option value="Frisbee">Frisbee</option>
+    <option value="Hiking">Hiking</option>
+    <option value="Yoga">Yoga</option>
+    <option value="Meditation">Meditation</option>
+    <option value="Ultimate Frisbee">Ultimate Frisbee</option>
+    <option value="Beach Volleyball">Beach Volleyball</option>
+    <option value="Indoor Soccer">Indoor Soccer</option>
+    <option value="Indoor Volleyball">Indoor Volleyball</option>
+    <option value="Indoor Track and Field">Indoor Track and Field</option>
+    <option value="Rock Climbing">Rock Climbing</option>
+    <option value="Camping">Camping</option>
+    <option value="Rugby">Rugby</option>
+    <option value="Hockey">Hockey</option>
+    <option value="Lacrosse">Lacrosse</option>
+    <option value="Wresling">Wresling</option>
+    <option value="Flag Football">Flag Football</option>
+    <option value="Touch Football">Touch Football</option>
   </select>
   <button id="submit-button">Submit</button>
 </div>
