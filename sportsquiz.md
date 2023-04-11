@@ -243,6 +243,7 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
   <button id="submit-button">Submit</button>
 </div>
 
+
 <script>
   const submitButton = document.getElementById('submit-button');
   const sportSelect = document.getElementById('sport-select');
@@ -254,11 +255,8 @@ document.getElementById("result").innerHTML = "Based on your answers, we recomme
   });
 
   function removeSport(sport) {
-    const index = sportsList.indexOf(sport);
-    if (index > -1) {
-      sportsList.splice(index, 1);
-      console.log(`Removing sport: ${sport}`);
-      console.log(`Updated sports list: ${sportsList}`);
-    }
+    sportsList = sportsList.filter(item => item !== sport);
+    console.log(`Removing sport: ${sport}`);
+    console.log(`Updated sports list: ${sportsList}`);
   }
 </script>
