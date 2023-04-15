@@ -90,7 +90,7 @@ const requestOptions = {
     "content-type": "application/json",
   },
 };
-fetch(calender_fetch, requestOptions)
+fetch(calender_fetch, requestOptions);
   .then(response => {
     if (response.status !== 200) {
       const errorMsg = 'Database create error: ' + response.status;
