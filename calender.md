@@ -1,13 +1,19 @@
-<script> AOS.init();</script>
-<div data-aos="fade-right"><h1>Plan your Schedule</h1></div>
+<script>
+  AOS.init();
+</script>
+
+<div data-aos="fade-right">
+  <h1>Plan your Schedule</h1>
+</div>
+
 <div data-aos="fade-up">
   <table class="profile">
-    <tr class="profile">
-      <th class="profile"><label for="workout">Type in Workout:</label></th>
-      <th class="profile"><label for="weeks">Choose a Day:</label></th>
-      <th class="profile">Apply</th>
-      <th class="profile">Remove</th>
-      <th class="profile">Update</th>s
+    <tr>
+      <th><label for="workout">Type in Workout:</label></th>
+      <th><label for="weeks">Choose a Day:</label></th>
+      <th>Apply</th>
+      <th>Remove</th>
+      <th>Update</th>
     </tr>
     <tr>
       <td><input id="input" class="profile"></td>
@@ -31,52 +37,38 @@
   <br>
 
   <table class="profile">
-  <tr class="profile">
-    <th class="profile">Monday</th>
-    <th class="profile">Tuesday</th>
-    <th class="profile">Wednesday</th>
-    <th class="profile">Thursday</th>
-    <th class="profile">Friday</th>
-    <th class="profile">Saturday</th>
-    <th class="profile">Sunday</th>
-  </tr>
-  <tr>
-    <td id="monday"></td>
-    <td id="tuesday"></td>
-    <td id="wednesday"></td>
-    <td id="thursday"></td>
-    <td id="friday"></td>
-    <td id="saturday"></td>
-    <td id="sunday"></td>
-  </tr>
-</table>
+    <tr>
+      <th>Monday</th>
+      <th>Tuesday</th>
+      <th>Wednesday</th>
+      <th>Thursday</th>
+      <th>Friday</th>
+      <th>Saturday</th>
+      <th>Sunday</th>
+    </tr>
+    <tr>
+      <td id="monday"></td>
+      <td id="tuesday"></td>
+      <td id="wednesday"></td>
+      <td id="thursday"></td>
+      <td id="friday"></td>
+      <td id="saturday"></td>
+      <td id="sunday"></td>
+    </tr>
+  </table>
 </div>
 
 <script>
 const tableBody = document.querySelector('#table');
 const url = "http://dolphins3.duckdns.org/api/users/";
 const calender_fetch = url + '/calender';
-const monday_fetch = url + '/monday';
-const tuesday_fetch = url + '/tuesday';
-const wednesday_fetch = url + '/wednesday';
-const thursday_fetch = url + '/thursday';
-const friday_fetch = url + '/friday';
-const saturday_fetch = url + '/saturday';
-const sunday_fetch = url + '/sunday';
-const monday_delete_site = url + '/delete_monday';
-const tuesday_delete_site = url + '/delete_tuesday';
-const wednesday_delete_site = url + '/delete_wednesday';
-const thursday_delete_site = url + '/delete_thursday';
-const friday_delete_site = url + '/delete_friday';
-const saturday_delete_site = url + '/delete_saturday';
-const sunday_delete_site = url + '/delete_sunday';
-const monday_update_site = url + '/update_monday';
-const tuesday_update_site = url + '/update_tuesday';
-const wednesday_update_site = url + '/update_wednesday';
-const thursday_update_site = url + '/update_thursday';
-const friday_update_site = url + '/update_friday';
-const saturday_update_site = url + '/update_saturday';
-const sunday_update_site = url + '/update_sunday';
+const weekdays = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+const urls = {};
+for (const day of weekdays) {
+  urls[day] = `${url}/${day}`;
+  urls[`delete_${day}`] = `${url}/delete_${day}`;
+  urls[`update_${day}`] = `${url}/update_${day}`;
+}
 if (sessionStorage.getItem("uid") == null) {
   location.href = "https://jakewarren2414.github.io/dolphins2/login";
 }
@@ -90,7 +82,7 @@ const requestOptions = {
     "content-type": "application/json",
   },
 };
-fetch(calender_fetch, requestOptions);
+fetch(calender_fetch, requestOptions)
   .then(response => {
     if (response.status !== 200) {
       const errorMsg = 'Database create error: ' + response.status;
@@ -110,19 +102,19 @@ fetch(calender_fetch, requestOptions);
 function Update() {
   const input = document.getElementById("input").value;
   const week = document.getElementById("week").value;
-  if (week == "monday") {
-    const monday_body = {
-      username: sessionStorage.getItem("uid"),
-      monday: input
-    };
-    const monday_request = {
-      method: 'POST',
-      body: JSON.stringify(monday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(monday_update_site, monday_request)
+  const body = {
+    username: sessionStorage.getItem("uid")
+  };
+  body[week] = input;
+  const request = {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers: {
+      "content-type": "application/json",
+    },
+  };
+  const url = urls[`update_${week}`];
+  fetch(url, request)
     .then(response => {
       if (response.status !== 200) {
         const errorMsg = 'Database create error: ' + response.status;
@@ -130,473 +122,64 @@ function Update() {
         return;
       }
       response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
+        document.getElementById(week).innerHTML = data[week];
       })
     })
-  }
-  if (week == "tuesday") {
-    const tuesday_body = {
-      username: sessionStorage.getItem("uid"),
-      tuesday: input
-    };
-    const tuesday_request = {
-      method: 'POST',
-      body: JSON.stringify(tuesday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(tuesday_update_site, tuesday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("tuesday").innerHTML = data.tuesday;
-      })
-    })
-  }
-  if (week == "wednesday") {
-    const wednesday_body = {
-      username: sessionStorage.getItem("uid"),
-      wednesday: input
-    };
-    const wednesday_request = {
-      method: 'POST',
-      body: JSON.stringify(wednesday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(wednesday_update_site, wednesday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("wednesday").innerHTML = data.wednesday;
-      })
-    })
-  }
-  if (week == "thursday") {
-    const thursday_body = {
-      username: sessionStorage.getItem("uid"),
-      thursday: input
-    };
-    const thursday_request = {
-      method: 'POST',
-      body: JSON.stringify(thursday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(thursday_update_site, thursday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("thursday").innerHTML = data.thursday;
-      })
-    })
-  }
-  if (week == "friday") {
-    const friday_body = {
-      username: sessionStorage.getItem("uid"),
-      friday: input
-    };
-    const friday_request = {
-      method: 'POST',
-      body: JSON.stringify(friday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(friday_update_site, friday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("friday").innerHTML = data.friday;
-      })
-    })
-  }
-  if (week == "saturday") {
-    const saturday_body = {
-      username: sessionStorage.getItem("uid"),
-      saturday: input
-    };
-    const saturday_request = {
-      method: 'POST',
-      body: JSON.stringify(saturday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(saturday_update_site, saturday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("saturday").innerHTML = data.saturday;
-      })
-    })
-  }
-  if (week == "sunday") {
-    const sunday_body = {
-      username: sessionStorage.getItem("uid"),
-      sunday: input
-    };
-    const sunday_request = {
-      method: 'POST',
-      body: JSON.stringify(sunday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(sunday_update_site, sunday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("sunday").innerHTML = data.sunday;
-      })
-    })
-  }
-  
 }
+
+
 function Add() {
   const input = document.getElementById("input").value;
   const week = document.getElementById("week").value;
-  if (week == "monday") {
-    const monday_body = {
-      username: sessionStorage.getItem("uid"),
-      monday: input
-    };
-    const monday_request = {
-      method: 'POST',
-      body: JSON.stringify(monday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(monday_fetch, monday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
-      })
-    })
+  const fetchUrl = ${week}_fetch;
+  const dayValue = ${week};
+  const dayBody = {
+    username: sessionStorage.getItem("uid"),
+    [dayValue]: input
+  };
+  const dayRequest = {
+    method: 'POST',
+    body: JSON.stringify(dayBody),
+    headers: {
+    "content-type": "application/json",
+  },
+  };
+  fetch(fetchUrl, dayRequest)
+  .then(response => {
+    if (response.status !== 200) {
+      const errorMsg = Database create error: ${response.status};
+      console.log(errorMsg);
+    return;
   }
-  if (week == "tuesday") {
-    const tuesday_body = {
-      username: sessionStorage.getItem("uid"),
-      tuesday: input
-    };
-    const tuesday_request = {
-      method: 'POST',
-      body: JSON.stringify(tuesday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(tuesday_fetch, tuesday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("tuesday").innerHTML = data.tuesday;
-      })
-    })
-  }
-  if (week == "wednesday") {
-    const wednesday_body = {
-      username: sessionStorage.getItem("uid"),
-      wednesday: input
-    };
-    const wednesday_request = {
-      method: 'POST',
-      body: JSON.stringify(wednesday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(wednesday_fetch, wednesday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("wednesday").innerHTML = data.wednesday;
-      })
-    })
-  }
-  if (week == "thursday") {
-    const thursday_body = {
-      username: sessionStorage.getItem("uid"),
-      thursday: input
-    };
-    const thursday_request = {
-      method: 'POST',
-      body: JSON.stringify(thursday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(thursday_fetch, thursday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("thursday").innerHTML = data.thursday;
-      })
-    })
-  }
-  if (week == "friday") {
-    const friday_body = {
-      username: sessionStorage.getItem("uid"),
-      friday: input
-    };
-    const friday_request = {
-      method: 'POST',
-      body: JSON.stringify(friday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(friday_fetch, friday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("friday").innerHTML = data.friday;
-      })
-    })
-  }
-  if (week == "saturday") {
-    const saturday_body = {
-      username: sessionStorage.getItem("uid"),
-      saturday: input
-    };
-    const saturday_request = {
-      method: 'POST',
-      body: JSON.stringify(saturday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(saturday_fetch, saturday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("saturday").innerHTML = data.saturday;
-      })
-    })
-  }
-  if (week == "sunday") {
-    const sunday_body = {
-      username: sessionStorage.getItem("uid"),
-      sunday: input
-    };
-    const sunday_request = {
-      method: 'POST',
-      body: JSON.stringify(sunday_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(sunday_fetch, sunday_request)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("sunday").innerHTML = data.sunday;
-      })
-    })
-  }
-
+  response.json().then(data => {
+    document.getElementById(week).innerHTML = data[dayValue];
+  })
+  })
 }
+
 function Remove() {
   const week = document.getElementById("week").value;
-  const delete_body = {
-    username: sessionStorage.getItem("uid"),
-  };
-  if (week == "monday") {
-    const monday_delete = {
+  const delete_body = { username: sessionStorage.getItem("uid") };
+  const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"];
+  const delete_site = "delete_site_url";
+
+  if (days.includes(week)) {
+    const delete_request = {
       method: 'POST',
       body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
+      headers: { "content-type": "application/json" },
     };
-     fetch(monday_delete_site, monday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("monday").innerHTML = data.monday;
+    fetch(`${delete_site}/${week}`, delete_request)
+      .then(response => {
+        if (response.status !== 200) {
+          const errorMsg = `Database create error: ${response.status}`;
+          console.log(errorMsg);
+          return;
+        }
+        response.json().then(data => {
+          document.getElementById(week).innerHTML = data[week];
+        })
       })
-    })
-  }
-  if (week == "tuesday") {
-    const tuesday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(tuesday_delete_site, tuesday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("tuesday").innerHTML = data.tuesday;
-      })
-    })
-  }
-  if (week == "wednesday") {
-    const wednesday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(wednesday_delete_site, wednesday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("wednesday").innerHTML = data.wednesday;
-      })
-    })
-  }
-  if (week == "thursday") {
-    const thursday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(thursday_delete_site, thursday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("thursday").innerHTML = data.thursday;
-      })
-    })
-  }
-  if (week == "friday") {
-    const friday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(friday_delete_site, friday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("friday").innerHTML = data.friday;
-      })
-    })
-  }
-  if (week == "saturday") {
-    const saturday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(saturday_delete_site, saturday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("saturday").innerHTML = data.saturday;
-      })
-    })
-  }
-  if (week == "sunday") {
-    const sunday_delete = {
-      method: 'POST',
-      body: JSON.stringify(delete_body),
-      headers: {
-        "content-type": "application/json",
-      },
-    };
-     fetch(sunday_delete_site, sunday_delete)
-    .then(response => {
-      if (response.status !== 200) {
-        const errorMsg = 'Database create error: ' + response.status;
-        console.log(errorMsg);
-        return;
-      }
-      response.json().then(data => {
-        document.getElementById("sunday").innerHTML = data.sunday;
-      })
-    })
   }
 }
 // fetch('https://dolphin.nighthawkcodingsociety.com/api/users/')
