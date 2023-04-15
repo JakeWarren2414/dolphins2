@@ -54,7 +54,7 @@
 
 <script>
 const tableBody = document.querySelector('#table');
-const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
+const url = "http://dolphins3.duckdns.org/api/users/";
 const calender_fetch = url + '/calender';
 const monday_fetch = url + '/monday';
 const tuesday_fetch = url + '/tuesday';
