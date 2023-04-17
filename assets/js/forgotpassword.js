@@ -1,16 +1,20 @@
+function birthday(dayof) {
+    dayof = dayof.replace('-', '').replace('-', '');
+    var birthdayy = dayof.substr(0, 4);
+    var birthdaymd = dayof.substr(4, 4);
+    var birthmonth = birthdaymd.substr(0,2);
+    var birthday = birthdaymd.substr(2,4)
+    var new_dayof = birthmonth +"-" + birthday + "-" + birthdayy;
+    return new_dayof;
+}
 function update() {
     const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
     const forgot_url = "https://dolphin.nighthawkcodingsociety.com/api/users/update_password";
     const password = document.getElementById("password").value;
     const username = document.getElementById("username").value;
     var dob = document.getElementById("birth").value;
-    dob = dob.replace('-', '').replace('-', '');
-    var birthdayy = dob.substr(0, 4);
-    var birthdaymd = dob.substr(4, 4);
-    var birthmonth = birthdaymd.substr(0,2);
-    var birthday = birthdaymd.substr(2,4)
-    var new_dob = birthmonth +"-" + birthday + "-" + birthdayy;
-    console.log(new_dob)
+    new_dow = birthday(dob);
+    console.log(new_dob);
     const check_password = document.getElementById("check_password").value;
     fetch(login_url)
         .then(response => response.json())
