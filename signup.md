@@ -127,8 +127,4 @@
         }
     }
 </script>
-<!--input id='name' type = "text"/>
-<button id = "press" onclick = "printName()">
-<div id='result'></div>
-<script src="{{ '/assets/js/signup.js' | relative_url }}"></script>-->
 
