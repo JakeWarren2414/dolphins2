@@ -8,8 +8,8 @@ function birthday(dayof) {
     return new_dayof;
 }
 function update() {
-    const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
-    const forgot_url = "https://dolphin.nighthawkcodingsociety.com/api/users/update_password";
+    const login_url = "https://dolphins3.duckdns.org/api/users/username";
+    const forgot_url = "https://dolphins3.duckdns.org/api/users//update_password";
     const password = document.getElementById("password").value;
     const username = document.getElementById("username").value;
     var dob = document.getElementById("birth").value;
