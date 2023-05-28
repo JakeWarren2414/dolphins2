@@ -38,6 +38,12 @@
 </head>
 <table id="flaskTable" class="table" style="width:100%">
     <thead id="flaskHead">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Age</th>
+        </tr>
     </thead>
     <tbody id="flaskBody"></tbody>
 </table>
