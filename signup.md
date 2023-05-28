@@ -61,8 +61,8 @@
         var confirm_password = document.getElementById("confirm_password").value;
         var username = document.getElementById("username").value;
         var birthday = document.getElementById('birth').value
-        const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
-        const url = "https://dolphin.nighthawkcodingsociety.com/api/users";
+        const login_url = "https://dolphins3.duckdns.org/api/users/username";
+        const url = "https://dolphins3.duckdns.org/api/users/";
         const create_fetch = url + '/create'; 
         fetch(login_url)
             .then(response => response.json())
@@ -127,8 +127,4 @@
         }
     }
 </script>
-<!--input id='name' type = "text"/>
-<button id = "press" onclick = "printName()">
-<div id='result'></div>
-<script src="{{ '/assets/js/signup.js' | relative_url }}"></script>-->
 

@@ -1,6 +1,6 @@
 function Delete_account() {
-    const login_url = "https://dolphin.nighthawkcodingsociety.com/api/users/username";
-    const delete_url = "https://dolphin.nighthawkcodingsociety.com/api/users/delete_user";
+    const login_url = "https://dolphins3.duckdns.org/api/users/username";
+    const delete_url = "https://dolphins3.duckdns.org/api/users/delete_user";
     const password = document.getElementById("password").value;
     const username = document.getElementById("username").value;
     fetch(login_url)
