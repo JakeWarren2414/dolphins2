@@ -29,7 +29,7 @@
 </body>
 
 
-%%html
+
 <head>
     <!-- load jQuery and DataTables style and scripts -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
@@ -39,10 +39,9 @@
 <table id="flaskTable" class="table" style="width:100%">
     <thead id="flaskHead">
         <tr>
-            <th>ID</th>
             <th>Name</th>
-            <th>DOB</th>
-            <th>Age</th>
+            <th>Singer</th>
+            <th>Year</th>
         </tr>
     </thead>
     <tbody id="flaskBody"></tbody>
